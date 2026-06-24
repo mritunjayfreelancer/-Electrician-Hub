@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chapter 03: Wires, Joints, Soldering & Underground Cables - Electrician Hub</title>
+
+    <meta name="description"
+        content="ITI Electrician Theory Chapter 3: Wires, Joints, Soldering and Underground Cables complete tutorial in Hindi & English with 20 MCQs, Megger testing, and underground cable structural layers mapping.">
+    <meta name="keywords"
+        content="Wire Joints, Soldering Iron Flux, Underground Cables Layers, Married Joint, Tee Joint, Britannia Joint, Megger Insulation Test, ITI Electrician Chapter 3 Notes">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        .chapter-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .chapter-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Action Downloader Zone */
+        .pdf-download-zone {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 25px;
+        }
+
+        .btn-pdf-trigger {
+            background-color: #f1c40f;
+            color: #0f172a;
+            border: 1px solid #e3b20a;
+            padding: 12px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(241, 196, 15, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .btn-pdf-trigger:hover {
+            background-color: #e3b20a;
+            transform: translateY(-1px);
+        }
+
+        .chapter-title-zone {
+            border-bottom: 2px dashed #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chapter-title-zone h1 {
+            font-size: 28px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .chapter-title-zone h2 {
+            font-size: 20px;
+            color: #2563eb;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        /* Deep Content Styling */
+        .section-block {
+            margin-bottom: 35px;
+        }
+
+        .section-block h3 {
+            font-size: 18px;
+            color: #0f172a;
+            border-left: 4px solid #f1c40f;
+            padding-left: 12px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Mac Style 3-Dot Box Windows */
+        .mac-box-window {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .mac-box-top-bar {
+            background: #f1f5f9;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .mac-box-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mac-box-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-r {
+            background: #ef4444;
+        }
+
+        .dot-y {
+            background: #f59e0b;
+        }
+
+        .dot-g {
+            background: #10b981;
+        }
+
+        .mac-box-lang {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mac-box-content {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .mac-box-window.eng-theme {
+            border-top: 3px solid #64748b;
+        }
+
+        .mac-box-window.eng-theme .mac-box-content {
+            color: #334155;
+            background: #f8fafc;
+        }
+
+        .mac-box-window.hin-theme {
+            border-top: 3px solid #f1c40f;
+        }
+
+        .mac-box-window.hin-theme .mac-box-content {
+            color: #713f12;
+            background: #fffbeb;
+        }
+
+        /* Industrial Premium Tables */
+        .premium-table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .premium-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .premium-data-table th {
+            background: #0f172a;
+            color: white;
+            padding: 12px;
+            font-weight: 500;
+        }
+
+        .premium-data-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+        }
+
+        .premium-data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* MCQ Test Grid Design */
+        .mcq-section-title {
+            font-size: 22px;
+            color: #0f172a;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 8px;
+        }
+
+        .mcq-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .mcq-question {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .mcq-options-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mcq-options-list li {
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-size: 14px;
+        }
+
+        .answer-reveal-box {
+            margin-top: 12px;
+            padding: 10px;
+            background: #dcfce7;
+            color: #15803d;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            display: block;
+        }
+
+        /* Viva Grid */
+        .viva-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .viva-item {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #0f172a;
+        }
+
+        .viva-question {
+            font-weight: 600;
+            font-size: 14px;
+            color: #0f172a;
+        }
+
+        .viva-answer {
+            font-size: 13px;
+            color: #475569;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* Bottom Floating Bar Layout */
+        .chapter-navigation-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+
+        /* ==========================================================
+           PREMIUM DYNAMIC MCQ VERIFICATION POPUP MODAL (CYBER THEME)
+           ========================================================== */
+        .verification-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .verification-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .verification-window {
+            background: #1e293b;
+            width: 92%;
+            max-width: 520px;
+            border-radius: 16px;
+            border: 2px solid #f1c40f;
+            box-shadow: 0 0 30px rgba(241, 196, 15, 0.25);
+            overflow-y: auto;
+            max-height: 85vh;
+        }
+
+        .v-header {
+            background: #0f172a;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .v-header h4 {
+            color: #f1c40f;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .v-close-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 26px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .v-body {
+            padding: 25px 20px;
+            color: #ffffff;
+        }
+
+        .v-intro {
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            text-align: center;
+            background: rgba(241, 196, 15, 0.08);
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px dashed rgba(241, 196, 15, 0.3);
+        }
+
+        .v-q-card {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #334155;
+        }
+
+        .v-question {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .v-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .v-options label {
+            font-size: 13px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .v-footer {
+            padding: 15px 20px;
+            background: #0f172a;
+            border-top: 1px solid #334155;
+            text-align: center;
+        }
+
+        .btn-v-submit {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .btn-v-submit:hover {
+            background: #059669;
+        }
+
+        @media print {
+
+            .navbar,
+            .pdf-download-zone,
+            footer,
+            .chapter-navigation-footer,
+            .verification-overlay {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff !important;
+            }
+
+            .chapter-container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .chapter-card {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="chapter-container">
+        <article class="chapter-card" id="pdfPrintTargetArea">
+
+            <div class="pdf-download-zone" data-html2pdf-ignore="true">
+                <button class="btn-pdf-trigger" id="openVerifyModalBtn">📥 Download Chapter PDF</button>
+            </div>
+
+            <div class="chapter-title-zone">
+                <span class="sub-title">Theory Module • 03</span>
+                <h1>Wires, Joints, Soldering & Underground Cables</h1>
+                <h2>तार, जोड़, सोल्डरिंग एवं भूमिगत केबल</h2>
+            </div>
+
+            <div class="section-block">
+                <h3>1. Introduction (परिचय)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">English Mode</div>
+                    </div>
+                    <div class="mac-box-content">
+                        Wires and cables are the core structural backbone of electrical systems, handling the
+                        transmission of energy from generational plants to terminal points. Execution of professional
+                        splicing joints and thermal soldering ensures zero dielectric loose contact hazards and
+                        efficient transmission.
+                    </div>
+                </div>
+
+                <div class="mac-box-window hin-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">Hindi Mode (हिन्दी)</div>
+                    </div>
+                    <div class="mac-box-content">
+                        तार और केबल संपूर्ण विद्युत वितरण प्रणाली की रीढ़ की हड्डी हैं। ये विद्युत ऊर्जा को एक स्टेशन से
+                        अंतिम उपभोक्ता तक सुरक्षित पहुंचाते हैं। सुरक्षित और कुशल विद्युत प्रवाह सुनिश्चित करने के लिए
+                        मजबूत और इंसुलेटेड जोड़ (Joint) तथा परफेक्ट सोल्डरिंग अति आवश्यक है।
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>2. Wire Specifications (तार की परिभाषा एवं प्रकार)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">Technical Definition</div>
+                    </div>
+                    <div class="mac-box-content">
+                        <strong>Wire:</strong> A wire is a single bare or insulated thin cylinder conductor used to
+                        route electrical current paths. Wires are classified by their Solid or Stranded gauge sizing
+                        configuration.
+                    </div>
+                </div>
+
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Conductor Material</th>
+                                <th>Key Advantages (मुख्य लाभ)</th>
+                                <th>Core Practical Uses (औद्योगिक उपयोग)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Copper (तांबा)</strong></td>
+                                <td>99% high conductivity, extremely flexible, resists chemical oxidation fatigue.</td>
+                                <td>Domestic house conduits wiring, motor windings, and panels loops.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Aluminium (एल्यूमिनियम)</strong></td>
+                                <td>Ultra lightweight profile, lower commercial cost ratio compared to copper.</td>
+                                <td>Overhead long-distance distribution transmission grid lines (ACSR).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>3. Cable Construction Layers Architecture (केबल की संरचना)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">Cable Construction Definition</div>
+                    </div>
+                    <div class="mac-box-content">
+                        <strong>Cable:</strong> A heavy cable consists of two or more independent insulated core
+                        conductors enclosed inside protective layered sheaths to withstand high dielectric stress and
+                        environmental humidity.
+                    </div>
+                </div>
+
+
+
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Layer Sequence</th>
+                                <th>Layer Name (संरचना भाग)</th>
+                                <th>Material Nomenclature & Core Function (कार्य एवं धातु)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Core 1</td>
+                                <td><strong>Conductor Core</strong></td>
+                                <td>Tinned Copper or Aluminium strands that channel the actual power current flow.</td>
+                            </tr>
+                            <tr>
+                                <td>Layer 2</td>
+                                <td><strong>Insulation Cover</strong></td>
+                                <td>Impregnated Paper, PVC or XLPE (Cross-Linked Polyethylene) to contain the voltage
+                                    lines.</td>
+                            </tr>
+                            <tr>
+                                <td>Layer 3</td>
+                                <td><strong>Metallic Sheath</strong></td>
+                                <td>Lead (Pb) or Aluminium casing wrap to prevent moisture entry into the core
+                                    insulation.</td>
+                            </tr>
+                            <tr>
+                                <td>Layer 4</td>
+                                <td><strong>Bedding System</strong></td>
+                                <td>Jute or Hessian tape dipped in bitumen to cushion the soft lead sheath from
+                                    armouring tracks.</td>
+                            </tr>
+                            <tr>
+                                <td>Layer 5</td>
+                                <td><strong>Armouring Grid</strong></td>
+                                <td>Galvanized Steel Wire or Tape wrapper wrap to safeguard cable from extreme
+                                    structural crush injury forces.</td>
+                            </tr>
+                            <tr>
+                                <td>Layer 6</td>
+                                <td><strong>Serving / Outer Sheath</strong></td>
+                                <td>Fibrous Jute layer or PVC finish to protect the internal steel armour from
+                                    atmospheric oxidation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>4. Structural Difference: Wire vs Cable (अंतर)</h3>
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter Factor</th>
+                                <th>Electrical Wire (तार)</th>
+                                <th>Electrical Heavy Cable (केबल)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Conductor Core Count</td>
+                                <td>Consists of a single bare or insulated strand path.</td>
+                                <td>Bundled grouping of multiple insulated separate cores.</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Layout Protection</td>
+                                <td>Lacks multi-layered armouring shield wrappers.</td>
+                                <td>Protected by metallic lead sheath and galvanized steel wire bands.</td>
+                            </tr>
+                            <tr>
+                                <td>Dielectric Voltage Capacity</td>
+                                <td>Optimized for low-capacity consumer line routes.</td>
+                                <td>Designed for heavy HT/EHT substation grid current layouts.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>5. Electrical Splicing Joints Management (विद्युत जोड़ प्रकार)</h3>
+                <div class="mac-box-window hin-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">जॉइंट्स के मूल नियम</div>
+                    </div>
+                    <div class="mac-box-content">
+                        एक बेहतरीन इलेक्ट्रिकल जोड़ का संपर्क प्रतिरोध (Contact Resistance) न्यूनतम होना चाहिए और उसकी
+                        यांत्रिक शक्ति (Mechanical Strength) मूल चालक के समान ही मजबूत होनी चाहिए ताकि वाइब्रेशन के कारण
+                        स्पार्किंग न हो।
+                    </div>
+                </div>
+
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Joint Name (जोड़ का नाम)</th>
+                                <th>Structural Description & Diagram Map</th>
+                                <th>Core Field Application (मुख्य उपयोग)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Straight Through Joint</strong></td>
+                                <td>Two conductors joined inline end-to-end: <code
+                                        style="font-family: monospace; font-size:12px;">------////------</code></td>
+                                <td>Extending the horizontal length of distribution wires.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Western Union Joint</strong></td>
+                                <td>Tightly wrapped interlocking twists for high tension overhead poles: <code
+                                        style="font-family: monospace; font-size:12px;">--->&lt;---</code></td>
+                                <td>Used strictly on long span overhead bare conductors pathways.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tee Joint (T-जोड़)</strong></td>
+                                <td>Branch line drop perpendicular to main line: <code
+                                        style="font-family: monospace; font-size:12px;">---|---</code></td>
+                                <td>Taking middle power drops and branch tapping lines without cutting main run.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Britannia Joint</strong></td>
+                                <td>Parallel lines bound with a third wrapping copper wire anchor binder.</td>
+                                <td>Heavy solid wire installations where conductors cannot be directly twisted.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Married Joint</strong></td>
+                                <td>Interlaced strands systematically woven together like hair braids.</td>
+                                <td>High current flexible multi-strand cabling layouts loops.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>6. Thermal Soldering Metallurgy (सोल्डरिंग एवं फ्लक्स)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">Soldering Parameters</div>
+                    </div>
+                    <div class="mac-box-content">
+                        <strong>Soldering:</strong> Joining structural wire joints using a melted fusible alloy matrix
+                        called solder. Soft solder consists of **Tin (Sn) and Lead (Pb)** in a standard **60:40
+                        composition ratio**, melting efficiently around 185°C to 230°C.
+                    </div>
+                </div>
+
+                <div class="mac-box-window hin-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">फ्लक्स का कार्य (Role of Flux)</div>
+                    </div>
+                    <div class="mac-box-content">
+                        <strong>Flux:</strong> सोल्डरिंग करते समय जोड़ों की सतह पर जमी धातु की आक्साइड परत (Oxide Layer)
+                        को हटाने, हवा के संपर्क से जंग रोकने, और पिघले हुए रांगे (Solder) को जोड़ के अंदर गहराई तक आसानी
+                        से प्रवाहित करने के लिए **Rosin या Zinc Chloride Flux** का उपयोग किया जाता है।
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>7. Underground High-Voltage Cable Testing (भूमिगत केबल)</h3>
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Cable Voltage Class</th>
+                                <th>Operating Voltage Limits Range</th>
+                                <th>NIMI Code Designation Label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Low Tension (LT)</td>
+                                <td>Up to 1000 Volts (1 KV)</td>
+                                <td>Used for consumer building distribution grids paths.</td>
+                            </tr>
+                            <tr>
+                                <td>High Tension (HT)</td>
+                                <td>1 KV to 11,000 Volts (11 KV)</td>
+                                <td>Industrial distribution substations links lines.</td>
+                            </tr>
+                            <tr>
+                                <td>Super / Extra High Tension</td>
+                                <td>22 KV up to 132 KV +</td>
+                                <td>Heavy long run interstate power grids grids grids.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">Megger Diagnosis Diagnostics Layer</div>
+                    </div>
+                    <div class="mac-box-content">
+                        • <strong>Short Circuit Fault:</strong> Occurs when core insulations breakdown and multi phases
+                        clash. Diagnosed via low resistance resistance reading on Megger testing.<br>
+                        • <strong>Open Circuit Fault:</strong> Mechanical break inside conductor core strand lines.
+                        Continuity test fails.<br>
+                        • <strong>Earth Fault:</strong> Live active wire conductor contacts the metallic protective lead
+                        sheath wrap. Insulations reading drops near zero.
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mcq-section-title">📝 Chapter 03 Exam Assessment (20 Important MCQs)</h3>
+
+            <div class="mcq-container">
+                <div class="mcq-card">
+                    <div class="mcq-question">Q1. विद्युत घरेलू वायरिंग स्थापनाओं (Domestic Wiring) के लिए किस चालक धातु
+                        का चयन सर्वोच्च माना जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Iron (लोहा)</li>
+                        <li>B. Copper (तांबा)</li>
+                        <li>C. Aluminium (एल्यूमिनियम)</li>
+                        <li>D. Zinc (जस्ता)</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Copper) - तांबे की विद्युत चालकता अधिक और
+                        प्रतिरोध कम होता है, जिससे वोल्टेज ड्रॉप न्यूनतम होता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q2. सिरोपरि ओवरहेड लाइनों (Overhead Transmission Lines) की लंबाई बढ़ाने के
+                        लिए किस यांत्रिक रूप से मजबूत जोड़ का उपयोग किया जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Married Joint</li>
+                        <li>B. Western Union Joint</li>
+                        <li>C. Tee Joint</li>
+                        <li>D. Britannia Joint</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Western Union Joint) - यह जोड़ खिंचाव बल
+                        (Tensile Strength) को सहन करने में सबसे सक्षम है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q3. मुख्य विद्युत लाइन चालक को बीच से बिना काटे, उससे कोई नई शाखा या
+                        सब-लाइन (Branch Connection) निकालने के लिए कौन सा जोड़ उपयुक्त है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Straight Joint</li>
+                        <li>B. Married Joint</li>
+                        <li>C. Tee Joint (टी-जोड़)</li>
+                        <li>D. Britannia Joint</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Tee Joint) - टी-जॉइंट का उपयोग रनिंग वायर से
+                        मिड-टैपिंग ड्रॉप्स लेने के लिए किया जाता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q4. नरम सोल्डर (Soft Solder Wire) बनाने के लिए टिन (Tin) और लेड (Lead)
+                        धातुओं का मानक प्रतिशत अनुपात कितना रखा जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. 50% Tin + 50% Lead</li>
+                        <li>B. 60% Tin + 40% Lead</li>
+                        <li>C. 40% Tin + 60% Lead</li>
+                        <li>D. 90% Tin + 10% Lead</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (60% Tin + 40% Lead) - यह अनुपात सोल्डर को कम
+                        तापमान (लगभग 185°C) पर पिघलने की उत्तम क्षमता देता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q5. सोल्डरिंग प्रक्रिया के दौरान उपयोग किए जाने वाले फ्लक्स (Flux Resin)
+                        का मुख्य और प्राथमिक कार्य क्या होता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. सोल्डरिंग आयरन को गर्म करना</li>
+                        <li>B. चालक की सतह से आक्साइड की परतों को हटाना और साफ रखना</li>
+                        <li>C. करंट की मात्रा बढ़ाना</li>
+                        <li>D. तारों को रबर इंसुलेशन देना</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (चालक की सतह से आक्साइड की परतों को हटाना) -
+                        फ्लक्स ऑक्साइड को हटाकर सोल्डर लिक्विड को जोड़ में आसानी से फैलाता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q6. भूमिगत केबलों (Underground Cables) में नमी, पानी और अम्लीय गैसों को
+                        इंसुलेशन के अंदर प्रवेश करने से रोकने के लिए कौन सी परत लगाई जाती है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Bedding Layer</li>
+                        <li>B. Metallic Sheath (धात्विक लेड शीथ)</li>
+                        <li>C. Armouring Wrapper</li>
+                        <li>D. PVC Serving</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Metallic Sheath) - लेड (शीशा) या एल्यूमिनियम की
+                        यह परत केबल को वाटरप्रूफ सील प्रदान करती है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q7. भूमिगत केबलों के धात्विक शीथ (Lead Sheath) को बाहरी लोहे की आर्मरिंग
+                        की नुकीली परतों के रगड़ से बचाने के लिए क्या बिछाया जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Conductor Core</li>
+                        <li>B. Outer Sheath</li>
+                        <li>C. Bedding (बेडिंग)</li>
+                        <li>D. XLPE Compound</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Bedding) - जूट या हेसियन टेप से बनी बेडिंग
+                        आंतरिक शीथ को खरोंच और डैमेज से बचाती है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q8. भूमिगत केबल (Underground Cable) को खुदाई या भारी वाहनों के गुजरने से
+                        होने वाली यांत्रिक चोट (Mechanical Injury Protection) से बचाने वाली परत कौन सी है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Metallic Sheath</li>
+                        <li>B. Armouring (आर्मरिंग)</li>
+                        <li>C. Bedding</li>
+                        <li>D. Insulation Paper</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Armouring) - यह गैल्वेनाइज्ड स्टील वायर या टेप
+                        की परत होती है जो केबल को क्रश होने से बचाती है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q9. भूमिगत उच्च वोल्टेज केबलों का इंसुलेशन प्रतिरोध (Insulation Resistance
+                        Test) मापने के लिए किस विशेष यंत्र का उपयोग किया जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Voltmeter</li>
+                        <li>B. Ammeter</li>
+                        <li>C. Megger (मेगर)</li>
+                        <li>D. Wattmeter</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Megger) - मेगर हाई डीसी वोल्टेज जनरेट करके
+                        मेगा-ओहम्स (MΩ) में उच्च इंसुलेशन वैल्यू मापता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q10. जब केबल का कोई चालू फेज वायर अंदर से टूट जाता है और सर्किट ओपन हो
+                        जाता है, तो उसे केबल का कौन सा फॉल्ट कहते हैं?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Short Circuit Fault</li>
+                        <li>B. Earth Fault</li>
+                        <li>C. Open Circuit Fault (ओपन सर्किट दोष)</li>
+                        <li>D. Insulation Leakage</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Open Circuit Fault) - तार के अंदरूनी कोर के
+                        टूटने से करंट का प्रवाह पूरी तरह रुक जाता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q11. केबल के इंसुलेशन के पूरी तरह जल जाने के कारण जब दो फेज आपस में सीधे
+                        संपर्क में आ जाते हैं, तो उसे क्या कहते हैं?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Earth Fault</li>
+                        <li>B. Short Circuit Fault (शॉर्ट सर्किट दोष)</li>
+                        <li>C. Open Circuit</li>
+                        <li>D. Continuity Pass</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Short Circuit Fault) - दो फेज आपस में टकराने से
+                        सर्किट का प्रतिरोध शून्य हो जाता है और भारी करंट बहता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q12. 11,000 वोल्ट (11 KV) तक की अंडरग्राउंड डिस्ट्रीब्यूशन लाइनों के लिए
+                        किस प्रकार के केबलों का चयन किया जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. LT Cables</li>
+                        <li>B. HT Cables (हाई टेंशन केबल)</li>
+                        <li>C. EHT Cables</li>
+                        <li>D. Oil Filled Cables</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (HT Cables) - हाई टेंशन केबल 1KV से 11KV की
+                        वोल्टेज रेंज के लिए डिज़ाइन की जाती हैं।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q13. फ्लेक्सिबल मल्टी-स्ट्रैंड तारों (Multi-strand Flexible Wires) को आपस
+                        में व्यवस्थित बुनकर जोड़ने के लिए कौन सा जॉइंट सबसे बेस्ट है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Britannia Joint</li>
+                        <li>B. Western Union</li>
+                        <li>C. Married Joint (मैरिड जोड़)</li>
+                        <li>D. Tee Joint</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Married Joint) - फ्लेक्सिबल तारों के स्ट्रैंड्स
+                        को आपस में गूंथकर मैरिड जॉइंट बनाया जाता है जो अत्यधिक लचीला होता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q14. केबल को जमीन के नीचे बिछाने की किस विधि में सबसे कम प्रारंभिक लागत
+                        (Lowest Cost Laying Method) आती है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Duct System</li>
+                        <li>B. Direct Laying Method (सीधे खाई में बिछाना)</li>
+                        <li>C. Concrete Trough Method</li>
+                        <li>D. Solid Shaft System</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Direct Laying Method) - जमीन में सीधी खाई खोदकर
+                        केबल को सैंड लेयर के बीच दबाना सबसे सस्ता माध्यम है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q15. सोल्डरिंग करने के बाद यदि जोड़ की सतह खुरदरी, धुंधली और दानेदार दिखाई
+                        दे, तो वह किस प्रकार का दोष है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Ideal Joint</li>
+                        <li>B. Cold Solder Joint (कोल्ड सोल्डर दोष)</li>
+                        <li>C. Shiny Solder</li>
+                        <li>D. High Conductive Joint</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Cold Solder Joint) - सोल्डर करते समय जॉइंट को
+                        पर्याप्त गर्मी न मिलने या सोल्डर के ठंडा होने से पहले हिलाने से कोल्ड सोल्डर दोष होता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q16. 3-फेज सप्लाई के साथ न्यूट्रल वायर को भी डिस्ट्रीब्यूट करने के लिए किस
+                        कोर संरचना के केबल की आवश्यकता होती है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Single Core</li>
+                        <li>B. Two Core</li>
+                        <li>C. Three Core</li>
+                        <li>D. Four Core Cable (चार कोर केबल)</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: D (Four Core Cable) - तीन कोर फेजेस के लिए और चौथी
+                        कोर न्यूट्रल लाइन के लिए रिजर्व होती है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q17. केबल की संरचना को याद रखने के लिए प्रयुक्त होने वाला प्रसिद्ध
+                        औद्योगिक सूत्र 'S-I-M-B-A-S' में 'M' किस परत को दर्शाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Main Conductor</li>
+                        <li>B. Metallic Sheath (धात्विक शीथ)</li>
+                        <li>C. Moisture Barrier</li>
+                        <li>D. Mechanical Armour</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Metallic Sheath) - SIMBAS का पूर्ण रूप
+                        Conductor, Insulation, Metallic Sheath, Bedding, Armouring, Serving है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q18. तांबे के भारी चालकों (Heavy Thick Wires) को बिना मरोड़े समानांतर रखकर
+                        ओवरहेड लाइनों में जोड़ने के लिए कौन सा जोड़ प्रयुक्त होता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. Married Joint</li>
+                        <li>B. Britannia Joint (ब्रिटानिया जोड़)</li>
+                        <li>C. Tee Joint</li>
+                        <li>D. Tap Splicing</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Britannia Joint) - मोटे तारों को सीधा रखकर उनके
+                        ऊपर पतले कॉपर वायर को कसकर लपेटकर ब्रिटानिया जॉइंट तैयार किया जाता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q19. एल्युमिनियम के तारों को ओवरहेड ट्रांसमिशन लाइनों में उपयोग करते समय
+                        स्टील कोर वायर (ACSR Wires) का क्या कार्य होता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. चालकता बढ़ाना</li>
+                        <li>B. केबल का वजन कम करना</li>
+                        <li>C. मैकेनिकल स्ट्रेंथ (यांत्रिक मजबूती) प्रदान करना</li>
+                        <li>D. जंग से बचाना</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (यांत्रिक मजबूती प्रदान करना) - स्टील वायर
+                        एल्युमिनियम लाइन को टूटने और झोल (Sag) खाने से बचाता है।</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q20. इलेक्ट्रॉनिक्स पीसीबी (PCB) सर्किट बोर्ड्स पर कंपोनेंट्स की सोल्डरिंग
+                        करने के लिए कितने वाट का सोल्डरिंग आयरन सबसे सूटेबल माना जाता है?</div>
+                    <ul class="mcq-options-list">
+                        <li>A. 15 Watt to 25 Watt</li>
+                        <li>B. 100 Watt</li>
+                        <li>C. 250 Watt Heavy Gun</li>
+                        <li>D. 500 Watt Industrial Gun</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: A (15 Watt to 25 Watt) - कम वाट का आयरन पीसीबी के
+                        नाजुक प्रिंट्स और सेमीकंडक्टर पुर्जों को जलने से बचाता है।</div>
+                </div>
+            </div>
+
+            <h3 class="mcq-section-title">💬 Viva-Voce Interview Preparation (Top Questions)</h3>
+            <div class="viva-grid">
+                <div class="viva-item">
+                    <div class="viva-question">Q1. भूमिगत केबलों में प्रयुक्त होने वाले XLPE इंसुलेशन का पूरा नाम और लाभ
+                        क्या है?</div>
+                    <div class="viva-answer">Ans: Cross-Linked Polyethylene. यह साधारण PVC की तुलना में बहुत अधिक तापमान
+                        (90°C) और शॉर्ट सर्किट हीट लोड को बिना पिघले सहन कर सकता है।</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q2. Britannia Joint और Western Union Joint में क्या मुख्य अंतर है?</div>
+                    <div class="viva-answer">Ans: वेस्टर्न यूनियन जॉइंट में तारों को आपस में मरोड़ा (Twist) जाता है,
+                        जबकि ब्रिटानिया जॉइंट में तारों को सीधा रखकर उनके ऊपर एक अन्य बाइंडिंग वायर लपेटा जाता है।
+                        ब्रिटानिया मोटे तारों के लिए बेस्ट है।</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q3. What is the fundamental operational difference between an open
+                        circuit fault and a short circuit fault?</div>
+                    <div class="viva-answer">Ans: An open circuit fault represents an infinite resistance path where the
+                        current flow falls to zero because of a broken core wire. A short circuit fault denotes a zero
+                        resistance path where heavy over-current flows because two active phases touch directly.</div>
+                </div>
+            </div>
+
+            <div class="chapter-navigation-footer" data-html2pdf-ignore="true">
+                <a href="../index.html#chapters" class="btn btn-certificate">← Back to Course Dashboard</a>
+                <a href="./basic-electrical-practice.html" class="app-link btn btn-primary">Go to Next Chapter →</a>
+            </div>
+
+        </article>
+    </main>
+
+    <div class="verification-overlay" id="verifyModal" data-html2pdf-ignore="true">
+        <div class="verification-window">
+            <div class="v-header">
+                <h4>🔒 SECURITY GATE: Unlock Your Chapter PDF</h4>
+                <button class="v-close-btn" id="closeVerifyModalBtn">×</button>
+            </div>
+            <div class="v-body">
+                <div class="v-intro">
+                    Bhai, PDF download karne ke liye niche diye gaye <strong>3 teeno sawalon ka bilkul sahi jawab
+                        (3/3)</strong> dena hoga rules ke mutabik!
+                </div>
+
+                <div class="v-q-card">
+                    <div class="v-question">Q1. Wires को आपस में सोल्डर करते समय रांगे (Solder) का मानक कंपोजिशन कितना
+                        होता है?</div>
+                    <div class="v-options">
+                        <label><input type="radio" name="v_q1" value="wrong"> A. 50% Tin + 50% Lead</label>
+                        <label><input type="radio" name="v_q1" value="correct"> B. 60% Tin + 40% Lead</label>
+                        <label><input type="radio" name="v_q1" value="wrong"> C. 20% Tin + 80% Lead</label>
+                    </div>
+                </div>
+
+                <div class="v-q-card">
+                    <div class="v-question">Q2. Undergound Cables का इंसुलेशन रेजिस्टेंस मापने के लिए किसका उपयोग किया
+                        जाता है?</div>
+                    <div class="v-options">
+                        <label><input type="radio" name="v_q2" value="wrong"> A. Voltmeter</label>
+                        <label><input type="radio" name="v_q2" value="correct"> B. Megger (मेगर)</label>
+                        <label><input type="radio" name="v_q2" value="wrong"> C. Hydrometer</label>
+                    </div>
+                </div>
+
+                <div class="v-q-card">
+                    <div class="v-question">Q3. Underground Cables को यांत्रिक चोट (Mechanical Crash Force) से बचाने
+                        वाली परत कौन सी है?</div>
+                    <div class="v-options">
+                        <label><input type="radio" name="v_q3" value="correct"> A. Armouring (आर्मरिंग)</label>
+                        <label><input type="radio" name="v_q3" value="wrong"> B. Lead Metallic Sheath</label>
+                        <label><input type="radio" name="v_q3" value="wrong"> C. Paper Insulation</label>
+                    </div>
+                </div>
+            </div>
+            <div class="v-footer">
+                <button class="btn-v-submit" id="checkAnswersVerifyBtn">Verify Answers & Unlock PDF →</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Verified DGT Academic Syllabus Library</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+        const verifyModal = document.getElementById("verifyModal");
+        const openModalBtn = document.getElementById("openVerifyModalBtn");
+        const closeModalBtn = document.getElementById("closeVerifyModalBtn");
+        const checkBtn = document.getElementById("checkAnswersVerifyBtn");
+
+        // Open Security Popup on Download button click
+        openModalBtn.addEventListener("click", () => {
+            verifyModal.classList.add("open");
+        });
+
+        // Close Security Popup
+        closeModalBtn.addEventListener("click", () => {
+            verifyModal.classList.remove("open");
+        });
+
+        // Calculate and Verify 3/3 Strict Score Action
+        checkBtn.addEventListener("click", () => {
+            const q1 = document.querySelector('input[name="v_q1"]:checked');
+            const q2 = document.querySelector('input[name="v_q2"]:checked');
+            const q3 = document.querySelector('input[name="v_q3"]:checked');
+
+            if (!q1 || !q2 || !q3) {
+                alert("⚠️ Bhai, pehle teeno sawalon ke options select toh karo!");
+                return;
+            }
+
+            if (q1.value === "correct" && q2.value === "correct" && q3.value === "correct") {
+                alert("🎉 Brilliant! Teeno jawab bilkul sahi hain. Aapka PDF background me download ho raha hai!");
+                verifyModal.classList.remove("open");
+
+                // Execute direct stealth background PDF download function instantly
+                const element = document.getElementById("pdfPrintTargetArea");
+                const opt = {
+                    margin: [10, 10, 10, 10],
+                    filename: 'Chapter-03-Wires-Joints-Soldering-Cables.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(element).save();
+
+            } else {
+                alert("❌ Arre yaar! Kuch jawab galat ho gaye. Rules ke mutabik 3 me se 3 sahi hone chahiye bacho. Dobara sahi se koshish karo!");
+                document.getElementsByName("v_q1").forEach(input => input.checked = false);
+                document.getElementsByName("v_q2").forEach(input => input.checked = false);
+                document.getElementsByName("v_q3").forEach(input => input.checked = false);
+            }
+        });
+    </script>
+</body>
+
+</html>

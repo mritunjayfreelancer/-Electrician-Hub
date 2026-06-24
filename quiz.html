@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚡ Electrician Hub - Live Speed Quiz Terminal</title>
+
+    <!-- Google Algorithm High-Traffic SEO Meta Layers -->
+    <meta name="description"
+        content="ITI Electrician basic zero level theory speed mock test quiz. Complete short 1-line MCQ question bank in Hindi.">
+    <meta name="keywords" content="ITI Electrician Theory Quiz, Electrician Mock Test, Basic Electrical Test Hindi">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Structured Quiz Object Schema Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Quiz",
+      "name": "Electrician Hub Premium Speed Quiz",
+      "description": "Premium 1-line basic multiple choice questions exam for ITI Electrician trade.",
+      "educationalAlignment": {
+        "@type": "AlignmentObject",
+        "educationalFramework": "NIMI NIMI Pattern Syllabus",
+        "targetName": "Electrician Trade Theory"
+      }
+    }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* Mac System Core Layout Base */
+        body {
+            background-color: #0b0f19 !important;
+            color: #e2e8f0;
+        }
+
+        .mac-terminal-wrapper {
+            max-width: 620px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        /* Premium Mac Window Layout Container */
+        .mac-window {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.15);
+            overflow: hidden;
+        }
+
+        /* Mac Three-Dot Window Control Bar */
+        .mac-titlebar {
+            background: #1f2937;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #374151;
+            position: relative;
+        }
+
+        .mac-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-close {
+            background: #ff5f56;
+        }
+
+        .dot-minimize {
+            background: #ffbd2e;
+        }
+
+        .dot-maximize {
+            background: #27c93f;
+        }
+
+        .mac-title-text {
+            color: #9ca3af;
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 0.5px;
+        }
+
+        /* Inside Terminal Workspace Body */
+        .mac-body {
+            padding: 30px 24px;
+        }
+
+        .quiz-stats-line {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+            color: #38bdf8;
+            margin-bottom: 25px;
+            border-bottom: 1px dashed #374151;
+            padding-bottom: 12px;
+        }
+
+        .strike-banner {
+            color: #f87171;
+            background: rgba(248, 113, 113, 0.1);
+            padding: 2px 10px;
+            border-radius: 4px;
+        }
+
+        /* 1-Line Strict Short Question Text Style */
+        .short-q-text {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #ffffff;
+            margin-bottom: 25px;
+            border-left: 4px solid #f1c40f;
+            padding-left: 12px;
+        }
+
+        /* Stylish Premium Option Buttons */
+        .mac-options-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mac-opt-btn {
+            background: #1f2937;
+            border: 1px solid #374151;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: #cbd5e1;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .mac-opt-btn:hover {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+            transform: translateX(4px);
+        }
+
+        .opt-prefix {
+            font-family: 'Fira Code', monospace;
+            color: #f1c40f;
+            margin-right: 12px;
+            font-weight: 600;
+        }
+
+        /* Terminal Fail State Window Layer */
+        .mac-termination-box {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .terminal-alert-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .mac-termination-box h2 {
+            color: #ef4444;
+            font-family: 'Fira Code', monospace;
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .final-score-badge {
+            font-size: 24px;
+            font-weight: 700;
+            color: #10b981;
+            margin: 20px 0;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .mac-action-btn {
+            background: #27c93f;
+            color: #000000;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(39, 201, 63, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .mac-action-btn:hover {
+            transform: scale(1.03);
+        }
+
+        /* Ultra Responsive Target Calibration */
+        @media (max-width: 768px) {
+            .mac-terminal-wrapper {
+                margin: 15px auto;
+            }
+
+            .mac-body {
+                padding: 20px 16px;
+            }
+
+            .short-q-text {
+                font-size: 15px;
+            }
+
+            .mac-opt-btn {
+                padding: 14px 16px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#dashboard">Dashboard</a></li>
+                <li><a href="./index.html#chapters">Syllabus</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="mac-terminal-wrapper">
+
+        <!-- Real Mac OS Window Wrapper Structure Component -->
+        <div class="mac-window">
+            <div class="mac-titlebar">
+                <div class="mac-dots">
+                    <span class="dot dot-close"></span>
+                    <span class="dot dot-minimize"></span>
+                    <span class="dot dot-maximize"></span>
+                </div>
+                <div class="mac-title-text">electrician_hub_mock.sh</div>
+            </div>
+
+            <div class="mac-body">
+                <!-- Active Gaming Workspace Window Zone -->
+                <div id="quizLiveZone">
+                    <div class="quiz-stats-line">
+                        <div>$ score --total: <span id="pointsLabel" style="color: #10b981; font-weight:700;">0</span>
+                        </div>
+                        <div class="strike-banner">errors: <span id="errorLabel">0</span>/3</div>
+                    </div>
+
+                    <!-- Short 1-Line Conceptual Question Text -->
+                    <div class="short-q-text" id="targetQuestionText">Loading Question Module...</div>
+
+                    <div class="mac-options-grid">
+                        <button class="mac-opt-btn" onclick="evaluateSelection(0)"><span
+                                class="opt-prefix">[A]</span><span id="label0">Loading...</span></button>
+                        <button class="mac-opt-btn" onclick="evaluateSelection(1)"><span
+                                class="opt-prefix">[B]</span><span id="label1">Loading...</span></button>
+                        <button class="mac-opt-btn" onclick="evaluateSelection(2)"><span
+                                class="opt-prefix">[C]</span><span id="label2">Loading...</span></button>
+                        <button class="mac-opt-btn" onclick="evaluateSelection(3)"><span
+                                class="opt-prefix">[D]</span><span id="label3">Loading...</span></button>
+                    </div>
+                </div>
+
+                <!-- Terminal Session Aborted State Panel UI -->
+                <div class="mac-termination-box" id="quizAbortedZone">
+                    <span class="terminal-alert-icon">❌</span>
+                    <h2>PROCESS TERMINATED: STATUS_FAIL</h2>
+                    <p style="color: #9ca3af; font-size: 14px;">Aapne lagatar 3 sawalo ke galat jawab diye hain.</p>
+                    <div class="final-score-badge">SCORE: <span id="finalScoreLabel">0</span> PTS</div>
+                    <button class="mac-action-btn" onclick="executeSystemReset()">clear && restart_quiz</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Secured Mac UI Code Compliant Shell</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Menu Component System
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Pure 1-Line Crisp Short Questions Database (Zero Level Concept Testing)
+        const strictOneLineDatabase = [
+            { q: "विद्युत धारा (Electric Current) का मात्रक क्या है?", o: ["Volt", "Ampere", "Ohm", "Watt"], r: 1 },
+            { q: "प्रतिरोध (Resistance) को मापने की इकाई क्या होती है?", o: ["Farad", "Henry", "Ohm", "Weber"], r: 2 },
+            { q: "इलेक्ट्रॉन (Electron) पर कौन सा चार्ज होता है?", o: ["धनात्मक", "ऋणात्मक", "उदासीन", "कोई नहीं"], r: 1 },
+            { q: "वोल्टेज मापने के लिए किस मीटर का उपयोग करते हैं?", o: ["Voltmeter", "Ammeter", "Wattmeter", "Energy meter"], r: 0 },
+            { q: "MCB का पूरा नाम (Full Form) क्या होता है?", o: ["Mini Circuit Breaker", "Miniature Circuit Breaker", "Main Circuit Breaker", "Molded Circuit Breaker"], r: 1 },
+            { q: "विद्युत दबाव या EMF को मापने की इकाई क्या है?", o: ["Ampere", "Volt", "Coulomb", "Joule"], r: 1 },
+            { q: "सुरक्षा संकेतों में हरा वर्गाकार रंग क्या दर्शाता है?", o: ["निषेधात्मक", "सावधानी संकेत", "सकारात्मक सुरक्षा स्थिति", "अनिवार्य कार्य"], r: 2 },
+            { q: "ओम का नियम (Ohm's Law) का मुख्य सूत्र कौन सा है?", o: ["V = I / R", "V = I * R", "I = V * R", "R = V * I"], r: 1 },
+            { q: "मानव शरीर का गीली अवस्था में प्रतिरोध कितना होता है?", o: ["100 Ohm", "1,000 Ohm", "100,000 Ohm", "500,000 Ohm"], r: 1 },
+            { q: "अग्निशामक यंत्र में प्रयुक्त CTC का पूर्ण रूप क्या है?", o: ["Carbon Tetra Chloride", "Chemical Temperature Control", "Copper Terminal Conductor", "Carbon Total Cover"], r: 0 },
+            { q: "बिजली के तारों की आग बुझाने के लिए क्या उपयोग करें?", o: ["पानी की बौछार", "झाग (Foam)", "हैलोन या शुष्क पाउडर", "सल्फर डाई ऑक्साइड"], r: 2 },
+            { q: "एक अच्छे चालक (Good Conductor) का प्रतिरोध कैसा होता है?", o: ["बहुत उच्च", "शून्य या बहुत कम", "अनंत", "मध्यम"], r: 1 },
+            { q: "इन्सुलेशन प्रतिरोध मापने के लिए किसका उपयोग होता है?", o: ["Multimeter", "Megger", "Ammeter", "Galvanometer"], r: 1 },
+            { q: "शुद्ध तांबे (Copper) का गलनांक लगभग कितना होता है?", o: ["1085°C", "650°C", "232°C", "1538°C"], r: 0 },
+            { q: "सोल्डरिंग वायर (Soldering Wire) किसका मिश्रण होता है?", o: ["तांबा और जिंक", "लेड और टिन", "लोहा और क्रोमियम", "एल्युमिनियम और चांदी"], r: 1 },
+            { q: "कॉम्बिनेशन प्लायर का इंसुलेशन कितने वोल्ट तक सुरक्षित है?", o: ["100V", "500V", "1000V", "5000V"], r: 2 },
+            { q: "फेज वायर में करंट की उपस्थिति किससे जांची जाती है?", o: ["Neon Phase Tester", "Screw Driver", "Center Punch", "Wire Stripper"], r: 0 },
+            { q: "अर्थिंग (Earthing) का मुख्य उद्देश्य क्या होता है?", o: ["वोल्टेज बढ़ाना", "लीकेज करंट से सुरक्षा", "बिजली बिल कम करना", "तारों को ठंडा रखना"], r: 1 },
+            { q: "शुद्ध जल (Pure Water) विद्युत का क्या होता है?", o: ["सुचालक", "कुचालक (इन्सुलेटर)", "अर्धचालक", "सुपरkndctor"], r: 1 },
+            { q: "परमाणु (Atom) के नाभिक के अंदर कौन से कण होते हैं?", o: ["इलेक्ट्रॉन और प्रोटॉन", "प्रोटॉन और न्यूट्रॉन", "इलेक्ट्रॉन और न्यूट्रॉन", "सिर्फ इलेक्ट्रॉन"], r: 1 },
+            { q: "विद्युत का सबसे अच्छा सुचालक धातु कौन सा है?", o: ["चांदी (Silver)", "एल्युमिनियम", "लोहा", "पीतल"], r: 0 },
+            { q: "AC का पूरा नाम क्या होता है?", o: ["Alternating Current", "Automatic Current", "Amplified Current", "Active Current"], r: 0 },
+            { q: "DC का पूरा नाम क्या होता है?", o: ["Direct Current", "Dynamic Current", "Digital Current", "Double Current"], r: 0 },
+            { q: "भारत में घरेलू AC सप्लाई की फ्रीक्वेंसी क्या है?", o: ["60 Hz", "50 Hz", "100 Hz", "0 Hz"], r: 1 },
+            { q: "दिष्ट धारा (Direct Current) की फ्रीक्वेंसी कितनी होती है?", o: ["50 Hz", "60 Hz", "शून्य (0 Hz)", "अनंत"], r: 2 },
+            { q: "विद्युत शक्ति (Electric Power) का मात्रक क्या है?", o: ["Volt", "Ampere", "Watt", "Ohm"], r: 2 },
+            { q: "फ्यूज वायर को सर्किट में किस क्रम में जोड़ा जाता है?", o: ["समानांतर (Parallel)", "श्रेणीक्रम (Series)", "दोनों में", "किसी में भी नहीं"], r: 1 },
+            { q: "सुरक्षा फ्यूज का गलनांक (Melting Point) कैसा होना चाहिए?", o: ["बहुत उच्च", "निम्न (कम)", "अनंत", "लोहे के बराबर"], r: 1 },
+            { q: "घरेलू वायरिंग में सभी उपकरण किस क्रम में जुड़ते हैं?", o: ["समानांतर (Parallel)", "श्रेणीक्रम (Series)", "मिश्रित क्रम", "किसी में भी नहीं"], r: 0 },
+            { q: "विद्युत ऊर्जा (Electric Energy) मापने का मीटर क्या है?", o: ["Voltmeter", "Wattmeter", "Energy Meter (KWh)", "Ammeter"], r: 2 },
+            { q: "एक यूनिट बिजली (1 KWh) किसके बराबर होती है?", o: ["100 Watt hour", "1000 Watt hour", "10 Watt hour", "500 Watt hour"], r: 1 },
+            { q: "रासायनिक बैटरी से हमें कौन सी धारा प्राप्त होती है?", o: ["AC", "DC", "AC और DC दोनों", "पल्सेटिंग करंट"], r: 1 },
+            { q: "लेड एसिड बैटरी में कौन सा एसिड इलेक्ट्रोलाइट होता है?", o: ["HCl", "HNO3", "तनु सल्फ्यूरिक एसिड (H2SO4)", "CH3COOH"], r: 2 },
+            { q: "स्टोरेज बैटरी की क्षमता (Capacity) किसमें मापी जाती है?", o: ["Watt", "Volt-Ampere", "Ampere-Hour (AH)", "KWh"], r: 2 },
+            { q: "ट्रांसफॉर्मर (Transformer) किस सिद्धांत पर कार्य करता है?", o: ["Self Induction", "Mutual Induction", "Chemical Effect", "Heating Effect"], r: 1 },
+            { q: "क्या ट्रांसफॉर्मर DC सप्लाई पर कार्य कर सकता है?", o: ["हाँ", "नहीं", "सिर्फ कम वोल्टेज पर", "सिर्फ उच्च वोल्टेज पर"], r: 1 },
+            { q: "प्रतिरोधों को सीरीज में जोड़ने पर कुल मान क्या होगा?", o: ["घटता है", "बढ़ता है", "समान रहता है", "शून्य हो जाता है"], r: 1 },
+            { q: "प्रतिरोधों को पैरेलल में जोड़ने पर कुल मान क्या होगा?", o: ["घटता है", "बढ़ता है", "समान रहता है", "अनंत हो जाता है"], r: 0 },
+            { q: "विद्युत हीटर का हीटिंग एलिमेंट किसका बना होता है?", o: ["टंगस्टन", "नाइक्रोम", "तांबा", "एल्युमिनियम"], r: 1 },
+            { q: "कांच के इलेक्ट्रिक बल्ब का फिलामेंट किसका बना होता है?", o: ["नाइक्रोम", "टंगस्टन", "लोहा", "यूरिका"], r: 1 },
+            { q: "इलेक्ट्रॉनिक्स में प्रयुक्त अर्धचालक धातु कौन सी है?", o: ["तांबा", "एल्युमिनियम", "सिलिकॉन", "सोना"], r: 2 },
+            { q: "सिलिकॉन परमाणु के सबसे बाहरी शेल में कितने इलेक्ट्रॉन हैं?", o: ["2", "4", "6", "8"], r: 1 },
+            { q: "रेक्टिफायर (Rectifier) सर्किट का मुख्य कार्य क्या है?", o: ["DC को AC में बदलना", "AC को DC in बदलना", "वोल्टेज बढ़ाना", "करंट कम करना"], r: 1 },
+            { q: "एक सामान्य सेमीकंडक्टर डायोड में कितने टर्मिनल होते हैं?", o: ["एक", "दो (Anode/Cathode)", "तीन", "चार"], r: 1 },
+            { q: "विद्युत चुंबक बनाने के लिए सबसे उपयुक्त कोर कौन सा है?", o: ["नरम लोहा (Soft Iron)", "स्टील", "तांबा", "निकल"], r: 0 },
+            { q: "शुद्ध रेजिस्टिव फिलामेंट लैंप का पावर फैक्टर कितना होता है?", o: ["0.5 lagging", "शून्य", "इकाई (Unity = 1)", "0.8 leading"], r: 2 },
+            { q: "कैपेसिटर (Capacitor) की क्षमता की इकाई क्या होती है?", o: ["Ohm", "Henry", "Farad", "Coulomb"], r: 2 },
+            { q: "सीलिंग फैन सर्किट में कैपेसिटर का क्या कार्य है?", o: ["स्पीड घटाना", "फेज स्प्लिट करके टॉर्क बनाना", "सजावट करना", "करंट रोकना"], r: 1 },
+            { q: "सप्लाई लाइन के पैरेलल में कौन सा मीटर लगाया जाता है?", o: ["Voltmeter", "Ammeter", "Series Test Lamp", "Galvanometer"], r: 0 },
+            { q: "चालू लाइन में तारों को काटने के लिए क्या इस्तेमाल करें?", o: ["Hacksaw", "Insulated Side Cutting Plier", "Knife", "Chisel"], r: 1 },
+            { q: "सुरक्षा मानकों के अनुसार अर्थ वायर का रंग कैसा होता है?", o: ["लाल", "काला", "हरा", "नीला"], r: 2 },
+            { q: "सिंगल फेज डोमेस्टिक सप्लाई में न्यूट्रल तार का रंग क्या है?", o: ["लाल", "काला", "पीला", "हरा"], r: 1 },
+            { q: "थ्री फेज AC सप्लाई के फेजों का सही रंग क्रम क्या है?", o: ["Red, Yellow, Green", "Red, Yellow, Blue (RYB)", "Black, White, Red", "Blue, Green, Yellow"], r: 1 },
+            { q: "तारों में वोल्टेज ड्रॉप मुख्य रूप से किस पर निर्भर है?", o: ["रेजिस्टेंस और करंट मान पर", "सिर्फ इन्सुलेशन पर", "मौसम के तापमान पर", "स्विच के प्रकार पर"], r: 0 },
+            { q: "लग्ज (Lugs) को वायर एंड पर दबाने वाले टूल को क्या कहते हैं?", o: ["Wire Stripper", "Crimping Tool", "Center Punch", "Hacksaw"], r: 1 },
+            { q: "जंक्शन बॉक्स में तारों को सुरक्षित कसने वाला टूल क्या है?", o: ["लग्ज", "वायर नट / कनेक्टर स्ट्रिप", "फ्यूज ग्रिप", "मास्किंग टेप"], r: 1 },
+            { q: "ऑटोमैटिक स्ट्रीट लाइट को कंट्रोल करने वाला कंपोनेंट कौन सा है?", o: ["Thermistor", "LDR (Light Dependent Resistor)", "PIR Sensor", "DIAC"], r: 1 },
+            { q: "सोलर सेल सूर्य की ऊर्जा को सीधे किसमें परिवर्तित करता है?", o: ["यांत्रिक ऊर्जा", "विद्युत ऊर्जा (DC)", "रासायनिक ऊर्जा", "ऊष्मीय ऊर्जा"], r: 1 },
+            { q: "घूर्णन कर रही मोटर शाफ्ट का RPM किससे मापते हैं?", o: ["Tachometer", "Multimeter", "Megger", "Energy Meter"], r: 0 },
+            { q: "कृत्रिम श्वास देने की सबसे तेज और प्राथमिक विधि कौन सी है?", o: ["मुंह से मुंह विधि", "शफर विधि", "सिल्वेस्टर विधि", "रेस्पिरेटर वाल्व"], r: 0 }
+        ];
+
+        let executionPool = [];
+        let executionIndex = 0;
+        let cumulativeScore = 0;
+        let continuousViolations = 0;
+
+        function initializeAestheticShuffle() {
+            let buffer = [...strictOneLineDatabase];
+            for (let i = buffer.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [buffer[i], buffer[j]] = [buffer[j], buffer[i]];
+            }
+            executionPool = buffer;
+        }
+
+        function presentNextTerminalQuestion() {
+            if (executionIndex >= executionPool.length) {
+                initializeAestheticShuffle();
+                executionIndex = 0;
+            }
+
+            const frame = executionPool[executionIndex];
+            document.getElementById("targetQuestionText").innerText = `Q. ${frame.q}`;
+
+            for (let i = 0; i < 4; i++) {
+                document.getElementById(`label${i}`).innerText = frame.o[i];
+            }
+        }
+
+        function evaluateSelection(userIndex) {
+            const frame = executionPool[executionIndex];
+
+            if (userIndex === frame.r) {
+                cumulativeScore += 10;
+                continuousViolations = 0;
+                document.getElementById("pointsLabel").innerText = cumulativeScore;
+                executionIndex++;
+                presentNextTerminalQuestion();
+            } else {
+                continuousViolations++;
+                document.getElementById("errorLabel").innerText = continuousViolations;
+
+                if (continuousViolations >= 3) {
+                    triggerAbortLayout();
+                } else {
+                    executionIndex++;
+                    presentNextTerminalQuestion();
+                }
+            }
+        }
+
+        function triggerAbortLayout() {
+            document.getElementById("quizLiveZone").style.display = "none";
+            document.getElementById("quizAbortedZone").style.display = "block";
+            document.getElementById("finalScoreLabel").innerText = cumulativeScore;
+        }
+
+        function executeSystemReset() {
+            cumulativeScore = 0;
+            continuousViolations = 0;
+            executionIndex = 0;
+
+            document.getElementById("pointsLabel").innerText = "0";
+            document.getElementById("errorLabel").innerText = "0";
+
+            document.getElementById("quizLiveZone").style.display = "block";
+            document.getElementById("quizAbortedZone").style.display = "none";
+
+            initializeAestheticShuffle();
+            presentNextTerminalQuestion();
+        }
+
+        window.onload = () => {
+            initializeAestheticShuffle();
+            presentNextTerminalQuestion();
+        };
+    </script>
+</body>
+
+</html>

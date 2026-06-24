@@ -1,0 +1,910 @@
+/* ==========================================================================
+   1. GLOBAL SYSTEM RESET & VARIABLES CONFIGURATION (MOBILE & WEB COMPLIANT)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --dark-primary: #0f172a;
+    --dark-secondary: #1e293b;
+    --electric-yellow: #f1c40f;
+    --electric-hover: #e3b20a;
+    --neon-cyan: #06b6d4;
+    --neon-cyan-hover: #0891b2;
+    --text-muted: #64748b;
+    --border-smooth: #e2e8f0;
+    --neon-blue: #38bdf8;
+    --success-green: #10b981;
+    --success-bg: #dcfce7;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   2. STICKY ACTION NAV BAR (MOBILE WEBVIEW & APK COMPATIBLE)
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--dark-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--electric-yellow);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   3. HERO BANNER CONFIGURATION & NEON SYSTEM BUTTONS
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069') no-repeat center center/cover;
+    min-height: 48vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85));
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.badge {
+    background-color: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.hero-container p {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--electric-yellow);
+    color: var(--dark-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--electric-hover);
+    transform: translateY(-1px);
+}
+
+.btn-certificate {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-certificate:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   4. PREMIUM DASHBOARD TILES LAYER
+   ========================================================================== */
+.premium-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.dash-tile {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--border-smooth);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+    position: relative;
+}
+
+.dash-tile-icon {
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 12px;
+}
+
+.tile-blue .dash-tile-icon {
+    background-color: #eff6ff;
+}
+
+.tile-pink .dash-tile-icon {
+    background-color: #fdf2f8;
+}
+
+.tile-green .dash-tile-icon {
+    background-color: #f0fdf4;
+}
+
+.tile-gold .dash-tile-icon {
+    background-color: #fff7ed;
+}
+
+.dash-tile-body h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-primary);
+}
+
+.dash-tile-body p {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.tile-price {
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+    margin-right: 5px;
+}
+
+.free-tag {
+    color: #22c55e;
+    background-color: #f0fdf4;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.dash-tile-action {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: #f1f5f9;
+    color: #475569;
+    transition: all 0.2s ease;
+}
+
+.dash-tile-action:hover {
+    background-color: var(--dark-primary);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   5. SYLLABUS ROWS LIST LAYOUT (CROSS PRICE & SHINY BADGES)
+   ========================================================================== */
+.premium-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.premium-list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-smooth);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.border-blue {
+    border-left: 4px solid #2563eb;
+}
+
+.border-green {
+    border-left: 4px solid var(--success-green);
+}
+
+.row-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-indicator {
+    font-size: 11px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.active-lesson {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.active-comp {
+    background: #f0fdf4;
+    color: var(--success-green);
+}
+
+.lesson-details .lesson-meta {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: block;
+}
+
+.lesson-details h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark-primary);
+    margin-top: 1px;
+}
+
+.lesson-details p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.row-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.row-price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.row-old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.row-free-badge {
+    color: #16a34a;
+    background-color: var(--success-bg);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.premium-row-btn {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 16px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn-blue-style {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-blue-style:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-green-style {
+    background-color: var(--success-green);
+    color: #ffffff;
+}
+
+.btn-green-style:hover {
+    background-color: #059669;
+}
+
+/* ==========================================================================
+   6. MAIN STRUCTURAL LAYOUTS & CONTAINERS
+   ========================================================================== */
+.main-container {
+    padding: 40px 5%;
+}
+
+.bg-alt {
+    background-color: #f8fafc;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+.section-header {
+    margin-bottom: 25px;
+}
+
+.sub-title {
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section-header h2 {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--dark-primary);
+}
+
+.section-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+.max-width-md {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.terms-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-smooth);
+    border-left: 4px solid #ef4444;
+    margin-top: 25px;
+}
+
+/* ==========================================================================
+   7. PRODUCTION FOOTER LAYOUT
+   ========================================================================== */
+footer {
+    background-color: var(--dark-primary);
+    color: #94a3b8;
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 1px solid #1f2937;
+}
+
+.footer-logo {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+footer .credits {
+    font-size: 10px;
+    margin-top: 12px;
+    color: #475569;
+}
+
+/* ==========================================================================
+   8. PREMIUM NEON CYBERPUNK "COMING SOON" DIALOG DRAWER
+   ========================================================================== */
+.coming-soon-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.coming-soon-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.coming-soon-window {
+    background: var(--dark-secondary);
+    width: 90%;
+    max-width: 460px;
+    border-radius: 16px;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.coming-soon-overlay.open .coming-soon-window {
+    transform: scale(1);
+}
+
+.neon-panel-header {
+    background: var(--dark-primary);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #334155;
+}
+
+.neon-panel-header h4 {
+    color: var(--neon-blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.close-neon-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.neon-panel-body {
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.neon-alert-icon {
+    font-size: 42px;
+    margin-bottom: 12px;
+    display: inline-block;
+    animation: rotateGear 2.5s linear infinite;
+}
+
+@keyframes rotateGear {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neon-panel-body h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--electric-yellow);
+}
+
+.neon-panel-body p {
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.neon-loading-bar {
+    width: 100%;
+    height: 5px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.neon-progress {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, var(--neon-blue), var(--electric-yellow));
+    border-radius: 10px;
+    position: absolute;
+    animation: scanLoad 1.4s infinite ease-in-out;
+}
+
+@keyframes scanLoad {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.neon-panel-footer {
+    padding: 15px 20px;
+    background: var(--dark-primary);
+    border-top: 1px solid #334155;
+    text-align: right;
+}
+
+.btn-neon-close {
+    background: var(--neon-blue);
+    color: var(--dark-primary);
+    border: none;
+    padding: 9px 22px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-neon-close:hover {
+    background: #0ea5e9;
+}
+
+/* ==========================================================================
+   9. MOBILE & ANDROID WEBVIEW APK OVERRIDES (ULTRA RESPONSION FLOW)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--dark-primary);
+        position: absolute;
+        top: 55px;
+        left: 0;
+        padding: 15px 0;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 24px;
+    }
+
+    .hero-section {
+        min-height: 40vh;
+        padding: 30px 15px;
+    }
+
+    .hero-container h1 {
+        font-size: 19px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .premium-list-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .row-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #f1f5f9;
+        padding-top: 12px;
+        margin-top: 4px;
+    }
+
+    .row-price-box {
+        align-items: flex-start;
+    }
+
+    .premium-row-btn {
+        width: auto;
+        padding: 7px 20px;
+    }
+
+    .premium-dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+
+/* ==========================================================================
+   MAC-STYLE HIGH-PREMIUM DYNAMIC POPUP MODAL (100% RESPONSIVE)
+   ========================================================================== */
+.coming-soon-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.coming-soon-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Slick Mac Code Window */
+.mac-window {
+    background: #1e293b;
+    /* Premium Dark Slate */
+    width: 92%;
+    max-width: 440px;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(6, 182, 212, 0.25);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.coming-soon-overlay.open .mac-window {
+    transform: scale(1);
+}
+
+/* Authentic Three Dot Mac Top Bar */
+.mac-titlebar {
+    background: #0f172a;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #334155;
+}
+
+.mac-dots {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    left: 18px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.close-dot {
+    background: #ef4444;
+}
+
+.minimize-dot {
+    background: #f59e0b;
+}
+
+.maximize-dot {
+    background: #10b981;
+}
+
+.mac-title {
+    color: #64748b;
+    font-size: 12px;
+    font-family: monospace;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Layout Window Body Text and Content */
+.mac-body {
+    padding: 35px 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.electric-icon {
+    font-size: 48px;
+    color: #f1c40f;
+    margin-bottom: 15px;
+    animation: voltGlow 1.4s infinite alternate ease-in-out;
+}
+
+@keyframes voltGlow {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+    }
+
+    100% {
+        transform: scale(1.08);
+        text-shadow: 0 0 25px rgba(241, 196, 15, 0.9);
+    }
+}
+
+.mac-body h3 {
+    font-size: 21px;
+    color: #f1c40f;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.mac-body p {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Loading Neon Scanner bar */
+.neon-bar {
+    width: 100%;
+    height: 4px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.neon-progress-run {
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, #06b6d4, #f1c40f);
+    border-radius: 10px;
+    position: absolute;
+    animation: runLoading 1.2s infinite ease-in-out;
+}
+
+@keyframes runLoading {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+/* Custom Styled Action CTA Control Button */
+.mac-btn {
+    background: #f1c40f;
+    color: #0f172a;
+    border: none;
+    padding: 11px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mac-btn:hover {
+    background: #e3b20a;
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.4);
+    transform: translateY(-1px);
+}

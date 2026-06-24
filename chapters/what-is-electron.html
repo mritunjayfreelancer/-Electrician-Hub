@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: What is Electron? - Deep Theory - Electrician Hub</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .chapter-container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .chapter-header {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chapter-header h1 {
+            font-size: 30px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        /* Premium Deep Content Typography */
+        .content-block {
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+
+        .content-block h2 {
+            font-size: 22px;
+            color: #0f172a;
+            margin-bottom: 15px;
+            border-left: 5px solid #10b981;
+            padding-left: 12px;
+            font-weight: 600;
+        }
+
+        .content-block p {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .important-note {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #78350f;
+        }
+
+        /* Image Display Boxes */
+        .img-box {
+            text-align: center;
+            margin: 25px 0;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .img-box img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+        }
+
+        .img-caption {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Q&A Framework Layouts */
+        .qa-card {
+            background: #f8fafc;
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 15px;
+        }
+
+        .qa-card strong {
+            color: #0f172a;
+            font-size: 15px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .qa-card p {
+            font-size: 14px;
+            color: #475569;
+            margin: 0;
+        }
+
+        /* Main Download Trigger Bar */
+        .download-trigger-zone {
+            text-align: center;
+            margin: 40px 0;
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .btn-trigger-pdf {
+            background-color: #be185d;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            padding: 14px 30px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-trigger-pdf:hover {
+            background-color: #9d174d;
+        }
+
+        /* Premium Pop-up MCB Window Style CSS */
+        .mcb-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mcb-modal-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mcb-window {
+            background: #ffffff;
+            width: 90%;
+            max-width: 550px;
+            border-radius: 16px;
+            border-top: 8px solid #f1c40f;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            transform: translateY(-30px);
+            transition: transform 0.3s ease;
+        }
+
+        .mcb-modal-overlay.open .mcb-window {
+            transform: translateY(0);
+        }
+
+        .mcb-header {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mcb-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #f1c40f;
+        }
+
+        .mcb-close {
+            font-size: 20px;
+            color: #94a3b8;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .mcb-body {
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .mcb-quiz-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .mcb-quiz-item p {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .mcb-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mcb-options label {
+            font-size: 13px;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .mcb-footer {
+            padding: 15px 20px;
+            background: #f1f5f9;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mcb-error {
+            color: #ef4444;
+            font-size: 12px;
+            font-weight: 600;
+            display: none;
+        }
+
+        .btn-mcb-verify {
+            background: #10b981;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .chapter-nav-bar {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+        }
+
+        .btn-next-ch {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+
+        /* Print system for pure seamless PDF output matching styles */
+        @media print {
+            body {
+                background: #ffffff;
+                color: #000000;
+            }
+
+            .navbar,
+            .download-trigger-zone,
+            .mcb-modal-overlay,
+            footer,
+            .menu-toggle,
+            .chapter-nav-bar {
+                display: none !important;
+            }
+
+            .chapter-container {
+                border: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            .content-block h2 {
+                border-left: 5px solid #000000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+                <li><a href="../index.html#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="chapter-container">
+
+        <div class="chapter-header">
+            <span class="sub-title">Module 01 • Basic Electrical Theory Fundamentals</span>
+            <h1>Chapter 1: What is Electron? (इलेक्ट्रॉन की संपूर्ण थ्योरी)</h1>
+        </div>
+
+        <div class="content-block">
+            <h2>1. पदार्थ और परमाणु का बुनियादी ज्ञान (Matter & Atom)</h2>
+            <p>इस ब्रह्मांड में जितनी भी वस्तुएं हैं—चाहे वह तांबे का तार हो, पानी हो या हवा—सभी छोटे-छोटे कणों से मिलकर
+                बनी हैं। विज्ञान की भाषा में इन वस्तुओं को <strong>पदार्थ (Matter)</strong> कहा जाता है। किसी भी पदार्थ
+                का वह सबसे छोटा हिस्सा जिसे और अधिक विभाजित नहीं किया जा सकता, उसे <strong>परमाणु (Atom)</strong> कहते
+                हैं।</p>
+            <p>एक परमाणु इतना सूक्ष्म होता है कि इसे साधारण आंखों से नहीं देखा जा सकता। लेकिन बिजली को समझने के लिए
+                परमाणु के आंतरिक भाग को समझना सबसे पहली सीढ़ी है।</p>
+        </div>
+
+        <div class="content-block">
+            <h2>2. परमाणु की आंतरिक संरचना (Internal Atomic Structure)</h2>
+            <p>प्रत्येक परमाणु मुख्य रूप से तीन प्रकार के अति-सूक्ष्म कणों से मिलकर बना होता है, जिन्हें हम सब-एटॉमिक
+                पार्टिकल्स कहते हैं:</p>
+            <p><strong>A) नाभिक (Nucleus):</strong> यह परमाणु का केंद्रीय भाग (Center) होता है। यह परमाणु का सबसे भारी
+                हिस्सा होता है। इसके अंदर दो मुख्य कण पाए जाते हैं:<br>
+                • <strong>प्रोटॉन (Proton):</strong> इस कण पर हमेशा <strong>धनात्मक आवेश (+ve Charge)</strong> होता
+                है।<br>
+                • <strong>न्यूट्रॉन (Neutron):</strong> यह कण पूरी तरह से <strong>उदासीन (Charge-less /
+                    Neutral)</strong> होता है, इस पर कोई बिजली का चार्ज नहीं होता।</p>
+            <p><strong>B) इलेक्ट्रॉन (Electron):</strong> यह परमाणु का सबसे चमत्कारी कण है। यह नाभिक के अंदर स्थिर नहीं
+                रहता, बल्कि नाभिक के चारों ओर निश्चित वृत्ताकार कक्षाओं (Orbits) में प्रकाश की गति के समान बहुत तेजी से
+                चक्कर लगाता रहता है।</p>
+
+            <div class="img-box">
+                <img src="../img/atomic-structure.jpg"
+                    alt="Detailed Structure of Atom with Nucleus, Protons, Neutrons and Electrons">
+                <span class="img-caption">चित्र 1.1: परमाणु का वैज्ञानिक मॉडल - केंद्र में नाभिक और बाहरी कक्षाओं में
+                    घूमते इलेक्ट्रॉन</span>
+            </div>
+
+            <div class="important-note">
+                <strong>💡 इलेक्ट्रिशियन परीक्षा नोट:</strong> परमाणु सामान्य अवस्था में पूरी तरह से न्यूट्रल (उदासीन)
+                होता है क्योंकि उसके अंदर जितने प्रोटॉन (प्लस चार्ज) होते हैं, ठीक उतने ही इलेक्ट्रॉन (माइनस चार्ज) बाहर
+                चक्कर लगा रहे होते हैं। दोनों एक दूसरे के प्रभाव को बैलेंस रखते हैं।
+            </div>
+        </div>
+
+        <div class="content-block">
+            <h2>3. इलेक्ट्रॉन की मुख्य विशेषताएं (Deep Properties of Electron)</h2>
+            <p>ITI थ्योरी और सरकारी परीक्षाओं के दृष्टिकोण से इलेक्ट्रॉन की निम्नलिखित विशेषताएं याद रखना बहुत जरूरी है:
+            </p>
+            <p>• <strong>विद्युत आवेश (Electrical Charge):</strong> इलेक्ट्रॉन पर हमेशा <strong>ऋणात्मक आवेश (-ve
+                    Charge)</strong> होता है। एक इलेक्ट्रॉन पर कुल <strong>-1.602 × 10<sup>-19</sup> कूलम्ब</strong> का
+                चार्ज होता है।<br>
+                • <strong>खोज (Discovery):</strong> इलेक्ट्रॉन की खोज सन 1897 में महान वैज्ञानिक <strong>सर जे.जे. थॉमसन
+                    (J.J. Thomson)</strong> ने कैथोड किरणों के प्रयोग के दौरान की थी।<br>
+                • <strong>वजन / द्रव्यमान (Mass):</strong> इलेक्ट्रॉन का द्रव्यमान अत्यंत नगण्य होता है। इसका मान
+                <strong>9.109 × 10<sup>-31</sup> किलोग्राम</strong> होता है। यदि प्रोटॉन से इसकी तुलना करें तो यह
+                प्रोटॉन से लगभग 1840 गुना हल्का होता है।</p>
+        </div>
+
+        <div class="content-block">
+            <h2>4. मुक्त इलेक्ट्रॉन और विद्युत धारा (Free Electrons & Current)</h2>
+            <p>जो इलेक्ट्रॉन परमाणु की सबसे आखिरी बाहरी कक्षा (Outermost Orbit / Valence Shell) में चक्कर लगाते हैं, उन
+                पर नाभिक का पकड़ने वाला आकर्षण बल बहुत कमजोर होता है। इस बाहरी कक्षा के इलेक्ट्रॉन को थोड़ी सी भी बाहरी
+                ऊर्जा (जैसे वोल्टेज) मिलने पर यह अपनी कक्षा छोड़कर बाहर निकल जाता है। इसी कण को हम <strong>मुक्त
+                    इलेक्ट्रॉन (Free Electron)</strong> कहते हैं।</p>
+
+            <div class="img-box">
+                <img src="../img/electron-flow.jpg"
+                    alt="Movement of free electrons inside copper conductor generating electricity">
+                <span class="img-caption">चित्र 1.2: किसी चालक (Conductor) तार में मुक्त इलेक्ट्रॉनों का एक दिशा में
+                    प्रवाह</span>
+            </div>
+
+            <p>जब किसी चालक तार (जैसे एल्युमिनियम या कॉपर) के अंदर करोड़ों मुक्त इलेक्ट्रॉन एक निश्चित दिशा में बहने
+                लगते हैं, तो उसी बहाव को हम <strong>विद्युत धारा (Electric Current)</strong> कहते हैं। संक्षेप में कहें
+                तो: <em>"इलेक्ट्रॉनों के बहने की दर को ही करंट कहा जाता है।"</em></p>
+        </div>
+
+        <div class="content-block">
+            <h2>5. अध्याय अभ्यास प्रश्न बैंक (Comprehensive Question Bank)</h2>
+
+            <p style="font-weight: 600; margin-bottom: 10px; color:#2563eb;">A) लघु उत्तरीय प्रश्न और उत्तर (Short
+                Question Answers):</p>
+            <div class="qa-card">
+                <strong>Q1. इलेक्ट्रॉन वोल्ट (eV) किसका मात्रक होता है?</strong>
+                <p>Ans: इलेक्ट्रॉन वोल्ट (eV) परमाणु स्तर पर ऊर्जा (Energy) को नापने का एक छोटा मात्रक होता है।</p>
+            </div>
+            <div class="qa-card">
+                <strong>Q2. चालक (Conductor) पदार्थों में करंट क्यों बहता है?</strong>
+                <p>Ans: क्योंकि सुचालक पदार्थों (जैसे तांबा, चांदी) के परमाणुओं में मुक्त इलेक्ट्रॉनों (Free Electrons)
+                    की संख्या बहुत अधिक होती है।</p>
+            </div>
+            <div class="qa-card">
+                <strong>Q3. इलेक्ट्रॉन का चार्ज किस वैज्ञानिक ने मापा था?</strong>
+                <p>Ans: इलेक्ट्रॉन के चार्ज का सटीक मान आर.ए. मिलिकन (R.A. Millikan) ने अपने प्रसिद्ध 'ऑयल ड्रॉप
+                    एक्सपेरिमेंट' द्वारा मापा था।</p>
+            </div>
+
+            <p style="font-weight: 600; margin-top:20px; margin-bottom: 10px; color:#2563eb;">B) विस्तृत उत्तरीय प्रश्न
+                (Long Q&A Concepts):</p>
+            <div class="qa-card">
+                <strong>प्रश्न: करंट के बहने की दिशा और इलेक्ट्रॉनों के बहने की दिशा में क्या अंतर है?</strong>
+                <p>Ans: वैज्ञानिक नियमों के अनुसार, इलेक्ट्रॉन हमेशा नेगेटिव (-ve) से पॉजिटिव (+ve) टर्मिनल की ओर बहते
+                    हैं। लेकिन पारंपरिक रूप से करंट (Conventional Current) की दिशा हमेशा इलेक्ट्रॉनों के विपरीत यानी
+                    पॉजिटिव (+ve) से नेगेटिव (-ve) मानी जाती है।</p>
+            </div>
+        </div>
+
+        <div class="download-trigger-zone">
+            <p style="font-size: 14px; color:#475569; margin-bottom: 15px; font-weight: 500;">Is pure chapter ko
+                complete premium format me save karne ke liye verification test pass karein.</p>
+            <button class="btn-trigger-pdf" id="openMcbQuizBtn">📥 Download Chapter PDF Notes</button>
+        </div>
+
+        <div class="chapter-nav-bar">
+            <a href="./safety.html" class="btn-next-ch">Next Chapter: Safety Rules ➔</a>
+        </div>
+
+    </main>
+
+    <div class="mcb-modal-overlay" id="mcbOverlay">
+        <div class="mcb-window">
+            <div class="mcb-header">
+                <h3>⚡ SECURITY DOOR: MCB Safety Verification</h3>
+                <button class="mcb-close" id="closeMcbBtn">×</button>
+            </div>
+            <div class="mcb-body">
+                <p
+                    style="font-size: 12px; color:#64748b; margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">
+                    PDF secure asset unlock karne ke liye niche diye gaye 3 prashno ka sahi uttar chun kar MCB Lift
+                    karein:</p>
+
+                <div class="mcb-quiz-item">
+                    <p><strong>प्रश्न 1.</strong> इलेक्ट्रॉन पर किस प्रकार का विद्युत आवेश (-ve ya +ve) पाया जाता है?
+                    </p>
+                    <div class="mcb-options">
+                        <label><input type="radio" name="mcb1" value="wrong"> A) धनात्मक (Positive Charge)</label>
+                        <label><input type="radio" name="mcb1" value="correct"> B) ऋणात्मक (Negative Charge)</label>
+                        <label><input type="radio" name="mcb1" value="wrong"> C) शून्य / उदासीन (Neutral)</label>
+                    </div>
+                </div>
+
+                <div class="mcb-quiz-item">
+                    <p><strong>प्रश्न 2.</strong> इलेक्ट्रॉन का द्रव्यमान (Weight) प्रोटॉन की तुलना में कितना गुना होता
+                        है?</p>
+                    <div class="mcb-options">
+                        <label><input type="radio" name="mcb2" value="wrong"> A) बराबर (Equal)</label>
+                        <label><input type="radio" name="mcb2" value="wrong"> B) 100 गुना भारी</label>
+                        <label><input type="radio" name="mcb2" value="correct"> C) लगभग 1/1840वां भाग (Halka)</label>
+                    </div>
+                </div>
+
+                <div class="mcb-quiz-item">
+                    <p><strong>प्रश्न 3.</strong> परमाणु का सबसे भारी भाग कौन सा होता है जिसमें प्रोटॉन और न्यूट्रॉन
+                        होते हैं?</p>
+                    <div class="mcb-options">
+                        <label><input type="radio" name="mcb3" value="correct"> A) नाभिक (Nucleus)</label>
+                        <label><input type="radio" name="mcb3" value="wrong"> B) बाहरी कक्षा (Orbit)</label>
+                        <label><input type="radio" name="mcb3" value="wrong"> C) मुक्त इलेक्ट्रॉन वैलेंस</label>
+                    </div>
+                </div>
+            </div>
+            <div class="mcb-footer">
+                <span class="mcb-error" id="mcbErrorBox">⚠️ Galat Jawab! Dubara check karein.</span>
+                <button class="btn-mcb-verify" id="mcbVerifyAction">Verify & Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Code Optimization Compliant with GitHub Pages & Play Store WebView</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Hamburger Mobile Toggle
+            const mobileMenu = document.getElementById("mobileMenu");
+            const navLinks = document.getElementById("navLinks");
+            if (mobileMenu && navLinks) {
+                mobileMenu.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                });
+            }
+
+            // MCB Box Dynamic Trigger Engine
+            const openBtn = document.getElementById("openMcbQuizBtn");
+            const closeBtn = document.getElementById("closeMcbBtn");
+            const overlay = document.getElementById("mcbOverlay");
+            const verifyBtn = document.getElementById("mcbVerifyAction");
+            const errorBox = document.getElementById("mcbErrorBox");
+
+            openBtn.addEventListener("click", () => {
+                overlay.classList.add("open");
+                errorBox.style.display = "none";
+            });
+
+            closeBtn.addEventListener("click", () => {
+                overlay.classList.remove("open");
+            });
+
+            // Verification Check Engine
+            verifyBtn.addEventListener("click", () => {
+                const ans1 = document.querySelector('input[name="mcb1"]:checked');
+                const ans2 = document.querySelector('input[name="mcb2"]:checked');
+                const ans3 = document.querySelector('input[name="mcb3"]:checked');
+
+                if (ans1 && ans2 && ans3) {
+                    if (ans1.value === "correct" && ans2.value === "correct" && ans3.value === "correct") {
+                        errorBox.style.display = "none";
+                        overlay.classList.remove("open"); // Close popup cleanly
+                        alert("🎉 Teeno Jawab Sahi Hain! MCB Lift ho chuki hai. Ab aapki premium book print aur save ho rahi hai.");
+                        window.print(); // Triggers high quality direct styled engine print system
+                    } else {
+                        errorBox.style.display = "block";
+                    }
+                } else {
+                    alert("⚠️ Kripya saare prashno ka uttar select karein!");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚡ ITI Electrician Master Notes & Short Definitions (NIMI 2026 Framework)</title>
+
+    <!-- Super High-Traffic SEO Setup for Quick Google Rank Push -->
+    <meta name="description"
+        content="ITI Electrician trade theory ke complete advanced quick revision short notes aur important technical definitions Hindi, English aur Hinglish me.">
+    <meta name="keywords"
+        content="ITI Electrician Notes, Electrician Definitions Hindi, Electrical Short Notes, NIMI Pattern Notes 2026, Electrician Hub">
+    <meta name="robots" content="index, follow">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        body {
+            background-color: #0b0f19 !important;
+            color: #cbd5e1;
+        }
+
+        .notes-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            padding: 45px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .notes-hero h1 {
+            color: #f1c40f;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .notes-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        /* Search Filter Interface */
+        .filter-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .notes-search {
+            width: 100%;
+            background: #111827;
+            border: 1px solid #374151;
+            padding: 14px 20px;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.2s;
+        }
+
+        .notes-search:focus {
+            border-color: #38bdf8;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Mac System Container Architecture */
+        .mac-notes-block {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .mac-header-bar {
+            background: #1f2937;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #374151;
+            position: relative;
+        }
+
+        .dots-group {
+            display: flex;
+            gap: 7px;
+        }
+
+        .m-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .d-red {
+            background: #ff5f56;
+        }
+
+        .d-yellow {
+            background: #ffbd2e;
+        }
+
+        .d-green {
+            background: #27c93f;
+        }
+
+        .terminal-tab-title {
+            color: #9ca3af;
+            font-family: 'Fira Code', monospace;
+            font-size: 11px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .mac-notes-content {
+            padding: 24px;
+        }
+
+        /* Combined Language Layout Elements */
+        .topic-badge {
+            font-family: 'Fira Code', monospace;
+            font-size: 12px;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 2px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .english-definition {
+            font-size: 15px;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .hinglish-explanation {
+            font-size: 13.5px;
+            color: #94a3b8;
+            margin-bottom: 14px;
+            line-height: 1.6;
+            font-style: italic;
+            border-left: 2px dashed #4b5563;
+            padding-left: 10px;
+        }
+
+        .hindi-definition {
+            font-size: 14px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            background: rgba(31, 41, 55, 0.5);
+            padding: 12px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #f1c40f;
+        }
+
+        .interview-tip {
+            margin-top: 15px;
+            font-size: 13px;
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 10px 14px;
+            border-radius: 6px;
+            color: #10b981;
+        }
+
+        .interview-tip strong {
+            color: #f1c40f;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Fluid Mobile Adjustment Layout */
+        @media (max-width: 768px) {
+            .notes-container {
+                padding: 0 10px;
+                margin: 15px auto;
+            }
+
+            .mac-notes-content {
+                padding: 16px;
+            }
+
+            .english-definition {
+                font-size: 14px;
+            }
+
+            .hinglish-explanation {
+                font-size: 12.5px;
+            }
+
+            .hindi-definition {
+                font-size: 13px;
+                padding: 10px;
+            }
+
+            .interview-tip {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#dashboard">Dashboard</a></li>
+                <li><a href="./quiz.html">Live Quiz</a></li>
+                <li><a href="./questions-answers.html">200 Q&A</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <div class="notes-hero">
+        <h1>📖 ITI Electrician Theory Master Short Notes</h1>
+        <p style="color: #94a3b8; font-size:14px; max-width:650px; margin:0 auto;">CBT Exam aur Interview cracking
+            definitions panel. Zero Level se lekar Industrial Advanced systems tak ke exact parameters.</p>
+    </div>
+
+    <main class="notes-container">
+
+        <!-- Instant Filter Bar Control -->
+        <div class="filter-wrapper">
+            <input type="text" id="notesSearchBox" class="notes-search"
+                placeholder="Kisi bhi chapter, definition ya key term ko yahan instant search karein...">
+        </div>
+
+        <!-- Master Wrapper Grid Block for Notes Elements -->
+        <div id="notesDataWrapper">
+
+            <!-- Module 1 -->
+            <div class="mac-notes-block">
+                <div class="mac-header-bar">
+                    <div class="dots-group">
+                        <span class="m-dot d-red"></span>
+                        <span class="m-dot d-yellow"></span>
+                        <span class="m-dot d-green"></span>
+                    </div>
+                    <div class="terminal-tab-title">module_01_electric_current.sh</div>
+                </div>
+                <div class="mac-notes-content">
+                    <span class="topic-badge">1. Electric Current (विद्युत धारा)</span>
+                    <div class="english-definition">Definition: The continuous flow of free electrons through a closed
+                        conducting path per unit time.</div>
+                    <div class="hinglish-explanation">Simplest Explanation: Kisi closed wire me se electrons ke lagatar
+                        behne (flow) ki rate ko electric current kehte hain. Iski direction hamesha electrons ke flow ke
+                        opposite (vpreet) hoti hai.</div>
+                    <div class="hindi-definition">हिंदी परिभाषा: किसी बंद चालक परिपथ में आवेश (इलेक्ट्रॉनों) के सतत
+                        प्रवाह की दर को विद्युत धारा कहते हैं। इसका मात्रक ऐम्पियर (Ampere) होता है और इसे 'I' से
+                        प्रदर्शित किया जाता है। [$I = Q / t$]</div>
+                    <div class="interview-tip"><strong>💡 INTERVIEW KEY:</strong> Direct interviewer ko batayein ki
+                        current ko hamesha Ammeter se **Series** me mapte hain, aur iska internal resistance zero hona
+                        chahiye.</div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="mac-notes-block">
+                <div class="mac-header-bar">
+                    <div class="dots-group"><span class="m-dot d-red"></span><span class="m-dot d-yellow"></span><span
+                            class="m-dot d-green"></span></div>
+                    <div class="terminal-tab-title">module_02_voltage_emf.sh</div>
+                </div>
+                <div class="mac-notes-content">
+                    <span class="topic-badge">2. EMF vs Potential Difference (विद्युत वाहक बल बनाम विभवांतर)</span>
+                    <div class="english-definition">EMF: Electromotive Force is the total voltage produced by a source
+                        (battery/generator) when no current is flowing. Potential Difference is the drop across any
+                        load.</div>
+                    <div class="hinglish-explanation">Simplest Explanation: EMF woh pressure hai jo electrons ko dhakka
+                        marta hai jab current circuit se nahi li ja rahi ho. Jab circuit chal raha hota hai tab wires ya
+                        load ke beech ke pressure drop ko P.D. ya voltage kehte hain.</div>
+                    <div class="hindi-definition">हिंदी परिभाषा: बिना किसी लोड के स्रोत द्वारा उत्पन्न कुल विद्युत दबाव
+                        विद्युत वाहक बल (EMF) कहलाता है। जब परिपथ में धारा बहती है, तब दो बिंदुओं के बीच के वोल्टेज अंतर
+                        को विभवांतर (P.D.) कहते हैं। दोनों की इकाई वोल्ट (Volt) होती है।</div>
+                    <div class="interview-tip"><strong>💡 INTERVIEW KEY:</strong> EMF का मान हमेशा पोटेंशियल डिफरेंस
+                        (P.D.) se bada hota hai kyuki circuit me internal resistance ke karan voltage drop ho jata hai.
+                        [$$V = E - I \times R$$]</div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="mac-notes-block">
+                <div class="mac-header-bar">
+                    <div class="dots-group"><span class="m-dot d-red"></span><span class="m-dot d-yellow"></span><span
+                            class="m-dot d-green"></span></div>
+                    <div class="terminal-tab-title">module_03_resistance.sh</div>
+                </div>
+                <div class="mac-notes-content">
+                    <span class="topic-badge">3. Electrical Resistance (प्रतिरोध)</span>
+                    <div class="english-definition">Definition: The property of a substance that opposes or resists the
+                        flow of electric current through it.</div>
+                    <div class="hinglish-explanation">Simplest Explanation: Jo cheez wire me behne wale current ke raste
+                        me rukaawat (opposition) banti hai, use resistance kehte hain. Iski unit Ohm ($\Omega$) hoti
+                        hai.</div>
+                    <div class="hindi-definition">हिंदी परिभाषा: किसी पदार्थ का वह प्राकृतिक गुण जो स्वयं में से
+                        प्रवाहित होने वाली विद्युत धारा का विरोध करता है, प्रतिरोध कहलाता है। यह तार की लंबाई के सीधे
+                        समानुपाती और मोटाई (Area) के व्युत्क्रमानुपाती होता है। [$$R = \rho \times \frac{L}{A}$$]</div>
+                    <div class="interview-tip"><strong>💡 INTERVIEW KEY:</strong> Conductors ka resistance tapman
+                        (Temperature) badhne par **badhta hai** (Positive Temperature Coefficient) aur Semiconductors ka
+                        tapman badhne par **ghatta hai**.</div>
+                </div>
+            </div>
+
+            <!-- Module 4 -->
+            <div class="mac-notes-block">
+                <div class="mac-header-bar">
+                    <div class="dots-group"><span class="m-dot d-red"></span><span class="m-dot d-yellow"></span><span
+                            class="m-dot d-green"></span></div>
+                    <div class="terminal-tab-title">module_04_transformer_core.sh</div>
+                </div>
+                <div class="mac-notes-content">
+                    <span class="topic-badge">4. Transformer Working Principle (ट्रांसफॉर्मर का सिद्धांत)</span>
+                    <div class="english-definition">Definition: A static electrical machine that transfers electrical
+                        energy from one circuit to another through Mutual Induction without changing frequency.</div>
+                    <div class="hinglish-explanation">Simplest Explanation: Transformer ek aisi ruki hui (static)
+                        machine hai jo bina kisi direct connection ke, sirf magnetic field ke zariye voltage ko kam ya
+                        jyada karti hai. Isme frequency kabhi nahi badalti.</div>
+                    <div class="hindi-definition">हिंदी परिभाषा: ट्रांसफॉर्मर एक स्थिर विद्युत उपकरण है जो अन्योन्य
+                        प्रेरण (Mutual Induction) के सिद्धांत पर कार्य करता है। यह आवृत्ति (Frequency) को बदले बिना
+                        वोल्टेज को स्टेप-अप या स्टेप-डाउन करता है। इसकी रेटिंग KVA में व्यक्त की जाती है।</div>
+                    <div class="interview-tip"><strong>💡 INTERVIEW KEY:</strong> Transformer **DC सप्लाई पर काम नहीं
+                        करता**। अगर DC देंगे, तो इंडक्टिव रिएक्टेंस शून्य होने के कारण प्राइमरी वाइंडिंग अत्यधिक करंट से
+                        जल जाएगी।</div>
+                </div>
+            </div>
+
+            <!-- Module 5 -->
+            <div class="mac-notes-block">
+                <div class="mac-header-bar">
+                    <div class="dots-group"><span class="m-dot d-red"></span><span class="m-dot d-yellow"></span><span
+                            class="m-dot d-green"></span></div>
+                    <div class="terminal-tab-title">module_05_circuit_protection.sh</div>
+                </div>
+                <div class="mac-notes-content">
+                    <span class="topic-badge">5. Miniature Circuit Breaker - MCB (लघु परिपथ विच्छेदक)</span>
+                    <div class="english-definition">Definition: An electromagnetic-thermal device designed to
+                        automatically isolate the electrical circuit during overload or short-circuit conditions.</div>
+                    <div class="hinglish-explanation">Simplest Explanation: MCB ek tarah ka automatic safety switch hai
+                        jo purane kit-kat fuse ki jagah lagta hai. Jab ghar me short circuit ya jarurat se jyada load
+                        badhta hai, toh ye automatically 'Trip' (off) ho jata hai.</div>
+                    <div class="hindi-definition">हिंदी परिभाषा: यह एक विद्युत-यांत्रिक सुरक्षा उपकरण है जो ओवरलोड
+                        (Overload) या शॉर्ट-सर्किट (Short-Circuit) होने पर परिपथ को स्वतः ही बंद (Trip) कर देता है।
+                        इसमें तार बदलने की आवश्यकता नहीं होती, इसे पुनः रिसेट किया जा सकता है।</div>
+                    <div class="interview-tip"><strong>💡 INTERVIEW KEY:</strong> MCB thermal trip (bimetallic strip) se
+                        **overload** ko handle karti hai aur electromagnetic solenoid se **short-circuit** ko rapid trip
+                        karti hai.</div>
+                </div>
+            </div>
+
+            <!-- Module 6 -->
+            <div class="mac-notes-block">
+                <div class="mac-header-bar">
+                    <div class="dots-group"><span class="m-dot d-red"></span><span class="m-dot d-yellow"></span><span
+                            class="m-dot d-green"></span></div>
+                    <div class="terminal-tab-title">module_06_earthing.sh</div>
+                </div>
+                <div class="mac-notes-content">
+                    <span class="topic-badge">6. Earthing System (भूसम्पर्कन प्रणाली)</span>
+                    <div class="english-definition">Definition: Connecting the metallic body of electrical equipment to
+                        the earth mass using a low resistance wire for leakage current discharge.</div>
+                    <div class="hinglish-explanation">Simplest Explanation: Kisi bhi machine ki metal body se ek wire
+                        jodkar zameen ke andar plate ya pipe se connect karna earthing kehlata hai. Isse agar machine me
+                        current leak ho, toh insaan ko shock nahi lagta aur current seedhe zameen me chala jata hai.
+                    </div>
+                    <div class="hindi-definition">हिंदी परिभाषा: विद्युत उपकरणों के धात्विक आवरण को कम प्रतिरोध वाले
+                        चालक तार द्वारा सीधे पृथ्वी के द्रव्यमान से जोड़ने की प्रक्रिया को अर्थिंग कहते हैं। इसका मुख्य
+                        उद्देश्य लीकेज करंट से मानव जीवन की सुरक्षा करना है।</div>
+                    <div class="interview-tip"><strong>💡 INTERVIEW KEY:</strong> Ek perfect aur effective
+                        grounding/earthing ka resistance **1 ओम से कम** होना चाहिए। इसमें नमी बनाए रखने के लिए कोयला और
+                        नमक मिलाया जाता है।</div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Tri-Language NIMI Structural Core Notes</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Mobile Hamburger linkage Menu System 
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Real-Time Micro Instant Search Engine (Zero Delay Logic)
+        const notesSearchBox = document.getElementById("notesSearchBox");
+        notesSearchBox.addEventListener("input", function () {
+            const currentQuery = this.value.toLowerCase().trim();
+            const blocks = document.querySelectorAll(".mac-notes-block");
+
+            blocks.forEach(block => {
+                const badgeText = block.querySelector(".topic-badge").innerText.toLowerCase();
+                const engText = block.querySelector(".english-definition").innerText.toLowerCase();
+                const hinglishText = block.querySelector(".hinglish-explanation").innerText.toLowerCase();
+                const hindiText = block.querySelector(".hindi-definition").innerText.toLowerCase();
+
+                if (badgeText.includes(currentQuery) || engText.includes(currentQuery) || hinglishText.includes(currentQuery) || hindiText.includes(currentQuery)) {
+                    block.style.display = "block";
+                } else {
+                    block.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
