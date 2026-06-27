@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Advanced Google SEO & Ranking Meta Tags -->
+    <title>Module 6: AC Circuits | ITI Electrician Theory Notes & CBT Exam MCQs</title>
+    <meta name="description"
+        content="ITI Electrician Trade Theory Chapter 6 Premium Notes in Hindi/Hinglish. Learn Alternating Current (AC), RMS Value, Power Factor, Star-Delta Connection with Top 10 Mock Test MCQs.">
+    <meta name="keywords"
+        content="AC Circuits, Alternating Current, ITI Electrician Theory, RMS Value, Power Factor, Star Delta Connection, ITI CBT Exam 2026, Electrician Hub Notes">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Electrician Hub">
+    <link rel="canonical" href="https://yourdomain.com/chapters/ac-circuits.html">
+
+    <!-- Open Graph for Social Media Optimization -->
+    <meta property="og:title" content="Module 6: AC Circuits | ITI Electrician Theory Premium Notes">
+    <meta property="og:description"
+        content="Master AC Circuits with interactive dashboards, shortcuts, and CBT exam practice questions. Perfect for ITI students.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yourdomain.com/chapters/ac-circuits.html">
+
+    <!-- Premium Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Ultra-Premium Light Theme Core Blueprint */
+        :root {
+            --primary: #ea580c;
+            --primary-hover: #c2410c;
+            --slate-900: #0f172a;
+            --slate-700: #334155;
+            --slate-500: #64748b;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            background-color: var(--bg-main) !important;
+            color: var(--slate-700);
+            font-family: 'Inter', 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            /* Comfortable eye scrolling readability */
+            letter-spacing: -0.01em;
+        }
+
+        /* Highly Scannable Navbar Architecture */
+        .navbar {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--slate-700);
+            font-weight: 500;
+            font-size: 14.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 24px;
+            height: 2px;
+            background-color: var(--slate-900);
+            transition: all 0.2s ease;
+        }
+
+        /* SEO Main Content Wrapper */
+        .study-page-container {
+            max-width: 860px;
+            /* Optimal reading line length to prevent eye strain */
+            margin: 40px auto;
+            padding: 40px 35px;
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-md);
+        }
+
+        .chapter-header {
+            text-align: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 25px;
+            margin-bottom: 40px;
+        }
+
+        .chapter-header h1 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--slate-900);
+            font-size: 30px;
+            margin: 8px 0;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .teacher-note {
+            background-color: #fff7ed;
+            border-left: 5px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #9a3412;
+            line-height: 1.6;
+        }
+
+        /* Fluid UX Alternating Content Grid Layout */
+        .flex-row-alternating {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 45px 0;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-column {
+            flex: 1.2;
+        }
+
+        .image-column {
+            flex: 0.8;
+            background-color: var(--bg-main);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .image-column img:hover {
+            transform: scale(1.02);
+        }
+
+        h2.topic-heading {
+            font-family: 'Poppins', sans-serif;
+            color: var(--slate-900);
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+
+        .sub-topic-heading {
+            color: var(--slate-900);
+            font-size: 17px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .lecture-eng {
+            font-size: 15px;
+            color: var(--slate-900);
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--slate-500);
+        }
+
+        .lecture-hinglish {
+            font-size: 15px;
+            color: var(--slate-700);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .example-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 18px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 14.5px;
+            color: #14532d;
+        }
+
+        .formula-box {
+            background-color: var(--bg-main);
+            border: 1px dashed var(--slate-500);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            color: var(--slate-900);
+            font-size: 16px;
+            text-align: center;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Industrial Clean Technical Comparison Matrices */
+        .cable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 14.5px;
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .cable-table th,
+        .cable-table td {
+            padding: 16px;
+            text-align: left;
+        }
+
+        .cable-table th {
+            background-color: #f8fafc;
+            color: var(--slate-900);
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .cable-table td {
+            color: var(--slate-700);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cable-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Q&A Interactive Cards Layout */
+        .exam-section-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--slate-900);
+            font-size: 24px;
+            margin: 50px 0 25px 0;
+            border-left: 5px solid var(--primary);
+            padding-left: 12px;
+            font-weight: 700;
+        }
+
+        .exam-qa-card {
+            background-color: var(--bg-main);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease;
+        }
+
+        .exam-qa-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .exam-question {
+            font-weight: 600;
+            color: var(--slate-900);
+            margin-bottom: 10px;
+            font-size: 15.5px;
+        }
+
+        .exam-answer {
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* MCQ Modern Dashboard Layout */
+        .mcq-card {
+            background-color: var(--bg-card);
+            padding: 22px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mcq-opt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .mcq-option-btn {
+            background-color: var(--bg-main);
+            border: 1px solid var(--border);
+            color: var(--slate-700);
+            padding: 14px 18px;
+            border-radius: 10px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14.5px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: var(--slate-500);
+            background-color: #f1f5f9;
+        }
+
+        .mcq-option-btn.correct-ans {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #15803d !important;
+            font-weight: 600;
+        }
+
+        .mcq-option-btn.wrong-ans {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        /* Navigation Controllers & Action Grid */
+        .bottom-action-panel {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn-action {
+            padding: 15px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-download-pdf {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-download-pdf:hover {
+            background-color: #b91c1c;
+            transform: translateY(-2px);
+        }
+
+        .btn-next-module {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.2);
+        }
+
+        .btn-next-module:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Modal Verification System Layer */
+        .quiz-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .quiz-modal-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 520px;
+            padding: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                transform: translateY(15px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .quiz-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-modal-header h3 {
+            margin: 0;
+            font-size: 19px;
+            color: var(--slate-900);
+            font-weight: 700;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--slate-500);
+        }
+
+        .quiz-progress-tracker {
+            font-size: 13px;
+            color: var(--slate-500);
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 25px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--slate-500);
+            margin: 0;
+        }
+
+        /* Responsive Breakpoints Overrides */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-card);
+                flex-direction: column;
+                gap: 0;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 15px;
+                border-top: 1px solid #f1f5f9;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .flex-row-alternating {
+                flex-direction: column !important;
+                gap: 25px;
+            }
+
+            .bottom-action-panel {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-action {
+                width: 100%;
+            }
+
+            .study-page-container {
+                padding: 20px 15px;
+                margin: 15px auto;
+            }
+
+            .chapter-header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="../index.html" class="logo">⚡ Electrician Hub</a>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+                <li><a href="../quiz.html">Live Quiz</a></li>
+                <li><a href="../notes.html">Short Notes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Semantic SEO Article Wrapper -->
+    <article class="study-page-container">
+
+        <header class="chapter-header">
+            <span
+                style="color: var(--primary); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 5px;">
+                ITI Electrician Theory Master Course
+            </span>
+            <h1>Module 06: Alternating Current (AC) Circuits</h1>
+        </header>
+
+        <section class="teacher-note">
+            <strong>👨‍🏫 Classroom Expert Note:</strong> Namaskar dosto! Alternating Current (AC) hamare gharo me aane
+            wali electricity ka core basic pillar hai. Is chapter se CBT exams aur entrance level technical interviews
+            me sabse zyada conceptual sawal puche jaate hain—jaise RMS value ka impact, Power Factor optimization, aur
+            Star-Delta electrical connection. Pure system ko simple framework aur analytical shortcut keys ke sath setup
+            kiya gaya hai.
+        </section>
+
+        <!-- Section 1: Introduction to AC & DC -->
+        <section class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Chapter 1: AC Aur DC Fundamentals</h2>
+
+                <div class="sub-topic-heading">What is AC (Alternating Current)? [Interview Framework]</div>
+                <div class="lecture-eng">Alternating Current (AC) is an electric current that changes both its magnitude
+                    and direction periodically over time.</div>
+                <div class="lecture-hinglish"><strong>Hinglish Definition:</strong> AC wo current hota hai jo samay
+                    (time) ke saath apni direction aur value (parimaan) dono ko lagatar periodically change karta rehta
+                    hai.</div>
+
+                <div class="example-box">
+                    💡 <strong>AC Real-Life Examples:</strong><br>
+                    • Household Grid Power Supply = 230V, 50Hz AC.<br>
+                    • Large scale Alternators aur Power Plants Generators AC hi produce karte hain.
+                </div>
+
+                <div class="sub-topic-heading">What is DC (Direct Current)?</div>
+                <div class="lecture-eng">DC (Direct Current) is the electric current which flows consistently in only
+                    one unidirectional path.</div>
+                <div class="lecture-hinglish"><strong>Examples:</strong> Chemical Battery Cell, Solar Photovoltaic Cell,
+                    aur aapke Smartphones ki Lithium-Ion battery hamesha pure steady DC supply hi deti hai.</div>
+            </div>
+            <div class="image-column">
+                <img src="../img/ac-vs-dc-waveform.png"
+                    alt="Alternating Current vs Direct Current Graphical Waveform Chart Diagram"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="example-box"
+                    style="display:none; text-align:left; background:#fee2e2; border-left-color:#ef4444; color:#991b1b; margin:0;">
+                    ⚠️ <strong>Vector Missing:</strong> Save <code>ac-vs-dc-waveform.png</code> inside the
+                    <code>img</code> folder path.
+                </div>
+                <span style="font-size:12px; color:var(--slate-500); display:block; margin-top:8px; font-weight:500;">AC
+                    vs DC Waveform Analytics Grid</span>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Comparison Matrix Table -->
+        <section>
+            <h2 class="topic-heading">Difference Matrix Between AC and DC Systems</h2>
+            <table class="cable-table">
+                <thead>
+                    <tr>
+                        <th>Technical Parameter</th>
+                        <th>Alternating Current (AC)</th>
+                        <th>Direct Current (DC)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Direction Flow</strong></td>
+                        <td>Changes periodically (Time ke sath lagatar badalti hai)</td>
+                        <td>Unidirectional path only (Hamesha ek hi disha me steady)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frequency Vector</strong></td>
+                        <td>Standard 50 Hz (In India)</td>
+                        <td>Exactly 0 Hz (Zero Constant No Cycles)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transmission Efficiency</strong></td>
+                        <td>Easily stepped up/down; transmitted long distances with minimal losses</td>
+                        <td>Long distance transmission is highly complex and costly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Generation Source</strong></td>
+                        <td>Alternators & Dynamic Synchronous Generators</td>
+                        <td>Chemical Batteries, Solar PV Cells, DC Dynamos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section 3: AC Waveform Parameters -->
+        <section class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">AC Waveform Metric Terms</h2>
+
+                <div class="sub-topic-heading">1. Cycle (चक्र):</div>
+                <p class="lecture-hinglish">Ek complete positive half-wave aur ek complete negative half-wave milkar jo
+                    poora single periodic path banati hai, use **1 Cycle** kehte hain.</p>
+
+                <div class="sub-topic-heading">2. Frequency (f) Aur Time Period (T):</div>
+                <div class="lecture-eng">Frequency is defined as the total number of cycles completed by the wave in one
+                    second. Unit: Hertz (Hz).</div>
+                <div class="lecture-hinglish">One complete cycle ko poora karne me network ko jitna time lagta hai, use
+                    **Time Period (T)** bolte hain. Dono inversely proportional hote hain:</div>
+                <div class="formula-box">f = 1 / T | T = 1 / f</div>
+
+                <div class="sub-topic-heading">3. Angular Frequency (ω):</div>
+                <p class="lecture-hinglish">Iski angular measurement speed unit **rad/s** hoti hai:</p>
+                <div class="formula-box">ω = 2πf</div>
+            </div>
+            <div class="image-column">
+                <img src="../img/ac-cycle-parameters.png" alt="AC Sine Waveform Cycle and Time Period Parameter Chart"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="example-box"
+                    style="display:none; text-align:left; background:#fee2e2; border-left-color:#ef4444; color:#991b1b; margin:0;">
+                    ⚠️ <strong>Vector Missing:</strong> Save <code>ac-cycle-parameters.png</code> inside the
+                    <code>img</code> folder.
+                </div>
+                <span
+                    style="font-size:12px; color:var(--slate-500); display:block; margin-top:8px; font-weight:500;">Time
+                    Period & Cycle Mapping Metrics</span>
+            </div>
+        </section>
+
+        <!-- Section 4: Mathematical Metrics (RMS & Average) -->
+        <section class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Peak, RMS Aur Average Constants</h2>
+
+                <div class="sub-topic-heading">Peak Value (Maximum Value):</div>
+                <p class="lecture-hinglish">AC wave ka zero line se upar ya niche jo maximum amplitude/crest point hota
+                    hai use Peak Value kehte hain (`Vm` ya `Im`).</p>
+
+                <div class="sub-topic-heading">RMS Value (Root Mean Square) [Most Critical Factor]:</div>
+                <div class="lecture-eng">RMS value is the effective value of AC that produces the exact same heat output
+                    as a steady DC supply under equal resistance.</div>
+                <div class="formula-box">Vrms = Vm / √2 = 0.707 × Vm <br> Irms = Im / √2 = 0.707 × Im</div>
+
+                <div class="sub-topic-heading">Average Value (औसत मान):</div>
+                <div class="formula-box">Vavg = 0.637 × Vm</div>
+
+                <div class="sub-topic-heading">Form Factor & Peak Factor Multipliers:</div>
+                <p class="lecture-hinglish">
+                    • **Form Factor:** RMS Value / Average Value = **1.11** (Standard Sine Wave)<br>
+                    • **Peak Factor:** Maximum Value / RMS Value = **1.414**
+                </p>
+            </div>
+            <div class="image-column">
+                <div class="example-box"
+                    style="text-align: left; margin: 0; line-height: 1.8; background-color: #f8fafc; border-left-color: var(--primary);">
+                    🎯 <strong style="color: var(--slate-900);">Formula Shortcut Cheat-sheet:</strong><br>
+                    • **RMS** = 0.707 × Max Value<br>
+                    • **Average** = 0.637 × Max Value<br>
+                    • **Form Factor** = 1.11 Constant<br>
+                    • **Peak Factor** = 1.414 Constant<br>
+                    • **Sinusoidal Equation:** v = Vm sin(ωt)
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: AC Through R, L, C Elements -->
+        <section>
+            <h2 class="topic-heading">AC Behavior Across Pure Circuit Elements (R, L, C)</h2>
+            <table class="cable-table">
+                <thead>
+                    <tr>
+                        <th>Pure Element Load</th>
+                        <th>Phase Configuration Angle</th>
+                        <th>Power Factor Effect</th>
+                        <th>Reactance Equation Matrix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pure Resistance (R)</strong></td>
+                        <td>Voltage aur Current **Same Phase (0°)** me linear hote hain.</td>
+                        <td>Exactly **Unity (1.0)**</td>
+                        <td>R (Ohm Opposition) <br> Active Power: P = V × I</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pure Inductor (L)</strong></td>
+                        <td>Current Current Voltage se **90° Lag** (piche) rehta hai.</td>
+                        <td>**Zero Lagging**</td>
+                        <td>Inductive Reactance: XL = 2πfL (Ohm)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pure Capacitor (C)</strong></td>
+                        <td>Current Current Voltage se **90° Lead** (aage) nikal jata hai.</td>
+                        <td>**Zero Leading**</td>
+                        <td>Capacitive Reactance: XC = 1 / (2πfC) (Ohm)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="teacher-note" style="background-color: #f0fdf4; border-left-color: #22c55e; color: #166534;">
+                🚀 <strong>Quick Exam Keys:</strong><br>
+                • **L = Lag:** Inductor core winding hamesha current ko lag karwayegi.<br>
+                • **C = Current Leads:** Capacitor layers me current always phase me lead karega.
+            </div>
+        </section>
+
+        <!-- Section 6: Impedance & Power Triangle -->
+        <section class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Impedance Vector Network & Power Triangle</h2>
+
+                <div class="sub-topic-heading">Impedance (Z) Analytical Concept:</div>
+                <p class="lecture-hinglish">AC line circuit me Ohm's Resistance (R) aur Reactor Components (XL/XC) ke
+                    vector total opposition ko **Impedance** bolte hain. Unit: **Ohm**.</p>
+                <div class="formula-box">Z = √(R² + (XL - XC)²) | AC Ohm's Law: V = I × Z</div>
+
+                <div class="sub-topic-heading">AC Power Triangle System Components:</div>
+                <p class="lecture-hinglish">
+                    1. **Active Power (P):** Actual dynamic work generator. Formula: `P = VI cosϕ` (Unit: Watt / kW)<br>
+                    2. **Reactive Power (Q):** Magnetic flux field creator. Formula: `Q = VI sinϕ` (Unit: VAR /
+                    kVAR)<br>
+                    3. **Apparent Power (S):** Combined gross vector input. Formula: `S = VI` (Unit: VA / kVA)
+                </p>
+                <div class="formula-box">Vector Power Matrix: S² = P² + Q²</div>
+            </div>
+            <div class="image-column">
+                <img src="../img/ac-power-triangle.png" alt="Electrical Engineering Power Triangle Vector Chart Layout"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="example-box"
+                    style="display:none; text-align:left; background:#fee2e2; border-left-color:#ef4444; color:#991b1b; margin:0;">
+                    ⚠️ <strong>Vector Missing:</strong> Save <code>ac-power-triangle.png</code> inside the
+                    <code>img</code> folder.
+                </div>
+                <span
+                    style="font-size:12px; color:var(--slate-500); display:block; margin-top:8px; font-weight:500;">Industrial
+                    AC Power Triangle Geometry</span>
+            </div>
+        </section>
+
+        <!-- Section 7: Premium Dashboard Visual Resonance Matrix -->
+        <section class="resonance-premium-container"
+            style="margin: 45px 0; padding: 30px; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border-radius: 18px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);">
+
+            <div style="border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 25px;">
+                <h2 class="topic-heading" style="border-bottom: none; margin: 0; padding: 0;">Electrical Resonance
+                    Dashboard (विद्युत अनुनाद)</h2>
+                <p class="lecture-hinglish" style="margin-top: 5px; color: var(--slate-500);">Complex circuits ka super
+                    efficient balancing node zone.</p>
+            </div>
+
+            <div class="lecture-hinglish"
+                style="background: #fff7ed; border-left: 4px solid #f97316; padding: 16px; border-radius: 10px; margin-bottom: 25px; font-size: 14.5px; color: #7c2d12; line-height: 1.6;">
+                🤝 <strong>Aasan Concept Breakdown:</strong> Inductor ($X_L$) current ko piche dhakelta hai aur
+                Capacitor ($X_C$) current ko aage khinchta hai. Jab dono elements ki takat ek nishchit frequency par
+                <strong>Bilkul Barabar ($X_L = X_C$)</strong> ho jaati hai, to ye dono reactive forces aapas me zero ho
+                jaate hain! Circuit me zero net reactance hota hai, aur kewal pure Resistance ($R$) bachta hai. Is
+                master balancing state ko hi <strong>Resonance</strong> bolte hain.
+            </div>
+
+            <!-- Premium 4-Card Dashboard Configuration -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 25px;">
+
+                <div
+                    style="background: #ffffff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                    <div style="font-size: 24px; margin-bottom: 5px;">🎯</div>
+                    <div
+                        style="font-size: 11px; color: var(--slate-500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Condition Trigger</div>
+                    <div style="font-size: 18px; color: var(--slate-900); font-weight: 700; margin-top: 5px;">$X_L =
+                        X_C$</div>
+                    <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Reactance Nullified</div>
+                </div>
+
+                <div
+                    style="background: #ffffff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                    <div style="font-size: 24px; margin-bottom: 5px;">📉</div>
+                    <div
+                        style="font-size: 11px; color: var(--slate-500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Impedance (Z)</div>
+                    <div style="font-size: 18px; color: #1e40af; font-weight: 700; margin-top: 5px;">Minimum ($Z = R$)
+                    </div>
+                    <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Rukavat Lowest Point</div>
+                </div>
+
+                <div
+                    style="background: #ffffff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid #22c55e; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                    <div style="font-size: 24px; margin-bottom: 5px;">📈</div>
+                    <div
+                        style="font-size: 11px; color: var(--slate-500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Circuit Current</div>
+                    <div style="font-size: 18px; color: #166534; font-weight: 700; margin-top: 5px;">Maximum Peak</div>
+                    <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">Full Vector Current Flow</div>
+                </div>
+
+                <div
+                    style="background: #ffffff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; text-align: center; border-top: 4px solid #a855f7; box-shadow: 0 2px 4px rgba(0,0,0,0.01);">
+                    <div style="font-size: 24px; margin-bottom: 5px;">⚖️</div>
+                    <div
+                        style="font-size: 11px; color: var(--slate-500); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        Power Factor (PF)</div>
+                    <div style="font-size: 18px; color: #6b21a8; font-weight: 700; margin-top: 5px;">Unity ($\cos\phi =
+                        1$)</div>
+                    <div style="font-size: 12px; color: #94a3b8; margin-top: 4px;">100% System Efficiency</div>
+                </div>
+
+            </div>
+
+            <!-- Dashboard Sub Columns Visual Section -->
+            <div class="flex-row-alternating" style="margin: 0; gap: 20px;">
+                <div class="content-column"
+                    style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid var(--border);">
+                    <div class="sub-topic-heading" style="margin-top: 0; color: var(--slate-900);">⚡ Power Factor (PF)
+                        Deep Analytics</div>
+                    <p class="lecture-hinglish" style="font-size: 13.5px; color: var(--slate-700); line-height: 1.6;">
+                        • **Equation Profile:** $\text{PF} = \cos\phi = \frac{\text{Active Power (P)}}{\text{Apparent
+                        Power (S)}} = \frac{R}{Z}$ <br>
+                        • **Absolute Limit:** Range is hamesha 0 se **1** tak hoti hai.<br>
+                        • **Inductive Loads:** Industrial Motors ya Fans lagging current drag karte hain, jisse PF down
+                        ho jata hai.<br>
+                        • **Capacitive Injection:** Shunt Capacitor banks parallel me active karke PF ko clean kiya jata
+                        hai.
+                    </p>
+                </div>
+                <div class="image-column"
+                    style="background: #ffffff; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 10px; border-radius:12px;">
+                    <img src="../img/resonance-curve.png"
+                        alt="Electrical Series Resonance Peak Curve Chart Matrix Diagram"
+                        style="max-height: 130px; width: auto;"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="example-box"
+                        style="display:none; text-align:left; background:#fee2e2; border-left-color:#ef4444; color:#991b1b; margin: 0; font-size: 12px;">
+                        ⚠️ <strong>Graph Vector Missing:</strong> Add <code>resonance-curve.png</code> to image path.
+                    </div>
+                    <span
+                        style="font-size:11px; color:var(--slate-500); margin-top:6px; display:block; font-weight: 600;">Resonant
+                        Frequency Peak Curve</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Polyphase, Star & Delta Connection -->
+        <section>
+            <h2 class="topic-heading">Three-Phase System Balancing: Star Aur Delta Connections</h2>
+            <p class="lecture-hinglish">Bade industrial dynamic electrical loads ko handle karne ke liye hum Poly-Phase
+                Systems standard framework use karte hain, jahan teeno active hot parameters ke beech uniform
+                <strong>120° phase space difference</strong> rehta hai. Line voltage matrix standard value **415V** hai.
+            </p>
+
+            <div class="flex-row-alternating">
+                <div class="content-column">
+                    <div class="sub-topic-heading">⭐ Star Connection Architecture (Y-Layout):</div>
+                    <p class="lecture-hinglish">Isme single shared common point hota hai jise **Neutral Node** kehte
+                        hain. Phase system distribution line balance ke liye best hai.</p>
+                    <div class="formula-box">VL = √3 × Vph | IL = Iph</div>
+
+                    <div class="sub-topic-heading">🔺 Delta Connection Architecture (Δ-Layout):</div>
+                    <p class="lecture-hinglish">Isme koi separate unique Neutral path configuration nahi hoti.
+                        Industrial induction heavy phase line systems me deployment hoti hai.</p>
+                    <div class="formula-box">VL = Vph | IL = √3 × Iph</div>
+
+                    <div class="sub-topic-heading">Combined Balanced 3-Phase Power Vector Formula:</div>
+                    <div class="formula-box">P = √3 × VL × IL × cosϕ</div>
+                </div>
+                <div class="image-column">
+                    <img src="../img/star-delta-connections.png"
+                        alt="Star and Delta Connection Wiring Configurations Schematic Schema Diagram"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="example-box"
+                        style="display:none; text-align:left; background:#fee2e2; border-left-color:#ef4444; color:#991b1b; margin:0;">
+                        ⚠️ <strong>Vector Missing:</strong> Save <code>star-delta-connections.png</code> inside the
+                        <code>img</code> folder.
+                    </div>
+                    <span
+                        style="font-size:12px; color:var(--slate-500); display:block; margin-top:8px; font-weight:500;">Star
+                        vs Delta Distribution Wiring Architecture</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Top 10 Exam Core Q&A Bank -->
+        <section>
+            <h2 class="exam-section-title">5. Master CBT Top 10 Exam Core Q&A Bank</h2>
+            <div class="exam-qa-stack">
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q1. AC (Alternating Current) ki core standard functional definition kya
+                        hoti hai?</div>
+                    <div class="exam-answer">Ans: Aisa dynamic electrical charge movement path jo fixed interval spacing
+                        par magnitude parameter aur orientation vector path dono ko seamlessly invert aur alter karta
+                        rehta hai.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q2. Alternating current waveforms me Root Mean Square (RMS) ka main
+                        baseline value kya hai?</div>
+                    <div class="exam-answer">Ans: RMS value kisi periodic wave system ka wo structural equivalent
+                        scaling potential hai jo stable pure direct current (DC) ke identical thermal heating limits ke
+                        matching capabilities maintain karta hai.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q3. Long-range electrical transmission networks grids me DC ke baseline
+                        configuration ke mukable AC network framework ko deploy kyu kiya jaata hai?</div>
+                    <div class="exam-answer">Ans: Kyunki AC voltages ko Electromagnetic induction transformers ke
+                        throwing extremely low grid lines power line drops ke sath line voltage dynamic balance step up
+                        karke distribute kiya ja sakta hai.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q4. Power Factor logic system ko real analytics terminology parameter
+                        matrix me kaise define kiya jata hai?</div>
+                    <div class="exam-answer">Ans: Angular system layout network metrics ke internal phase angle
+                        parameters ka cosine scale element `cosϕ`, ya active work grid parameters (Watt) aur absolute
+                        dynamic input matrix capacity (VA) ka baseline output scale fraction ratio.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q5. Active dynamic vector component power (P) aur reactive component
+                        matrix power (Q) me configuration variation baseline kya hai?</div>
+                    <div class="exam-answer">Ans: Active Power real machinery work generation loops (heat/light/torque)
+                        driven components perform karta hai, jabki Reactive component dynamically dynamic mechanical
+                        energy systems ke induction elements me required alternate magnetic field configurations
+                        structure karta hai.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q6. Industrial alternate grid distribution levels par dynamic power
+                        correction capacitor array bank nodes ko active karke systems ke overall power factor output ko
+                        kaise dynamic recovery di jaati hai?</div>
+                    <div class="exam-answer">Ans: Grid lines system par dynamic parameters load inductive shift ke
+                        chalte reactive delays push karte hain, dynamic array capacitors advanced phase offset
+                        parameters leading dynamic shift provide karke complete balancing node create karte hain.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q7. Heavy industrial design systems me 3-phase high power synchronous
+                        induction machinery automatically self-starting zones toggle kaise kar leti hain?</div>
+                    <div class="exam-answer">Ans: Jab space metrics sequence me uniform alternating phases matrix
+                        sequence setup 120° spatial array patterns create karte hain, tab physical air gap variables
+                        magnetic stator blocks me unique automated **Rotating Magnetic Field (RMF)** initiate kar dete
+                        hain.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q8. Steady dynamic parameter distributions me internal network system
+                        transformers continuous alternate systems inputs me hi operational state deployment kyu maintain
+                        karte hain battery banks inputs par kyu nahi?</div>
+                    <div class="exam-answer">Ans: Mutual inductance operational logic layout setup layers purely rate of
+                        change of variable flux links sequence scale setup demand karte hain. Steady inputs dynamic
+                        induction fields blocks structure nahi kar paate, jisse structural coils failure trigger hota
+                        hai.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q9. Domestic baseline home infrastructure configurations network
+                        allocations design pure dynamic single-phase elements setup hi allocation networks me kyu supply
+                        karta hai?</div>
+                    <div class="exam-answer">Ans: Heavy dynamic loads line balances validation configuration demand
+                        loops internal limits standard domestic consumer devices standard load bounds parameters safe
+                        lower operation levels balance optimization manage kar lete hain.</div>
+                </div>
+                <div class="exam-qa-card">
+                    <div class="exam-question">Q10. Alternating system layouts calculations design frameworks array
+                        configuration me overall operational resonance setup limits parameters index boundaries trigger
+                        tab kab hotii hain?</div>
+                    <div class="exam-answer">Ans: Dynamic operations sequence configuration phase me variable properties
+                        adjustments scale optimization parameters parameters parameters exactly layout boundary
+                        intersection balance level parameters standard `XL = XC` match frame execution levels parameters
+                        verify tab phase structure sequence operational efficiency state hit kar deta hai.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Dynamic Online CBT Interactive Test Arena Dashboard -->
+        <section>
+            <h2 class="exam-section-title">6. Online CBT Objective Practice (10 Core Live MCQs Arena)</h2>
+            <div id="mcqDynamicRoot"></div>
+        </section>
+
+        <!-- Core Actions Panel Dashboard Layout Component -->
+        <footer class="bottom-action-panel">
+            <button class="btn-action btn-download-pdf" onclick="initiatePdfQuizGate()">📥 Instant Secure Note File
+                Download</button>
+            <a href="./polyphase-systems.html" class="btn-action btn-next-module">Launch Module 07: Polyphase Systems
+                ❯</a>
+        </footer>
+
+    </article>
+
+    <!-- Modal Quiz Locked Gate Box Frame Architecture -->
+    <div class="quiz-modal-overlay" id="pdfQuizModal">
+        <div class="quiz-modal-card">
+            <div class="quiz-modal-header">
+                <h3>🔒 Unlock Note File Download</h3>
+                <button class="close-modal-btn" onclick="closePdfModal()">×</button>
+            </div>
+            <div id="quizModalContent">
+                <!-- JavaScript Dynamic Verification Engine Inject Modules here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub Ecosystem</p>
+            <p>&copy; 2026 Electrician Hub | Premium Web Standard Multi-Language Core Syllabus Delivery System</p>
+        </div>
+    </footer>
+
+    <!-- Expert Level Interactive Core Script Logic Modules System -->
+    <script>
+        // High Scannable Mobile Navigation Active Toggle Controller Engine
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Live CBT Premium Question Bank Dataset Array Engine Arrays
+        const mcqPool = [
+            { q: "AC ka full form inme se kya hota hai?", o: ["Automatic Current", "Alternating Current", "Active Current", "Average Current"], c: 1 },
+            { q: "India me commercial AC grid ki standard frequency kitni hoti hai?", o: ["25 Hz", "40 Hz", "50 Hz", "60 Hz"], c: 2 },
+            { q: "Sine wave ke liye standard RMS Value ka mathematical multiplier kya hai?", o: ["0.5 Vm", "0.707 Vm", "1.0 Vm", "2.0 Vm"], c: 1 },
+            { q: "Ek pure inductor circuit me flow hone wala current voltage se kis prakaar related hota hai?", o: ["Lead karta hai", "Lag karta hai", "Same phase me hota hai", "Zero ho jata hai"], c: 1 },
+            { q: "Pure capacitor electrical lines me current ka behavior kaisa hota hai?", o: ["Lag karta hai", "Lead karta hai", "Same phase me rehta hai", "Voltage ko block karta hai"], c: 1 },
+            { q: "AC circuits me total opposition yaani Impedance (Z) ki electrical unit kya hai?", o: ["Volt", "Ampere", "Ohm", "Watt"], c: 2 },
+            { q: "Kisi load network par max attainable power factor kitna ho sakta hai?", o: ["0.5", "0.8", "1.0", "2.0"], c: 2 },
+            { q: "Star Connection circuit wiring layout me Line Voltage (VL) kis ke barabar hota hai?", o: ["Vph", "√3 Vph", "2Vph", "3Vph"], c: 1 },
+            { q: "Delta Connection power wiring design me Line Current (IL) ka sahi relation kya hai?", o: ["Iph", "√3 Iph", "Iph / √3", "2Iph"], c: 1 },
+            { q: "AC system me dynamic Reactive Power (Q) ko measure karne ki standard industrial unit kya hai?", o: ["Watt", "Joule", "VAR", "VA"], c: 2 }
+        ];
+
+        // Compile Main Content Page Dynamic MCQ Component Layer Grid Buffer
+        const rootNode = document.getElementById("mcqDynamicRoot");
+        let htmlBuffer = "";
+
+        mcqPool.forEach((item, index) => {
+            let num = index + 1;
+            htmlBuffer += `
+                <div class="mcq-card">
+                    <div class="exam-question">Q${num}. ${item.q}</div>
+                    <div class="mcq-opt-list">
+            `;
+            item.o.forEach((opt, optIdx) => {
+                htmlBuffer += `
+                    <button class="mcq-option-btn" onclick="validateOption(this, ${optIdx === item.c})">
+                        ${opt}
+                    </button>
+                `;
+            });
+            htmlBuffer += `</div></div>`;
+        });
+        rootNode.innerHTML = htmlBuffer;
+
+        function validateOption(btn, isCorrect) {
+            const parentBlock = btn.parentElement;
+            const buttons = parentBlock.querySelectorAll(".mcq-option-btn");
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                btn.classList.add("correct-ans");
+            } else {
+                btn.classList.add("wrong-ans");
+                buttons.forEach(b => {
+                    if (b.getAttribute("onclick").includes("true")) {
+                        b.classList.add("correct-ans");
+                    }
+                });
+            }
+        }
+
+        /* --- Secure Randomized 3-MCQ Verification Download Gate Engine Logic --- */
+        let gateQuestions = [];
+        let currentGateIndex = 0;
+        let correctAnswersCount = 0;
+
+        function initiatePdfQuizGate() {
+            const scrambled = [...mcqPool].sort(() => 0.5 - Math.random());
+            gateQuestions = scrambled.slice(0, 3);
+
+            currentGateIndex = 0;
+            correctAnswersCount = 0;
+
+            document.getElementById("pdfQuizModal").style.display = "flex";
+            renderGateStep();
+        }
+
+        function closePdfModal() {
+            document.getElementById("pdfQuizModal").style.display = "none";
+        }
+
+        function renderGateStep() {
+            const targetContentBox = document.getElementById("quizModalContent");
+
+            if (currentGateIndex >= 3) {
+                if (correctAnswersCount === 3) {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 15px;">🎉</div>
+                            <h4 style="color: #15803d; margin: 0 0 10px 0; font-size: 19px;">Verification Perfect Score!</h4>
+                            <p style="color: var(--slate-500); font-size: 14px; margin-bottom: 20px;">Aapka authentic verified note file backend system se automatically target downloads folder me transfer ho raha hai...</p>
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        closePdfModal();
+                        executeNoteDownload();
+                    }, 1500);
+                } else {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 15px;">❌</div>
+                            <h4 style="color: #b91c1c; margin: 0 0 10px 0; font-size: 19px;">Verification Failed!</h4>
+                            <p style="color: var(--slate-500); font-size: 14px; margin-bottom: 20px;">Note file lock unlock karne ke liye sabhi teeno custom validation mock questions ke perfect evaluation responses deliver karne mandatory hain.</p>
+                            <button class="btn-action btn-next-module" style="width:100%;" onclick="initiatePdfQuizGate()">Try Again ↻</button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const currentObj = gateQuestions[currentGateIndex];
+
+            let modalHtml = `
+                <div class="quiz-progress-tracker">Verification Step ${currentGateIndex + 1} of 3</div>
+                <div class="exam-question" style="font-size: 16px; margin-bottom: 18px; line-height:1.5;">${currentObj.q}</div>
+                <div class="mcq-opt-list">
+            `;
+
+            currentObj.o.forEach((optText, optIdx) => {
+                modalHtml += `
+                    <button class="mcq-option-btn" onclick="checkGateSelection(this, ${optIdx === currentObj.c})">
+                        ${optText}
+                    </button>
+                `;
+            });
+
+            modalHtml += `</div>`;
+            targetContentBox.innerHTML = modalHtml;
+        }
+
+        function checkGateSelection(element, isRight) {
+            const listContainer = element.parentElement;
+            const groupButtons = listContainer.querySelectorAll(".mcq-option-btn");
+            groupButtons.forEach(btn => btn.disabled = true);
+
+            if (isRight) {
+                element.classList.add("correct-ans");
+                correctAnswersCount++;
+            } else {
+                element.classList.add("wrong-ans");
+                groupButtons.forEach((btn, idx) => {
+                    if (idx === gateQuestions[currentGateIndex].c) {
+                        btn.classList.add("correct-ans");
+                    }
+                });
+            }
+
+            setTimeout(() => {
+                currentGateIndex++;
+                renderGateStep();
+            }, 1200);
+        }
+
+        /* --- Pure Automated Text Document Blob Generation System Engine (No Print View Trigger) --- */
+        function executeNoteDownload() {
+            // Document clean context stream array mapping setup
+            const textData = `==================================================================
+ITI ELECTRICIAN TRADE MASTER COURSE SYLLABUS CORE REVISION NOTES
+MODULE 06: ALTERNATING CURRENT (AC) CIRCUITS SYSTEM
+==================================================================
+
+[CHAPTER 1 SUMMARY DEFINITION]
+* English: Alternating Current (AC) is an electric current that changes both its magnitude and direction periodically over time.
+* Hinglish: AC wo current hota hai jo time ke saath apni direction aur value dono ko lagatar periodically change karta rehta hai.
+* Home Grid Supply: 230V, 50Hz AC Systems.
+
+[AC SYSTEM vs DC SYSTEM CORE PROPERTIES MATRIX]
+1. Direction Flow: AC changes periodically | DC remains unidirectional.
+2. Grid Frequency: AC India uses standard 50 Hz | DC has 0 Hz completely static.
+3. Transmission range: AC is highly scalable long-range efficiently | DC long distance is difficult.
+
+[CRITICAL WAVEFORM CONSTANT PARAMETERS]
+* Cycle: One positive half wave combine with one negative half wave setup.
+* Frequency (f): 1/T (Unit: Hertz)
+* Time Period (T): 1/f (Seconds required to hit single sequence cycle completion)
+* Angular Speed Value (w): 2*pi*f (rad/s)
+* Peak Value: Max crest parameter value amplitude reached (Vm/Im).
+* RMS Value (Heating Effect): Vm / sqrt(2) = 0.707 * Vm (Extremely critical baseline value).
+* Average Value: 0.637 * Vm
+* Form Factor Vector Fraction: RMS Value / Average Value = 1.11 Constant.
+* Peak Factor Vector Fraction: Maximum Value / RMS Value = 1.414 Constant.
+
+[CIRCUIT PASSIVE PURE LOADS RELATION INDEX]
+* Pure Resistance (R): Phase angle is 0 deg. Power Factor is Unity (1.0).
+* Pure Inductor (L): Current lags behind the voltage by exactly 90 degrees. (XL = 2*pi*f*L)
+* Pure Capacitor (C): Current leads ahead of the voltage by exactly 90 degrees. (XC = 1 / (2*pi*f*C))
+
+[TOTAL IMPEDANCE NETWORK AND POWER TRIANGLE ARRAYS]
+* Impedance Equation (Z): sqrt( R^2 + (XL - XC)^2 ) (Measured inside Ohms)
+* Active Real Component Power (P): V * I * cos(phi) (Units: Watt)
+* Reactive Component Power (Q): V * I * sin(phi) (Units: VAR)
+* Apparent Combined Power (S): V * I (Units: VA)
+* Combined Vector Math Logic Balance: S^2 = P^2 + Q^2
+
+[ELECTRICAL SYSTEM RESONANCE DASHBOARD VALUES]
+* Condition Rule: Inductive parameter completely matches capacitive parameter (XL = XC).
+* System Opposition (Impedance): Reduces directly to Minimum limits (Z = R).
+* Line Current Flow: Hits maximum absolute saturation peak levels.
+* Operational Power Factor: Transforms instantly to Unity value (cos(phi) = 1.0).
+
+[THREE-PHASE SYSTEMS ARRANGEMENT MODULES]
+* Star Configuration (Y-Layout): Neutral wire present. Line Voltage = sqrt(3) * Phase Voltage. Line Current = Phase Current.
+* Delta Configuration (Delta-Layout): No separate Neutral node. Line Voltage = Phase Voltage. Line Current = sqrt(3) * Phase Current.
+* Total Balanced Combined 3-Phase Power System Matrix: P = sqrt(3) * VL * IL * cos(phi)
+
+==================================================================
+DOCUMENT SECURITY VERIFICATION TOKEN ID: ETHUB-AC-2026-CONFIRMED
+==================================================================`;
+
+            // JavaScript Dynamic Virtual Link Generation System mapping triggers download stream
+            const blob = new Blob([textData], { type: "text/plain;charset=utf-8" });
+            const linkUrl = URL.createObjectURL(blob);
+
+            const dynamicDownloadAnchor = document.createElement("a");
+            dynamicDownloadAnchor.href = linkUrl;
+            dynamicDownloadAnchor.download = "Module_06_AC_Circuits_Theory_Notes.txt";
+
+            document.body.appendChild(dynamicDownloadAnchor);
+            dynamicDownloadAnchor.click();
+
+            // Clean dynamic runtime allocations memory tracking pointers optimization
+            document.body.removeChild(dynamicDownloadAnchor);
+            URL.revokeObjectURL(linkUrl);
+        }
+    </script>
+</body>
+
+</html>
