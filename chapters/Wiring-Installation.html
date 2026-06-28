@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 5: Wiring Installation and Earthing | ITI Electrician Theory</title>
+    <meta name="description"
+        content="ITI Electrician Trade Theory Chapter 5 Premium Light Theme Notes. Wiring Installation, Types of Wiring, IE Rules, Earthing in easy teacher style.">
+    <meta name="keywords"
+        content="ITI Electrician Notes, Wiring Installation, Earthing, IE Rules, Plate Earthing, Pipe Earthing, Light Theme UI">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Premium Soft Light Theme Grid Base */
+        body {
+            background-color: #f0f2f5 !important;
+            color: #1e293b;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Layout Configuration */
+        header.navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 14.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #0f172a;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+        }
+
+        .study-page-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px 25px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-header {
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        .chapter-header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .teacher-note {
+            background-color: #e0f2fe;
+            border-left: 5px solid #0284c7;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 14.5px;
+            color: #0369a1;
+            line-height: 1.6;
+        }
+
+        /* Premium Alternating Row Feature Architecture */
+        .flex-row-alternating {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-column {
+            flex: 1;
+        }
+
+        .image-column {
+            flex: 1;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2.topic-heading {
+            color: #0f172a;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .sub-topic-heading {
+            color: #1e293b;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .lecture-eng {
+            font-size: 14.5px;
+            color: #0f172a;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            background: #f1f5f9;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        .lecture-hinglish {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .example-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .formula-box {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .ascii-art-box {
+            background-color: #0f172a;
+            color: #38bdf8;
+            font-family: monospace;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Industrial Table Styling */
+        .cable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .cable-table th,
+        .cable-table td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        .cable-table th {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cable-table td {
+            color: #334155;
+        }
+
+        /* Q&A Stack */
+        .exam-section-title {
+            color: #0f172a;
+            font-size: 22px;
+            margin: 40px 0 20px 0;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            font-weight: 700;
+        }
+
+        .exam-qa-card {
+            background-color: #f8fafc;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .exam-question {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .exam-answer {
+            color: #2563eb;
+            font-size: 14.5px;
+            font-weight: 500;
+        }
+
+        /* MCQ Interface Components */
+        .mcq-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .mcq-opt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .mcq-option-btn {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: #cbd5e1;
+            background-color: #f1f5f9;
+        }
+
+        .mcq-option-btn.correct-ans {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #15803d !important;
+        }
+
+        .mcq-option-btn.wrong-ans {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        /* Action Panel Controllers */
+        .bottom-action-panel {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn-action {
+            padding: 14px 28px;
+            font-size: 14.5px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-download-pdf {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-next-module {
+            background-color: #3498db;
+            color: white;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Premium Quiz Modal Overlay Styles */
+        .quiz-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .quiz-modal-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 550px;
+            padding: 25px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .quiz-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .quiz-progress-tracker {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 20px 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #64748b;
+            font-size: 13.5px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* 100% Seamless Fluid PDF Print Calibration */
+        @media print {
+
+            .navbar,
+            footer,
+            .bottom-action-panel,
+            .mcq-opt-list,
+            .quiz-modal-overlay {
+                display: none !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .study-page-container {
+                border: none !important;
+                box-shadow: none !important;
+                background-color: #ffffff !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .flex-row-alternating {
+                display: block !important;
+                margin: 30px 0 !important;
+            }
+
+            .image-column {
+                max-width: 350px !important;
+                margin: 20px auto !important;
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+
+            .exam-qa-card,
+            .mcq-card,
+            .example-box,
+            .ascii-art-box {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                border: 1px solid #cbd5e1 !important;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Mobile Viewport Reset Overrides */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 20px;
+                gap: 15px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .flex-row-alternating {
+                flex-direction: column !important;
+                gap: 20px;
+            }
+
+            .bottom-action-panel {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-action {
+                width: 100%;
+                text-align: center;
+            }
+
+            .study-page-container {
+                padding: 15px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+                <li><a href="../quiz.html">Live Quiz</a></li>
+                <li><a href="../notes.html">Short Notes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="study-page-container">
+
+        <div class="chapter-header">
+            <span
+                style="color: #0284c7; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">ITI
+                Electrician Theory Module 05</span>
+            <h1>Wiring Installation & Earthing (वायरिंग इंस्टॉलेशन और अर्थिंग)</h1>
+        </div>
+
+        <div class="teacher-note">
+            <strong>👨‍🏫 Classroom Note:</strong> Dosto, Wiring Installation aur Earthing competitive exams aur
+            practical
+            field dono ke liye sabse important core chapter hai. Is note me power station se electricity distribution ka
+            pura process,
+            wiring ke advanced styles, Earthing ke frameworks (Plate & Pipe) aur industrial IE Rules ko real classroom
+            teacher style me compile kiya gaya hai!
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Chapter 1 : Wiring Installation Kya Hoti Hai?</h2>
+                <div class="sub-topic-heading">Power Station Se Ghar Tak Ka Safar</div>
+                <p class="lecture-hinglish">Imagine karo tumhare ghar me fan, bulb aur TV chal rahe hain. Ye electricity
+                    power station se hamare ghar tak ek sequential flow path me aati hai:</p>
+
+                <div class="ascii-art-box">
+                    [ Power Station ]
+                    ↓
+                    [ Transmission Line ]
+                    ↓
+                    [ Distribution Transformer ]
+                    ↓
+                    [ Service Line ] → [ Energy Meter ] → [ Main Switch ]
+                    ↓
+                    [ Distribution Board ] → [ Individual Switches ]
+                    ↓
+                    [ Load: Fan, Bulb, Socket ]</div>
+
+                <div class="sub-topic-heading">Wiring Installation Ki Definition</div>
+                <div class="lecture-eng">Electrical Wiring Installation is the complete arrangement of electrical wires,
+                    switches, sockets, protective devices and accessories used to safely distribute electrical power.
+                </div>
+                <div class="lecture-hinglish"><strong>Aasan Bhasha me:</strong> Ghar ya building me electricity ko
+                    surakshit roop se distribute karne ke liye wire, switch, socket, fuse, aur MCB ke pure setup ko hi
+                    Wiring Installation kehte hain.</div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">Objectives of a Good Wiring System</h2>
+                <p class="lecture-hinglish">Ek adarsh (Good) wiring installation karte samay hume in 5 pramukh
+                    objectives ka dhyan rakhna chahiye:</p>
+
+                <div class="example-box">
+                    🔒 <strong>1. Safety (सुरक्षा):</strong> Insaan ko electric shock aur building ko fire hazards se
+                    bachana.<br>
+                    ⚡ <strong>2. Reliability (विश्वसनीयता):</strong> Supply continuous milti rahe, koi internal circuit
+                    fault na ho.<br>
+                    💰 <strong>3. Economy (किफायती):</strong> Material quality achhi ho par kharcha budget ke andar
+                    ho.<br>
+                    🛠️ <strong>4. Easy Maintenance:</strong> Fault hone par repair aasani se bina poori wiring kharab
+                    kiye kiya ja sake.<br>
+                    ✨ <strong>5. Good Appearance:</strong> Fitting dekhne me premium, neat aur sundar lage.
+                </div>
+            </div>
+            <div class="image-column">
+                <img src="../img/wiring_objectives.jpg" alt="Electrical Safety and Reliability Model Layout">
+                <span style="font-size:12px; color:#64748b;">Industrial Design Objectives</span>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Types of Wiring Systems (एग्जाम फेवरेट टॉपिक)</h2>
+                <p class="lecture-hinglish">Syllabus me char pramukh purani aur aadhunik wiring ke types hain:</p>
+
+                <div class="sub-topic-heading">1. Cleat Wiring (क्लीट वायरिंग)</div>
+                <p class="lecture-hinglish">Vulkanized India Rubber (VIR) ya PVC wires ko Porcelain cleat ke support se
+                    deewar par open lagaya jata hai. <br>
+                    <strong>Pros/Cons:</strong> Cheap, Temporary aur fast installation. Lekin visually kharab,
+                    unprotected aur temporary use (Marriage, construction sites) ke liye hoti hai.
+                </p>
+
+                <div class="sub-topic-heading">2. Batten Wiring (बैटन वायरिंग)</div>
+                <p class="lecture-hinglish">Lakdi ke flat wooden batten ko deewar par thoka jata hai, aur wire ko Link
+                    Clips ki help se fix kiya jata hai. <br>
+                    <strong>Pros/Cons:</strong> Neat lookup aur sasti hai, par wood moisture absorb karke short circuit
+                    aur fire risk badhata hai.
+                </p>
+
+                <div class="sub-topic-heading">3. Casing and Capping Wiring</div>
+                <p class="lecture-hinglish">Wooden ya PVC ki V-shaped channel (Casing) ke andar wire dalkar upar se
+                    cover (Capping) lagayi jati hai. Modern PVC casing abhi bhi temporary offices me use hoti hai.</p>
+
+                <div class="sub-topic-heading">4. Conduit Wiring (कंड्यूट वायरिंग) - Most Important</div>
+                <p class="lecture-eng">Wires are drawn inside heavy duty PVC or Galvanized Iron (GI) pipes called
+                    conduits.</p>
+                <p class="lecture-hinglish"><strong>Surface Conduit:</strong> Pipe deewar ke upar dikhta hai
+                    (Industries). <br>
+                    <strong>Concealed Conduit:</strong> Pipe plaster ke andar chhupa hota hai (Modern Homes/Hospitals).
+                    Yeh fire-proof, safe aur long life hai.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">Color Coding & House Wiring Accessories</h2>
+                <div class="sub-topic-heading">Modern Wire Color Coding Layout:</div>
+                <table class="cable-table">
+                    <thead>
+                        <tr>
+                            <th>Line Type</th>
+                            <th>New Global Standard Code</th>
+                            <th>Old Indian Standard Code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Phase / Live (L)</strong></td>
+                            <td style="color:#92400e; font-weight:bold;">Brown (भूरा)</td>
+                            <td style="color:#b91c1c; font-weight:bold;">Red (लाल)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Neutral (N)</strong></td>
+                            <td style="color:#1d4ed8; font-weight:bold;">Blue (नीला)</td>
+                            <td style="color:#0f172a; font-weight:bold;">Black (काला)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Earth Ground (E)</strong></td>
+                            <td style="color:#15803d; font-weight:bold;">Green / Yellow Grid</td>
+                            <td style="color:#16a34a; font-weight:bold;">Solid Green (हरा)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="formula-box">🧠 Memory Trick: SPF Rule -> Switch & Fuse hamesha Phase wire me lagte hain!
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">IE Rules (Indian Electricity Rules) For Safety</h2>
+                <div class="lecture-eng">The primary objective of Indian Electricity Rules is to safeguard people,
+                    animals, and properties from hazardous leakages and shocks.</div>
+                <p class="lecture-hinglish">Exam point of view se nimnlikhit niyam sabse jyada pucche jaate hain:</p>
+
+                <div class="example-box" style="background-color:#fffbeb; border-left-color:#d97706; color:#78350f;">
+                    📌 <strong>Rule 1 (Insulation):</strong> Puri installation properly insulated honi chahiye. Kahin
+                    naked joint nahi hoga.<br>
+                    📌 <strong>Rule 2 (Earthing):</strong> Sabhi major metal body appliances (Cooler, Fridge) ko earth
+                    pin se jorna compulsory hai.<br>
+                    📌 <strong>Rule 3 (Main Switch):</strong> Emergency cut-off ke liye main switch building entrance ke
+                    bilkul paas hona chahiye.<br>
+                    📌 <strong>Rule 4 (Switch Location):</strong> Switch ko hamesha Phase (Live) wire me series me
+                    jodein, Neutral me kabhi nahi.<br>
+                    📌 <strong>Rule 5 (Fuse Integrity):</strong> Fuse hamesha Phase wire me lagega, Neutral me fuse wire
+                    lagana sakht mana hai.
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">Electrical Estimation Framework</h2>
+                <div class="lecture-eng">Electrical Estimation is the process of calculating the precise quantity and
+                    cost of materials and labor before physical execution.</div>
+                <p class="lecture-hinglish"><strong>Estimation me kya calculate kiya jata hai?</strong> Isme Wire
+                    length, Conduit pipes, Switch/Sockets ki exact counting, Distribution Board capacity, Earth wire
+                    thickness, Labor charges aur transport cost ko add karke Ek Total Cost sheet banayi jati hai.</p>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    [ Material List ] -> [ Pricing Grid ]
+                    ↓
+                    [ Labor Estimate ] -> [ Buffer % ]
+                    ↓
+                    === TOTAL PROJECT ESTIMATE ===</div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Earthing Architecture (अर्थिंग सिस्टम)</h2>
+                <div class="sub-topic-heading">Classroom Scenario Analysis:</div>
+                <p class="lecture-hinglish">Mano tumhare cooler ki internal copper binding toot kar metallic body ko
+                    touch kar gayi. Agar insulation fail hone par ground connection nahi hai to physical touch karte hi
+                    tez shock lagega. Lekin agar metal body earthed hai to fault current turant safety route se zameen
+                    me flow kar jayega, circuit ka fuse blow ho jayega ya MCB trip ho jayegi, aur aap safe rahenge.</p>
+                <div class="lecture-eng">Earthing is the process of connecting non-current carrying metallic parts of
+                    electrical equipment to the earth.</div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">Plate Earthing vs Pipe Earthing (Deep Study)</h2>
+                <p class="lecture-hinglish">Industrial framework me do methods sabse zyada chalte hain:</p>
+
+                <div class="sub-topic-heading">Method A: Plate Earthing</div>
+                <p class="lecture-hinglish">Isme 60cm × 60cm × 3.15mm ki Copper plate (ya 6mm ki GI plate) ko 3-metre
+                    gehre gaddhe (Pit) me vertical rakha jata hai. Plate ke charo taraf moisture maintain karne ke liye
+                    Charcoal (कोयला) aur Salt (नमक) ki alternate layers bichaayi jaati hain.</p>
+
+                <div class="sub-topic-heading">Method B: Pipe Earthing (Most Popular)</div>
+                <p class="lecture-hinglish">Isme perforated (holes wali) Galvanized Iron (GI) pipe (lagbhag 38mm
+                    diameter, 2.5m se 3m length) ko zameen me dump kiya jata hai. Yeh sasti hai aur maintenance asaan
+                    hai.</p>
+            </div>
+        </div>
+
+        <h2 class="topic-heading">Plate Earthing vs Pipe Earthing Matrix</h2>
+        <table class="cable-table">
+            <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Plate Earthing Framework</th>
+                    <th>Pipe Earthing Framework</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Core Element</strong></td>
+                    <td>Copper or GI Solid Sheet Plate (600x600 mm)</td>
+                    <td>Perforated GI Hollow Pipe (38mm diameter)</td>
+                </tr>
+                <tr>
+                    <td><strong>Installation Cost</strong></td>
+                    <td>Expensive (महंगा सिस्टम)</td>
+                    <td>Economical & Highly Cost-Effective</td>
+                </tr>
+                <tr>
+                    <td><strong>Pit Size Required</strong></td>
+                    <td>Large dimension deep grid excavation</td>
+                    <td>Narrow drill pit setup</td>
+                </tr>
+                <tr>
+                    <td><strong>Resistance Value</strong></td>
+                    <td>Extremely low resistance path</td>
+                    <td>Stable low resistance path (Most widely used)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="topic-heading">Difference Between Earthing and Grounding</h2>
+        <table class="cable-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Earthing (अर्थिंग)</th>
+                    <th>Grounding (ग्राउंडिंग)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Target Component</strong></td>
+                    <td>Equipment ki non-current carrying metallic body ko jordata hai.</td>
+                    <td>System ke current carrying point (Jaise Transformer Neutral) ko jordata hai.</td>
+                </tr>
+                <tr>
+                    <td><strong>Primary Objective</strong></td>
+                    <td>Human protection from dangerous leakage shock.</td>
+                    <td>System voltage stability aur fault current return line bypass control.</td>
+                </tr>
+                <tr>
+                    <td><strong>Standard Wire Color</strong></td>
+                    <td>Green or Yellow-Green stripe line.</td>
+                    <td>Solid Black or Blue dependent network lines.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="topic-heading">Industrial Oral Viva-Voce Questions Bank</h2>
+        <div class="exam-qa-stack">
+            <div class="exam-qa-card">
+                <div class="exam-question">Q1. Earthing pit me Salt aur Charcoal kyu dala jata hai?</div>
+                <div class="exam-answer">Ans: Salt mitti ki electrical conductivity badhata hai aur Charcoal soil
+                    moisture (नमी) ko capture karke rakhta hai, jisse earth resistance permanently low bani rehti hai.
+                </div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q2. Ideal Earth Resistance ki standard value kitni honi chahiye?</div>
+                <div class="exam-answer">Ans: Domestic structures ke liye 1 se 5 Ohm ke beech, aur badhe Power
+                    Stations/Substations me 1 Ohm se bhi kam (approx 0.5 Ohm) honi chahiye.</div>
+            </div>
+        </div>
+
+        <h2 class="topic-heading">Chapter Summary (One-Line Revision Grid)</h2>
+        <div class="example-box" style="background:#f8fafc; border-left-color:#3498db;">
+            ⚡ <strong>Wiring Installation</strong> = Power safe internal distribution layout.<br>
+            📐 <strong>Estimation Sheet</strong> = Pre-calculation of component costs + labor parameters.<br>
+            🛡️ <strong>Conduit System</strong> = Highest security standard wiring option for modern buildings.<br>
+            🟢 <strong>Earth Color</strong> = Modern Brown (Live), Blue (Neutral), Green/Yellow (Earth).<br>
+            🛠️ <strong>SPF Rule</strong> = Connect individual switches and fuse lines strictly on Phase circuit
+            nodes.<br>
+            ⚓ <strong>Pipe System</strong> = Industrial favorite due to low-cost grid drilling execution.
+        </div>
+
+        <h2 class="exam-section-title">5. Master CBT Top 10 Exam Core Q&A Bank</h2>
+        <div class="exam-qa-stack">
+            <div class="exam-qa-card">
+                <div class="exam-question">Q1. Gharon me temporary decoration light setup ke liye kis type ki wiring
+                    upyukt hai?</div>
+                <div class="exam-answer">Ans: Cleat Wiring (क्लीट वायरिंग). Yeh temporary aur asani se nikaali jaane
+                    wali wiring hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q2. Modern concrete residential slabs me kis wiring ko primacy di jati hai?
+                </div>
+                <div class="exam-answer">Ans: Concealed Conduit Wiring. Yeh plaster ke andar hone ke karan fireproof aur
+                    neat look deti hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q3. Phase, Neutral aur Earth wire ke naye standard color code kya hain?</div>
+                <div class="exam-answer">Ans: Phase = Brown (भूरा), Neutral = Blue (नीला), Earth = Green/Yellow.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q4. IE Rules ke mutabik kis line segment me security fuse lagana varjit
+                    (prohibited) hai?</div>
+                <div class="exam-answer">Ans: Neutral wire me fuse lagana varjit hai, fuse hamesha keval Phase wire me
+                    lagna chahiye.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q5. Earth electrode installation ke charo taraf mitti ko treat karne ka main
+                    logic kya hai?</div>
+                <div class="exam-answer">Ans: Total internal earth resistance loop value ko minimum limit tak drop
+                    karna.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q6. Plate Earthing setup me standard specification Copper plate ki ideal
+                    dimensions kya hoti hain?</div>
+                <div class="exam-answer">Ans: 600 mm × 600 mm × 3.15 mm size parameter grid.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q7. Electrical estimation process ka core beneficial utilization kya hota
+                    hai?</div>
+                <div class="exam-answer">Ans: Execution se pehle material shortage aur unexpected financial financial
+                    losses se bachna.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q8. Agar single switch load parameter leak hokar metal body par touch ho, to
+                    kya system protective device trip hoga?</div>
+                <div class="exam-answer">Ans: Haan, agar safe low-resistance Earthing properly connected hai to MCB
+                    instantly trip ho jayegi.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q9. System security frame me ELCB ka full name kya hota hai?</div>
+                <div class="exam-answer">Ans: Earth Leakage Circuit Breaker. Yeh microscopic leakage current detection
+                    par bhi active trip karta hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q10. Substations aur highly loaded generation grids ke liye ideal maximum
+                    grounding target resistance kitna hai?</div>
+                <div class="exam-answer">Ans: Lagbhag 1 Ohm se kam, preferably down to 0.5 Ohm.</div>
+            </div>
+        </div>
+
+        <h2 class="exam-section-title">6. Online CBT Objective Practice (10 Core Live MCQs)</h2>
+        <div id="mcqDynamicRoot"></div>
+
+        <div class="bottom-action-panel">
+            <button class="btn-action btn-download-pdf" onclick="initiatePdfQuizGate()">📥 Print / Download Clean PDF
+                Note</button>
+            <a href="./magnetism-and-capacitors.html" class="btn-action btn-next-module app-link">Launch Module 06:
+                Magnetism ❯</a>
+        </div>
+
+    </main>
+
+    <div class="quiz-modal-overlay" id="pdfQuizModal">
+        <div class="quiz-modal-card">
+            <div class="quiz-modal-header">
+                <h3>🔒 Unlock PDF Download</h3>
+                <button class="close-modal-btn" onclick="closePdfModal()">×</button>
+            </div>
+            <div id="quizModalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Premium Tri-Language Core Syllabus System</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Mobile Bar Animation Toggle
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Live 10 Core Objective Question Bank Object Array
+        const mcqPool = [
+            { q: "Household electrical wiring systems me switches ko hamesha kis wire element par series me fit kiya jata hai?", o: ["Neutral wire", "Earth wire", "Phase (Live) wire", "Grounding node"], c: 2 },
+            { q: "Naye global standard codes ke according, Neutral wire ka standard identity range color kya hota hai?", o: ["Red color", "Blue color", "Black color", "Green color"], c: 1 },
+            { q: "Inme se building structures ke liye sabse durable, safe aur fire-proof premium wiring framework kaun sa hai?", o: ["Cleat Wiring", "Batten Open Wiring", "Concealed Conduit Wiring", "Casing Capping System"], c: 2 },
+            { q: "Plate Earthing parameters ke mutabik, standard GI Plate sheet thickness parameter kitna hona compulsory hai?", o: ["3.15 mm", "6.00 mm", "1.50 mm", "10.00 mm"], c: 1 },
+            { q: "Earth Connection Pit architecture me moisture content flow ko safe limit par retain karne ke liye kya bichaaya jata hai?", o: ["Sand Grid", "Salt + Charcoal Alternate Layers", "Plastic Isolation Sheets", "Dry Wood Core Pieces"], c: 1 },
+            { q: "Indian Electricity Rules ke mutabik, safety ground systems ka total allowable ideal house earth resistance kitna hona chahiye?", o: ["100 Ohm to 500 Ohm", "1 Ohm to 5 Ohm", "Infinite Value", "Bilkul Zero Ohm always"], c: 1 },
+            { q: "Project shuru karne se pehle component material inventory quantity aur pricing evaluate karne ki technique ko kya kehte hain?", o: ["Fault Auditing", "Electrical Estimation", "Load Balancing Sheet", "Insulation Testing"], c: 1 },
+            { q: "Transformer Neutral points ko solid ground earth plate se bypass link connect karne ko kya kaha jata hai?", o: ["Earthing Process", "Grounding Process", "Loop Insulation Protection", "Static Discharging"], c: 1 },
+            { q: "Cleat wiring execution main usage category framework me kahan use hoti hai?", o: ["Premium Corporate Hospitals", "Temporary Functions / Construction Site Sites", "Heavy Industry Powerhouses", "Underground Subways"], c: 1 },
+            { q: "Equipment core body insulation leakage hone par fault current direction instantly zameen me link bypass karke kisko shock protection deta hai?", o: ["Energy Meter Grid", "Human Body Operating System", "Transformer Windings", "Generation Plant Turbine"], c: 1 }
+        ];
+
+        // Compile Main Page Dynamic Quiz Matrix Grid Layout
+        const rootNode = document.getElementById("mcqDynamicRoot");
+        let htmlBuffer = "";
+
+        mcqPool.forEach((item, index) => {
+            let num = index + 1;
+            htmlBuffer += `
+                <div class="mcq-card">
+                    <div class="exam-question">Q${num}. ${item.q}</div>
+                    <div class="mcq-opt-list">
+            `;
+            item.o.forEach((opt, optIdx) => {
+                htmlBuffer += `
+                    <button class="mcq-option-btn" onclick="validateOption(this, ${optIdx === item.c})">
+                        ${opt}
+                    </button>
+                `;
+            });
+            htmlBuffer += `</div></div>`;
+        });
+        rootNode.innerHTML = htmlBuffer;
+
+        function validateOption(btn, isCorrect) {
+            const parentBlock = btn.parentElement;
+            const buttons = parentBlock.querySelectorAll(".mcq-option-btn");
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                btn.classList.add("correct-ans");
+            } else {
+                btn.classList.add("wrong-ans");
+                buttons.forEach(b => {
+                    if (b.innerText.trim() === mcqPool[Array.from(rootNode.children).indexOf(parentBlock.parentElement)].o[mcqPool[Array.from(rootNode.children).indexOf(parentBlock.parentElement)].c]) {
+                        b.classList.add("correct-ans");
+                    }
+                });
+            }
+        }
+
+        /* --- Custom Premium 3-MCQ Quiz Gate Engine Logic --- */
+        let gateQuestions = [];
+        let currentGateIndex = 0;
+        let correctAnswersCount = 0;
+
+        function initiatePdfQuizGate() {
+            const scrambled = [...mcqPool].sort(() => 0.5 - Math.random());
+            gateQuestions = scrambled.slice(0, 3);
+
+            currentGateIndex = 0;
+            correctAnswersCount = 0;
+
+            document.getElementById("pdfQuizModal").style.display = "flex";
+            renderGateStep();
+        }
+
+        function closePdfModal() {
+            document.getElementById("pdfQuizModal").style.display = "none";
+        }
+
+        function renderGateStep() {
+            const targetContentBox = document.getElementById("quizModalContent");
+
+            if (currentGateIndex >= 3) {
+                if (correctAnswersCount === 3) {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+                            <h4 style="color: #15803d; margin: 0 0 10px 0; font-size: 18px;">Perfect Score! Verification Successful.</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">PDF printing utility configuration is launching now...</p>
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        closePdfModal();
+                        window.print();
+                    }, 1500);
+                } else {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">❌</div>
+                            <h4 style="color: #b91c1c; margin: 0 0 10px 0; font-size: 18px;">Verification Failed!</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">PDF download security parameter criteria require checking 3/3 right selections.</p>
+                            <button class="btn-action btn-next-module" onclick="initiatePdfQuizGate()">Try Again ↻</button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const currentObj = gateQuestions[currentGateIndex];
+
+            let modalHtml = `
+                <div class="quiz-progress-tracker">Question ${currentGateIndex + 1} of 3</div>
+                <div class="exam-question" style="font-size: 16px; margin-bottom: 15px;">${currentObj.q}</div>
+                <div class="mcq-opt-list">
+            `;
+
+            currentObj.o.forEach((optText, optIdx) => {
+                modalHtml += `
+                    <button class="mcq-option-btn" onclick="checkGateSelection(this, ${optIdx === currentObj.c})">
+                        ${optText}
+                    </button>
+                `;
+            });
+
+            modalHtml += `</div>`;
+            targetContentBox.innerHTML = modalHtml;
+        }
+
+        function checkGateSelection(element, isRight) {
+            const listContainer = element.parentElement;
+            const groupButtons = listContainer.querySelectorAll(".mcq-option-btn");
+            groupButtons.forEach(btn => btn.disabled = true);
+
+            if (isRight) {
+                element.classList.add("correct-ans");
+                correctAnswersCount++;
+            } else {
+                element.classList.add("wrong-ans");
+                groupButtons.forEach((btn, idx) => {
+                    if (idx === gateQuestions[currentGateIndex].c) {
+                        btn.classList.add("correct-ans");
+                    }
+                });
+            }
+
+            setTimeout(() => {
+                currentGateIndex++;
+                renderGateStep();
+            }, 1200);
+        }
+    </script>
+</body>
+
+</html>
