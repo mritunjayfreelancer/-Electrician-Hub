@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chapter 05: Domestic Appliances - Electrician Hub</title>
+
+    <meta name="description"
+        content="ITI Electrician Theory Chapter: Domestic Appliances completely explained in Hindi & English with 20 MCQs, Electric Iron, Mixer Grinder, Geyser, Washing Machine, and Interview notes.">
+    <meta name="keywords"
+        content="Domestic Appliances, Electric Iron, Mixer Grinder, Geyser, Washing Machine, Universal Motor, BLDC Motor, Thermostat, ITI Electrician Theory">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        /* Base Reset & Core Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        /* Responsive Navbar */
+        header.navbar {
+            background: #0f172a;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header.navbar .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f1c40f;
+        }
+
+        header.navbar nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        header.navbar nav ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        header.navbar nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        /* Chapter Layout */
+        .chapter-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .chapter-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Action Downloader Zone */
+        .pdf-download-zone {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 25px;
+        }
+
+        .btn-pdf-trigger {
+            background-color: #f1c40f;
+            color: #0f172a;
+            border: 1px solid #e3b20a;
+            padding: 12px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(241, 196, 15, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .btn-pdf-trigger:hover {
+            background-color: #e3b20a;
+            transform: translateY(-1px);
+        }
+
+        .chapter-title-zone {
+            border-bottom: 2px dashed #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .chapter-title-zone h1 {
+            font-size: 28px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .chapter-title-zone h2 {
+            font-size: 20px;
+            color: #2563eb;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .sub-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* Deep Content Styling */
+        .section-block {
+            margin-bottom: 35px;
+        }
+
+        .section-block h3 {
+            font-size: 18px;
+            color: #0f172a;
+            border-left: 4px solid #f1c40f;
+            padding-left: 12px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        /* Mac Style 3-Dot Box Windows */
+        .mac-box-window {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .mac-box-top-bar {
+            background: #f1f5f9;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .mac-box-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mac-box-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-r {
+            background: #ef4444;
+        }
+
+        .dot-y {
+            background: #f59e0b;
+        }
+
+        .dot-g {
+            background: #10b981;
+        }
+
+        .mac-box-lang {
+            font-size: 11px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mac-box-content {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .mac-box-window.eng-theme {
+            border-top: 3px solid #64748b;
+        }
+
+        .mac-box-window.eng-theme .mac-box-content {
+            color: #334155;
+            background: #f8fafc;
+        }
+
+        .mac-box-window.hin-theme {
+            border-top: 3px solid #f1c40f;
+        }
+
+        .mac-box-window.hin-theme .mac-box-content {
+            color: #713f12;
+            background: #fffbeb;
+        }
+
+        /* Flow Process styling */
+        .flow-step {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            margin: 5px 0;
+            font-size: 13px;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: #f1c40f;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 2px 0;
+        }
+
+        /* Industrial Premium Tables */
+        .premium-table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .premium-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .premium-data-table th {
+            background: #0f172a;
+            color: white;
+            padding: 12px;
+            font-weight: 500;
+        }
+
+        .premium-data-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+        }
+
+        .premium-data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* MCQ Test Grid Design */
+        .mcq-section-title {
+            font-size: 22px;
+            color: #0f172a;
+            margin: 40px 0 20px 0;
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 8px;
+        }
+
+        .mcq-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .mcq-question {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .mcq-options-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mcq-options-list li {
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-size: 14px;
+        }
+
+        .answer-reveal-box {
+            margin-top: 12px;
+            padding: 10px;
+            background: #dcfce7;
+            color: #15803d;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            display: block;
+        }
+
+        /* Viva Grid */
+        .viva-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .viva-item {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #0f172a;
+        }
+
+        .viva-question {
+            font-weight: 600;
+            font-size: 14px;
+            color: #0f172a;
+        }
+
+        .viva-answer {
+            font-size: 13px;
+            color: #475569;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* Info Bullet Lists */
+        .info-list {
+            list-style: none;
+            padding-left: 5px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: #f1c40f;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Bottom Navigation Footer */
+        .chapter-navigation-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-certificate {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-certificate:hover {
+            background: #cbd5e1;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        /* Footer Compliance */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 13px;
+            border-top: 3px solid #f1c40f;
+        }
+
+        footer .footer-logo {
+            color: #f1c40f;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        /* ==========================================================
+           PREMIUM DYNAMIC MCQ VERIFICATION POPUP MODAL (CYBER THEME)
+           ========================================================== */
+        .verification-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .verification-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .verification-window {
+            background: #1e293b;
+            width: 92%;
+            max-width: 520px;
+            border-radius: 16px;
+            border: 2px solid #f1c40f;
+            box-shadow: 0 0 30px rgba(241, 196, 15, 0.25);
+            overflow-y: auto;
+            max-height: 85vh;
+        }
+
+        .v-header {
+            background: #0f172a;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .v-header h4 {
+            color: #f1c40f;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .v-close-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 26px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .v-body {
+            padding: 25px 20px;
+            color: #ffffff;
+        }
+
+        .v-intro {
+            font-size: 13px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+            text-align: center;
+            background: rgba(241, 196, 15, 0.08);
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px dashed rgba(241, 196, 15, 0.3);
+        }
+
+        .v-q-card {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #334155;
+        }
+
+        .v-question {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .v-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .v-options label {
+            font-size: 13px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .v-footer {
+            padding: 15px 20px;
+            background: #0f172a;
+            border-top: 1px solid #334155;
+            text-align: center;
+        }
+
+        .btn-v-submit {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .btn-v-submit:hover {
+            background: #059669;
+        }
+
+        /* Print system rules */
+        @media print {
+
+            .navbar,
+            .pdf-download-zone,
+            footer,
+            .chapter-navigation-footer,
+            .verification-overlay {
+                display: none !important;
+            }
+
+            body {
+                background: #ffffff !important;
+            }
+
+            .chapter-container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .chapter-card {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chapter-card {
+                padding: 20px 15px;
+            }
+
+            .chapter-title-zone h1 {
+                font-size: 22px;
+            }
+
+            header.navbar {
+                padding: 15px 20px;
+            }
+
+            header.navbar nav ul {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="chapter-container">
+        <article class="chapter-card" id="pdfPrintTargetArea">
+
+            <div class="pdf-download-zone" data-html2pdf-ignore="true">
+                <button class="btn-pdf-trigger" id="openVerifyModalBtn">📥 Download Chapter PDF</button>
+            </div>
+
+            <div class="chapter-title-zone">
+                <span class="sub-title">Theory Module • 05</span>
+                <h1>Domestic Appliances</h1>
+                <h2>घरेलू विद्युत उपकरण</h2>
+            </div>
+
+            <div class="section-block">
+                <h3>1. Introduction (परिचय)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">English Mode</div>
+                    </div>
+                    <div class="mac-box-content">
+                        <strong>Definition:</strong> Domestic appliances are electrical devices used in homes to perform
+                        household tasks conveniently, safely, and efficiently. They make daily routine work simple and
+                        save substantial manual operational effort.
+                    </div>
+                </div>
+
+                <div class="mac-box-window hin-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span><span
+                                class="mac-box-dot dot-y"></span><span class="mac-box-dot dot-g"></span></div>
+                        <div class="mac-box-lang">Hindi Mode (हिन्दी)</div>
+                    </div>
+                    <div class="mac-box-content">
+                        <strong>परिभाषा:</strong> Domestic appliances wo electrical devices hote hain jo ghar ke daily
+                        kaam jaise cooking, washing, heating aur cleaning ko aasaan banate hain. Ye hamari daily life ke
+                        kaam ko comfortable aur easy bana dete hain.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>2. Domestic Appliances Classification (वर्गीकरण)</h3>
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Appliance Name</th>
+                                <th>Main Work (मुख्य कार्य)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Electric Iron</strong></td>
+                                <td>Clothes Press Karna (कपड़ों की सिलवटें हटाना)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Electric Heater</strong></td>
+                                <td>Heat Generate Karna (कमरा गर्म करना/खाना पकाना)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mixer Grinder</strong></td>
+                                <td>Grinding aur Mixing (मसाले पीसना और मिश्रण बनाना)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Electric Geyser</strong></td>
+                                <td>Water Heating (पानी गर्म करना)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Washing Machine</strong></td>
+                                <td>Clothes Washing (कपड़े धोना और सुखाना)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>3. Electric Iron (विद्युत प्रेस)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-r"></span></div>
+                        <div class="mac-box-lang">English Overview</div>
+                    </div>
+                    <div class="mac-box-content">
+                        An electric iron is an electrical appliance used to remove wrinkles from clothes by converting
+                        electrical energy into heat energy.
+                    </div>
+                </div>
+                <div class="mac-box-window hin-theme">
+                    <div class="mac-box-top-bar">
+                        <div class="mac-box-dots"><span class="mac-box-dot dot-y"></span></div>
+                        <div class="mac-box-lang">हिन्दी विवरण</div>
+                    </div>
+                    <div class="mac-box-content">
+                        Electric iron ek electrical appliance hai jo electrical energy ko heat me convert karke kapdo ki
+                        silvate (wrinkles) hataata hai.
+                    </div>
+                </div>
+
+                <p><strong>Principle & Formula:</strong> Works on <strong>Joule's Heating Effect</strong>.</p>
+                <div class="flow-step">Formula: H = I²RT <br> (Where I = Current, R = Resistance, T = Time)</div>
+
+                <p><strong>Main Parts:</strong></p>
+                <ul class="info-list">
+                    <li>Heating Element (Nichrome Wire)</li>
+                    <li>Thermostat (Bi-metallic strip)</li>
+                    <li>Sole Plate, Handle & Indicator Lamp</li>
+                    <li>Power Cord & Safety Fuse</li>
+                </ul>
+
+                <p><strong>Working Process Loop:</strong></p>
+                <div class="flow-step">Supply ON hoti hai</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Current Nichrome wire me flow karta hai</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Nichrome resistance ki wajah se heat produce karta hai</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Heat Sole Plate me transfer hoti hai</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Thermostat temperature ko control/cut-off karta hai</div>
+
+                <p><strong>Why Nichrome Wire is Used?</strong></p>
+                <ul class="info-list">
+                    <li>High Resistance & High Melting Point</li>
+                    <li>Doesn't Rust/Oxidize at high temperatures</li>
+                    <li>Long Life Layout and Produces More Heat</li>
+                </ul>
+
+                <div class="viva-item" style="margin-top:10px;">
+                    <div class="viva-question">Interview Point Q: Iron me thermostat kyun use hota hai?</div>
+                    <div class="viva-answer">Answer: Temperature ko automatically maintain karne ke liye power supply
+                        control karna.</div>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>4. Electric Heater (विद्युत हीटर)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-content">
+                        <strong>Electric Heater:</strong> An appliance that converts electrical energy into heat energy
+                        for room heating or cooking purposes based on the Joule Heating Effect (H = I²RT).
+                    </div>
+                </div>
+                <p><strong>Main Components:</strong> Heating Coil (Nichrome Wire), Reflector, Main Body, Switch, Power
+                    Cord, Safety Fuse.</p>
+
+                <p><strong>Working Sequence:</strong></p>
+                <div class="flow-step">Current → Nichrome Coil → Heat Generation → Heat Air me Transfer → Room Warm
+                </div>
+
+                <p><strong>Heater Types Grid:</strong> Fan Heater, Radiant Heater, Oil Heater, Coil Heater, PTC Heater.
+                </p>
+                <p><strong>Why Nichrome?</strong> High Resistance, Heat Stable, Oxidation Resistant, Long Life
+                    Parameters.</p>
+            </div>
+
+            <div class="section-block">
+                <h3>5. Mixer Grinder (मिक्सर ग्राइंडर)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-content">
+                        An electrical appliance used for mixing, grinding and blending food materials using a high-speed
+                        electric motor.
+                    </div>
+                </div>
+                <p><strong>Principle Path:</strong> Electrical Energy → Mechanical Energy → Motor Rotation → Blade
+                    Rotation → Grinding Execution.</p>
+                <p><strong>Key Components:</strong> Universal Motor (Stator & Rotor), Carbon Brushes, Heavy Blades,
+                    Jars, Coupler, Speed Control Switch, Overload Protector (OLP).</p>
+
+                <p><strong>Working Sequence:</strong></p>
+                <div class="flow-step">Switch ON → Universal Motor Rotates → Coupler rotates Blade → Blade Crushes
+                    Material → Grinding Completed</div>
+
+                <p><strong>Why Universal Motor?</strong> High Speed, Small Size, High Torque & works efficiently on both
+                    AC & DC Supply.</p>
+                <div class="flow-step" style="background:#fffbeb; border-color:#f1c40f;"><strong>Motor RPM
+                        Range:</strong> Approx 15000 – 22000 RPM</div>
+            </div>
+
+            <div class="section-block">
+                <h3>6. Electric Geyser (गीजर)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-content">
+                        A geyser is an electric appliance used to heat water safely using an immersion heating element
+                        based on Joule Heating Effect.
+                    </div>
+                </div>
+                <p><strong>Core Structural Parts:</strong> Immersion Heating Element, Thermostat, Storage Tank,
+                    Magnesium Rod (Prevents corrosion), Temperature Sensor, Pressure Valve, Thermal Insulation, Outer
+                    Protective Body.</p>
+
+                <p><strong>Working Loop:</strong></p>
+                <div class="flow-step">Water Tank Fill → Heating Element ON → Water Heat → Thermostat Monitor → Required
+                    Temp Attained → Power OFF Automatically</div>
+
+                <p><strong>Safety Devices Parameters:</strong> Thermostat Switch, Pressure Relief Valve, Thermal
+                    Cut-Out, Dead-End Solid Earthing Line.</p>
+            </div>
+
+            <div class="section-block">
+                <h3>7. Washing Machine (वाशिंग मशीन)</h3>
+                <div class="mac-box-window eng-theme">
+                    <div class="mac-box-content">
+                        An electrical appliance used to wash clothes automatically by using water, detergent, and
+                        controlled mechanical motion cycles.
+                    </div>
+                </div>
+                <p><strong>Classification Types:</strong> Semi Automatic vs Fully Automatic | Top Load vs Front Load
+                    Configurations.</p>
+                <p><strong>Main Parts Layout:</strong> Electric Motor, Spinning Drum, Agitator/Pulsator, Digital Timer,
+                    Water Inlet Valve, Heavy Drain Pump, PCB Main Board, Door Lock Switch, Shock Absorbers, Belt
+                    Mechanism, Running Capacitor.</p>
+
+                <p><strong>Operational Cycle:</strong> Water Fill → Detergent Mix → Motor Rotate Drum → Wash → Drain →
+                    Rinse → Spin → Dry Cycle.</p>
+                <p><strong>Motors Used in Industry:</strong> Universal Motor, Induction Motor, BLDC Motor (Modern Smart
+                    Machines).</p>
+                <p><strong>BLDC Motor (Brushless DC) Advantages:</strong> Less Noise Execution, Ultra High Efficiency,
+                    Extremely Long Structural Life, Low Maintenance Cost, Dynamic Energy Saving.</p>
+            </div>
+
+            <div class="section-block">
+                <h3>8. Technical Reference Parameters & Definitions</h3>
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Component/Term</th>
+                                <th>Engineering Definition & Core Use Cases</th>
+                                <th>SI Unit / Formula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Resistance</strong></td>
+                                <td>Opposition offered by a conductor to current flow.</td>
+                                <td>Ohm (Ω)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Current</strong></td>
+                                <td>Continuous uniform flow of electrons through a loop.</td>
+                                <td>Ampere (A)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Voltage</strong></td>
+                                <td>Electrical pressure that pushes the charge carrier.</td>
+                                <td>Volt (V)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Power</strong></td>
+                                <td>Rate of electrical energy consumption in real-time.</td>
+                                <td>P = VI | Watt (W)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Energy</strong></td>
+                                <td>Electrical power consumed over a given period of time.</td>
+                                <td>E = P × t | kWh</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Thermostat</strong></td>
+                                <td>Automatic temperature controlling switch using bi-metal setup.</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Heating Element</strong></td>
+                                <td>Converts electrical energy directly into safe heat energy.</td>
+                                <td>Nichrome Alloys</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fuse</strong></td>
+                                <td>Safety device that protects circuits from excessive overcurrent.</td>
+                                <td>Melts down</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Earthing Line</strong></td>
+                                <td>Provides low resistance safety path for leakage currents.</td>
+                                <td>Prevents Shocks</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>9. Structural Technical Comparison (अंतर)</h3>
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Parameters</th>
+                                <th>Electric Iron</th>
+                                <th>Electric Heater</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Primary Objective</strong></td>
+                                <td>Pressing & removing wrinkles from clothes.</td>
+                                <td>Room heating or direct cooking operations.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sole Plate</strong></td>
+                                <td>Heavy polished flat sole plate present.</td>
+                                <td>No flat sole plate; features open coil layout.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Control System</strong></td>
+                                <td>Strictly temperature controlled by thermostat.</td>
+                                <td>Generally open radiant heat loops.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="premium-table-wrapper">
+                    <table class="premium-data-table">
+                        <thead>
+                            <tr>
+                                <th>Parameters</th>
+                                <th>Mixer Grinder</th>
+                                <th>Washing Machine</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Application</strong></td>
+                                <td>Food items grinding and processing.</td>
+                                <td>Fabric materials cleaning and drying.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Speed Limits</strong></td>
+                                <td>Ultra High Speed (15000-22000 RPM range).</td>
+                                <td>Relatively Low Speed but continuous torque.</td>
+                            </tr>
+                            <li><strong>Motor Class</strong></td>
+                                <td>Universal Motor setup.</td>
+                                <td>Induction or BLDC Motor systems.</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <h3>10. Industrial Safety Precautions (सुरक्षा सावधानियां)</h3>
+                <ul class="info-list">
+                    <li>Always verify and connect heavy three-pin solid <strong>Earthing infrastructure</strong>.</li>
+                    <li>Never operate or touch any electrical appliance terminal with wet hands.</li>
+                    <li>Check insulation sleeves periodically for tracking degradation or breakdown leaks.</li>
+                    <li>Always deploy properly rated protective structural Fuses or MCBs.</li>
+                    <li>Do not overload industrial plug sockets beyond rated power indices.</li>
+                    <li>Switch OFF the isolated power point immediately after completing operations.</li>
+                </ul>
+            </div>
+
+            <h3 class="mcq-section-title">💬 Viva-Voce Interview Preparation (Top 10 Questions)</h3>
+            <div class="viva-grid">
+                <div class="viva-item">
+                    <div class="viva-question">Q1. What is a Domestic Appliance?</div>
+                    <div class="viva-answer">Ans: Domestic appliances are electrical devices used in homes to perform
+                        household work conveniently and safely.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q2. Which principle is used in an Electric Iron?</div>
+                    <div class="viva-answer">Ans: Joule's Law of Heating Effect (H = I²RT).</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q3. Why Nichrome wire is specifically selected for heating elements?
+                    </div>
+                    <div class="viva-answer">Ans: Because of its extremely high resistance value, high melting point,
+                        and excellent oxidation resistance under heavy temperatures.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q4. What is a Thermostat?</div>
+                    <div class="viva-answer">Ans: A thermostat is an automatic temperature-controlling switch that opens
+                        or closes the circuit when specific limits are reached.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q5. Which motor is utilized inside a Mixer Grinder?</div>
+                    <div class="viva-answer">Ans: Universal Motor because of its superior starting torque and high
+                        operating speed.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q6. Which motor type is popular in modern premium smart washing machines?
+                    </div>
+                    <div class="viva-answer">Ans: BLDC Motor (Brushless DC Motor) due to energy optimization and minimal
+                        wear-and-tear.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q7. Why standard frame Earthing lines are mandatory for appliances?</div>
+                    <div class="viva-answer">Ans: To bypass potential dangerous insulation leakage currents to earth,
+                        saving users from electric shocks.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q8. Define the role of a Heating Element.</div>
+                    <div class="viva-answer">Ans: It is a functional resistive component designed to transform
+                        electrical power directly into thermodynamic heat energy.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q9. What is an Overload Protector (OLP) in a Mixer?</div>
+                    <div class="viva-answer">Ans: A bimetallic safety mechanism that trips and isolates the motor during
+                        excessive mechanical loading.</div>
+                </div>
+                <div class="viva-item">
+                    <div class="viva-question">Q10. State the main difference between Semi-Automatic and Fully Automatic
+                        Washing Machines.</div>
+                    <div class="viva-answer">Ans: Semi-automatic requires manual intervention for transferring clothes
+                        and water management, while fully automatic controls everything via integrated PCBs
+                        automatically.</div>
+                </div>
+            </div>
+
+            <h3 class="mcq-section-title">📝 Chapter Exam Assessment (20 Important MCQs)</h3>
+            <div class="mcq-container">
+                <div class="mcq-card">
+                    <div class="mcq-question">Q1. Electric iron works on:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Magnetic Effect</li>
+                        <li>B) Chemical Effect</li>
+                        <li>C) Joule Heating Effect</li>
+                        <li>D) Electrolysis</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Joule Heating Effect)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q2. Nichrome wire is used because of:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Low resistance</li>
+                        <li>B) High resistance</li>
+                        <li>C) Softness</li>
+                        <li>D) Cheap price</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (High resistance)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q3. Thermostat controls:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Current</li>
+                        <li>B) Voltage</li>
+                        <li>C) Temperature</li>
+                        <li>D) Speed</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Temperature)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q4. Mixer grinder uses:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Transformer</li>
+                        <li>B) Universal Motor</li>
+                        <li>C) Stepper Motor</li>
+                        <li>D) Servo Motor</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Universal Motor)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q5. Modern washing machine generally uses:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) BLDC Motor</li>
+                        <li>B) Synchronous Motor</li>
+                        <li>C) DC Generator</li>
+                        <li>D) Alternator</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: A (BLDC Motor)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q6. Heating element converts:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Heat → Electrical</li>
+                        <li>B) Electrical → Heat</li>
+                        <li>C) Mechanical → Heat</li>
+                        <li>D) Chemical → Heat</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Electrical → Heat)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q7. Unit of power:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Volt</li>
+                        <li>B) Ampere</li>
+                        <li>C) Watt</li>
+                        <li>D) Joule</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Watt)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q8. Fuse protects against:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Low voltage</li>
+                        <li>B) Overcurrent</li>
+                        <li>C) Moisture</li>
+                        <li>D) Noise</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Overcurrent)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q9. Earthing provides:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) High Voltage</li>
+                        <li>B) Safety Path</li>
+                        <li>C) Extra Power</li>
+                        <li>D) Speed Control</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Safety Path)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q10. Formula of Power:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) P = IR</li>
+                        <li>B) P = VI</li>
+                        <li>C) P = V/R</li>
+                        <li>D) P = I/R</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (P = VI)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q11. Which appliance removes wrinkles from clothes?</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Geyser</li>
+                        <li>B) Iron</li>
+                        <li>C) Mixer Grinder</li>
+                        <li>D) Heater</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Iron)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q12. Which appliance heats water?</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Iron</li>
+                        <li>B) Geyser</li>
+                        <li>C) Mixer</li>
+                        <li>D) Fan</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Geyser)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q13. Which appliance is used for grinding food?</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Washing Machine</li>
+                        <li>B) Mixer Grinder</li>
+                        <li>C) Heater</li>
+                        <li>D) Iron</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Mixer Grinder)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q14. Which component rotates in a mixer?</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Thermostat</li>
+                        <li>B) Blade</li>
+                        <li>C) Fuse</li>
+                        <li>D) Relay</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Blade)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q15. Which law explains heat generation in a resistor?</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Ohm's Law</li>
+                        <li>B) Joule's Law of Heating</li>
+                        <li>C) Faraday's Law</li>
+                        <li>D) Kirchhoff's Law</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Joule's Law of Heating)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q16. The SI unit of resistance is:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Volt</li>
+                        <li>B) Ampere</li>
+                        <li>C) Ohm</li>
+                        <li>D) Watt</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Ohm)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q17. A thermostat mainly acts as:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Motor</li>
+                        <li>B) Automatic switch</li>
+                        <li>C) Fuse</li>
+                        <li>D) Capacitor</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Automatic switch)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q18. The spin cycle in a washing machine is used to:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Heat water</li>
+                        <li>B) Dry clothes by removing water</li>
+                        <li>C) Add detergent</li>
+                        <li>D) Fill water</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Dry clothes by removing water)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q19. Which safety device melts during excessive current?</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Relay</li>
+                        <li>B) Thermostat</li>
+                        <li>C) Fuse</li>
+                        <li>D) Capacitor</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: C (Fuse)</div>
+                </div>
+                <div class="mcq-card">
+                    <div class="mcq-question">Q20. Electrical energy in a mixer is converted mainly into:</div>
+                    <ul class="mcq-options-list">
+                        <li>A) Chemical Energy</li>
+                        <li>B) Mechanical Energy</li>
+                        <li>C) Light Energy</li>
+                        <li>D) Nuclear Energy</li>
+                    </ul>
+                    <div class="answer-reveal-box">✅ Correct Answer: B (Mechanical Energy)</div>
+                </div>
+            </div>
+
+            <div class="chapter-navigation-footer" data-html2pdf-ignore="true">
+                <a href="../index.html#chapters" class="btn btn-certificate">← Back to Course Dashboard</a>
+                <a href="../index.html#chapters" class="btn btn-primary">Complete Syllabus ✓</a>
+            </div>
+
+        </article>
+    </main>
+
+    <div class="verification-overlay" id="verifyModal" data-html2pdf-ignore="true">
+        <div class="verification-window">
+            <div class="v-header">
+                <h4>🔒 SECURITY GATE: Unlock Your Chapter PDF</h4>
+                <button class="v-close-btn" id="closeVerifyModalBtn">×</button>
+            </div>
+            <div class="v-body">
+                <div class="v-intro">
+                    Bhai, PDF download karne ke liye niche diye gaye <strong>Domestic Appliances ke 3 sawalon ka bilkul
+                        sahi jawab (3/3)</strong> dena hoga security standard ke mutabik!
+                </div>
+
+                <div class="v-q-card">
+                    <div class="v-question">Q1. Electric Iron me Automatic temperature control ke liye kya lagaya jata
+                        hai?</div>
+                    <div class="v-options">
+                        <label><input type="radio" name="v_q1" value="wrong"> A. Only Fuse</label>
+                        <label><input type="radio" name="v_q1" value="correct"> B. Thermostat</label>
+                        <label><input type="radio" name="v_q1" value="wrong"> C. Universal Motor</label>
+                    </div>
+                </div>
+
+                <div class="v-q-card">
+                    <div class="v-question">Q2. Mixer Grinder me high torque aur speed ke liye kaun si motor use hoti
+                        hai?</div>
+                    <div class="v-options">
+                        <label><input type="radio" name="v_q2" value="wrong"> A. Induction Motor</label>
+                        <label><input type="radio" name="v_q2" value="wrong"> B. Synchronous Motor</label>
+                        <label><input type="radio" name="v_q2" value="correct"> C. Universal Motor</label>
+                    </div>
+                </div>
+
+                <div class="v-q-card">
+                    <div class="v-question">Q3. Washing Machine me 'Spin Cycle' ka primary function kya hai?</div>
+                    <div class="v-options">
+                        <label><input type="radio" name="v_q3" value="correct"> A. Dry clothes by removing water</label>
+                        <label><input type="radio" name="v_q3" value="wrong"> B. Heating water tank</label>
+                        <label><input type="radio" name="v_q3" value="wrong"> C. Foam Generation</label>
+                    </div>
+                </div>
+            </div>
+            <div class="v-footer">
+                <button class="btn-v-submit" id="checkAnswersVerifyBtn">Verify Answers & Unlock PDF →</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Verified DGT Academic Syllabus Library</p>
+        </div>
+    </footer>
+
+    <script>
+        const verifyModal = document.getElementById("verifyModal");
+        const openModalBtn = document.getElementById("openVerifyModalBtn");
+        const closeModalBtn = document.getElementById("closeVerifyModalBtn");
+        const checkBtn = document.getElementById("checkAnswersVerifyBtn");
+
+        // Open Security Popup on Download button click
+        openModalBtn.addEventListener("click", () => {
+            verifyModal.classList.add("open");
+        });
+
+        // Close Security Popup
+        closeModalBtn.addEventListener("click", () => {
+            verifyModal.classList.remove("open");
+        });
+
+        // Calculate and Verify 3/3 Strict Score Action
+        checkBtn.addEventListener("click", () => {
+            const q1 = document.querySelector('input[name="v_q1"]:checked');
+            const q2 = document.querySelector('input[name="v_q2"]:checked');
+            const q3 = document.querySelector('input[name="v_q3"]:checked');
+
+            if (!q1 || !q2 || !q3) {
+                alert("⚠️ Bhai, pehle teeno sawalon ke options select toh karo!");
+                return;
+            }
+
+            if (q1.value === "correct" && q2.value === "correct" && q3.value === "correct") {
+                alert("🎉 Brilliant! Teeno jawab bilkul sahi hain. Aapka PDF automatic download ho raha hai!");
+                verifyModal.classList.remove("open");
+
+                // Execute background PDF download function instantly
+                const element = document.getElementById("pdfPrintTargetArea");
+                const opt = {
+                    margin: [10, 10, 10, 10],
+                    filename: 'Chapter-Domestic-Appliances.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+                html2pdf().set(opt).from(element).save();
+
+            } else {
+                alert("❌ Arre yaar! Kuch jawab galat ho gaye. Rules ke mutabik 3 me se 3 sahi hone chahiye bacho. Dobara sahi se koshish karo!");
+                document.getElementsByName("v_q1").forEach(input => input.checked = false);
+                document.getElementsByName("v_q2").forEach(input => input.checked = false);
+                document.getElementsByName("v_q3").forEach(input => input.checked = false);
+            }
+        });
+    </script>
+</body>
+
+</html>
