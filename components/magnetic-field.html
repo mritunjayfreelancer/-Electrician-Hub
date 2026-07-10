@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ultimate Guide: What is Magnetic Field? (Deep Theory + MCQ) - Electrician Hub</title>
+
+    <meta name="description"
+        content="Master Magnetic Field, Flux Lines, Electromagnetism, and Magnetic Force from basic to advanced industrial automation level with simulated conceptual layouts.">
+    <meta name="keywords"
+        content="What is Magnetic Field, Magnetic Flux, Electromagnetism, Biot-Savart Law, Lorentz Force, ITI Electrician, Diploma Electrical">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Electrician Hub">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        /* CSS Reset & Structural Layout Engine */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* --- 100% Same Premium Navbar Styling --- */
+        header.navbar {
+            background: #0f172a;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header.navbar .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f1c40f;
+        }
+
+        header.navbar nav ul.nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        header.navbar nav ul.nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        header.navbar nav ul.nav-links a:hover {
+            color: #f1c40f;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        /* --- Dual Panel Dashboard Grid System --- */
+        .dashboard-wrapper {
+            display: flex;
+            margin-top: 65px;
+            height: calc(100vh - 65px);
+            position: relative;
+        }
+
+        /* LEFT SIDEBAR PANEL LAYOUT */
+        .sidebar-index-panel {
+            width: 320px;
+            background: #ffffff;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+            padding: 25px 15px;
+            flex-shrink: 0;
+        }
+
+        .index-main-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1c40f;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .index-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .index-menu li a {
+            display: block;
+            padding: 10px 14px;
+            color: #475569;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+            border-left: 3px solid transparent;
+        }
+
+        .index-menu li a:hover {
+            background: #f1f5f9;
+            color: #2563eb;
+            border-left-color: #2563eb;
+            padding-left: 18px;
+        }
+
+        /* RIGHT SIDE MASTER CONTENT PANEL */
+        .content-stream-panel {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 40px;
+            background: #f8fafc;
+        }
+
+        .content-inner-shell {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        /* --- Premium Mac Style UI Window Box Shell --- */
+        .mac-window-box {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .mac-top-bar {
+            background: #f1f5f9;
+            height: 45px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .mac-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .mac-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red {
+            background: #ef4444;
+        }
+
+        .dot-yellow {
+            background: #f59e0b;
+        }
+
+        .dot-green {
+            background: #10b981;
+        }
+
+        .mac-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .mac-content {
+            padding: 40px;
+        }
+
+        /* Framework Typography Framework Elements */
+        .chapter-section {
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #cbd5e1;
+            scroll-margin-top: 30px;
+        }
+
+        .chapter-section h2 {
+            font-size: 24px;
+            color: #0f172a;
+            font-weight: 800;
+            margin-bottom: 25px;
+            background: #f1f5f9;
+            padding: 14px 20px;
+            border-radius: 8px;
+            border-left: 6px solid #f1c40f;
+        }
+
+        .framework-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #e2e8f0;
+            color: #475569;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* Real Teacher Style Explanatory UI Blocks */
+        .teacher-note-box {
+            background: #fffbeb;
+            border-left: 5px solid #d97706;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .teacher-note-box h4 {
+            color: #b45309;
+            font-size: 16px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-container {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #cbd5e1;
+        }
+
+        .lang-label {
+            background: #e2e8f0;
+            padding: 6px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #475569;
+        }
+
+        .lang-text {
+            padding: 15px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .eng-theme {
+            background: #f8fafc;
+            color: #334155;
+        }
+
+        .hing-theme {
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tech-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            border-top: 4px solid #2563eb;
+        }
+
+        .tech-card strong {
+            color: #0f172a;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .tech-card span {
+            font-size: 13.5px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .visual-board {
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            border-left: 4px solid #10b981;
+            white-space: pre-wrap;
+        }
+
+        .premium-table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .premium-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .premium-table th {
+            background: #0f172a;
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+        }
+
+        .premium-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+        }
+
+        .premium-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .qa-block {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid #2563eb;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .qa-question {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .qa-answer {
+            font-size: 14px;
+            color: #334155;
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .mcq-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .mcq-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .mcq-options {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mcq-options li {
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-size: 13.5px;
+        }
+
+        .mcq-options li.correct-ans {
+            background: #dcfce7;
+            border-color: #bbf7d0;
+            color: #166534;
+            font-weight: 600;
+        }
+
+        /* --- Live Magnetic Flux Simulator Core --- */
+        .simulation-container {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 2px solid #334155;
+        }
+
+        .sim-title {
+            color: #f1c40f;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .circuit-board {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: #1e293b;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .magnet-bar {
+            width: 160px;
+            height: 40px;
+            background: linear-gradient(to right, #ef4444 50%, #2563eb 50%);
+            border-radius: 4px;
+            display: flex;
+            color: white;
+            font-weight: 800;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            border: 2px solid #ffffff;
+        }
+
+        .magnet-pole {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flux-lines-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.15;
+            transition: opacity 0.3s;
+        }
+
+        .flux-lines-container.active {
+            opacity: 1;
+            animation: pulse-flux 2s ease-in-out infinite alternate;
+        }
+
+        .flux-orbit {
+            position: absolute;
+            border: 2px dashed #38bdf8;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .orbit-1 {
+            width: 220px;
+            height: 90px;
+        }
+
+        .orbit-2 {
+            width: 280px;
+            height: 140px;
+        }
+
+        .orbit-3 {
+            width: 340px;
+            height: 180px;
+        }
+
+        .sim-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .btn-sim-toggle {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-sim-toggle.active {
+            background: #ef4444;
+        }
+
+        @keyframes pulse-flux {
+            from {
+                transform: scale(0.98);
+                opacity: 0.7;
+            }
+
+            to {
+                transform: scale(1.02);
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Adjustments */
+        .mobile-quick-nav-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0f172a;
+            color: white;
+            padding: 12px 20px;
+            z-index: 999;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-mobile-index {
+            background: #f1c40f;
+            color: #0f172a;
+            border: none;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .pdf-download-zone {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .btn-pdf-trigger {
+            background: #1e293b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 992px) {
+            body {
+                overflow: auto;
+            }
+
+            .dashboard-wrapper {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .sidebar-index-panel {
+                position: fixed;
+                top: 65px;
+                left: -100%;
+                width: 280px;
+                height: calc(100vh - 65px);
+                z-index: 998;
+                box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+                transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .sidebar-index-panel.open {
+                left: 0;
+            }
+
+            .content-stream-panel {
+                padding: 15px;
+                height: auto;
+                overflow-y: visible;
+            }
+
+            .mac-content {
+                padding: 25px 15px;
+            }
+
+            .mobile-quick-nav-bar {
+                display: flex;
+            }
+
+            .pdf-download-zone {
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .mac-title {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header.navbar nav ul.nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                width: 100%;
+                background: #0f172a;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            header.navbar nav ul.nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu"><span class="bar"></span><span class="bar"></span><span
+                class="bar"></span></div>
+    </header>
+
+    <div class="dashboard-wrapper">
+
+        <aside class="sidebar-panel sidebar-index-panel" id="sidebarIndex">
+            <div class="index-main-title">🧲 Field Module Index</div>
+            <ul class="index-menu">
+                <li><a href="#sec-intro" class="index-link-node">1. Visualizing the Invisible</a></li>
+                <li><a href="#sec-def" class="index-link-node">2. Core & Technical Definition</a></li>
+                <li><a href="#sec-simulator" class="index-link-node">3. Live Flux Simulator</a></li>
+                <li><a href="#sec-properties" class="index-link-node">4. Magnetic Flux Lines Rules</a></li>
+                <li><a href="#sec-electro" class="index-link-node">5. Electromagnetism Core</a></li>
+                <li><a href="#sec-units" class="index-link-node">6. Math & Units Matrix</a></li>
+                <li><a href="#sec-qa" class="index-link-node">7. Expert Interview Q&A Zone</a></li>
+                <li><a href="#sec-mcq" class="index-link-node">8. Assessment MCQ Test</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-stream-panel">
+            <div class="content-inner-shell">
+
+                <div class="pdf-download-zone" data-html2pdf-ignore="true">
+                    <button class="btn-pdf-trigger" id="downloadPdfBtn">📥 Download Magnetic Field PDF</button>
+                </div>
+
+                <div class="mac-window-box" id="pdfPrintArea">
+                    <div class="mac-top-bar">
+                        <div class="mac-dots"><span class="mac-dot dot-red"></span><span
+                                class="mac-dot dot-yellow"></span><span class="mac-dot dot-green"></span></div>
+                        <div class="mac-title">Syllabus Terminal Window: Magnetic Field Core</div>
+                    </div>
+
+                    <div class="mac-content">
+
+                        <section class="chapter-section" id="sec-intro">
+                            <span class="framework-badge">🌍 Real-World Analogy</span>
+                            <h2>1. Introduction (मैग्नेटिक फील्ड की अदृश्य शक्ति)</h2>
+                            <p>Bhai, tumne bachpan me do magnets ke sath toh pakka khela hoga! Jab do magnets ko ek
+                                doosre ke paas laate hain, toh bina ek doosre ko touch kiye hi unke beech ek zoradar
+                                khinchav (Attraction) ya dhakka (Repulsion) feel hota hai.</p>
+                            <p>Socho, jab dono magnets door hain aur hawa me hain, toh bina kisi physical contact ke yeh
+                                force lag kaise raha hai? Magnet ke charo taraf kuch toh aisa hota hai jo invisible hai
+                                par bohot zyada powerful hai! Yahi invisible force-space hamari engineering ka base hai:
+                            </p>
+                            <div class="visual-board" style="text-align: center; font-weight: 700; color: #f1c40f;">
+                                🧲 MAGNETIC FIELD (चुंबकीय क्षेत्र) 🧲
+                            </div>
+                            <p>Simple shabdo me bolein toh, jaise kisi area me kisi powerful don ka ek **"Ilaaka" (Zone
+                                of Influence)** hota hai jahan uska asar chalta hai, thik waise hi kisi magnet ke charo
+                                taraf ka wo ilaaka jahan tak uski magnetic power feel ki ja sake, use hum **Magnetic
+                                Field** kehte hain.</p>
+                        </section>
+
+                        <section class="chapter-section" id="sec-def">
+                            <span class="framework-badge">📖 The Theory Blueprint</span>
+                            <h2>2. Magnetic Field Ki Core Definition</h2>
+
+                            <div class="lang-container">
+                                <div class="lang-label">Simple Friend Mode (Hinglish)</div>
+                                <div class="lang-text hing-theme"><strong>Magnetic field kisi magnet ya current-carrying
+                                        wire ke charo taraf ka wo space hai</strong> jisme agar koi doosra magnet ya
+                                    iron piece (jaise lohe ka buraada) laya jaye, toh wo ek magnetic force experience
+                                    karta hai. Yeh field lines ke roop me spread hota hai jo North Pole se nikal kar
+                                    South Pole tak jaati hain.</div>
+                            </div>
+
+                            <div class="lang-container">
+                                <div class="lang-label">Technical Exam Level Standard</div>
+                                <div class="lang-text eng-theme">A <strong>magnetic field</strong> is a vector field
+                                    vector quantity surrounding a magnetic material or a moving electric charge, within
+                                    which the force of magnetism acts. It is characterized by both magnitude and
+                                    direction, dynamically represented by imaginary lines of magnetic flux.</div>
+                            </div>
+                        </section>
+
+                        <section class="chapter-section" id="sec-simulator">
+                            <span class="framework-badge">🔬 Interactive Lab Component</span>
+                            <h2>3. Live Flux Simulator (मैग्नेटिक लाइन ट्रैकर)</h2>
+                            <p>Neeche diye gaye circuit toggle button ko hit karo aur dekho kaise North (N) aur South
+                                (S) poles ke beech invisible magnetic force lines activate ho jaati hain. Yeh lines hi
+                                motor me rotation paida karne ke liye mechanical force lagati hain!</p>
+
+                            <div class="simulation-container" data-html2pdf-ignore="true">
+                                <div class="sim-title">🔄 Dynamic Magnetic Field Line Tracer</div>
+                                <div class="circuit-board">
+                                    <div class="flux-lines-container" id="fluxContainer">
+                                        <div class="flux-orbit orbit-1"></div>
+                                        <div class="flux-orbit orbit-2"></div>
+                                        <div class="flux-orbit orbit-3"></div>
+                                    </div>
+                                    <div class="magnet-bar">
+                                        <div class="magnet-pole" style="background: #ef4444;">N</div>
+                                        <div class="magnet-pole" style="background: #2563eb;">S</div>
+                                    </div>
+                                </div>
+                                <div class="sim-controls">
+                                    <button class="btn-sim-toggle" id="simActionBtn">Visualize Magnetic Field Lines
+                                        (लाइन्स देखें) →</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="chapter-section" id="sec-properties">
+                            <span class="framework-badge">📜 Golden Rules of Physics</span>
+                            <h2>4. Magnetic Flux Lines Ki 5 Khas Properties</h2>
+                            <p>Exam me examiner ka sabse pasandida topic! In lines ki harkaton ko dhyan se note kar lo:
+                            </p>
+                            <div class="tech-grid">
+                                <div class="tech-card"><strong>Direction Rule:</strong> <span>Magnet ke bahar yeh
+                                        hamesha <strong>North to South</strong> jaati hain, aur magnet ke andar
+                                        <strong>South to North</strong> (ek complete closed loop banati hain).</span>
+                                </div>
+                                <div class="tech-card"><strong>No Intersections:</strong> <span>Do magnetic lines kabhi
+                                        bhi ek doosre ko **cut nahi kar sakti**। Agar karengi toh ek hi point par do
+                                        directions ho jayengi jo impossible hai.</span></div>
+                                <div class="tech-card"><strong>Crowding Effect:</strong> <span>Poles ke paas yeh lines
+                                        bohot ghani (crowded) hoti hain, isliye poles par **magnetic force maximum**
+                                        hota hai.</span></div>
+                                <div class="tech-card"><strong>Elastic Behavior:</strong> <span>Yeh lines ek stretched
+                                        elastic rubber band ki tarah behave karti hain, jo hamesha short path dhoodhne
+                                        ki koshish karti hain.</span></div>
+                            </div>
+                        </section>
+
+                        <section class="chapter-section" id="sec-electro">
+                            <span class="framework-badge">⚡ The Motor Connection</span>
+                            <h2>5. Electromagnetism (बिजली se चुंबक banana)</h2>
+                            <p>Dhyan se suno, motor permanent magnet se nahi chalti, hum use electricity dekar khud ka
+                                magnet banate hain! Jab bhi kisi copper winding coil se electric current pass hota hai,
+                                toh uske charo taraf instantly ek temporary magnetic field ban jata hai. Ise hi hum
+                                **Electromagnetism** kehte hain.</p>
+                            <div class="teacher-note-box">
+                                <h4>👨‍🏫 Friend's Core Tip:</h4>
+                                <p>Oersted naam ke scientist ne discover kiya tha ki current aur magnetism ka gehra
+                                    rishta hai. Agar current double karoge, toh coil ka magnetic field bhi double
+                                    powerful ho jayega. Yahi wajah hai ki hamari heavy industrial induction motors itna
+                                    tagda torque paida kar paati hain!</p>
+                            </div>
+                        </section>
+
+                        <section class="chapter-section" id="sec-units">
+                            <span class="framework-badge">🧮 Units & Formula Bank</span>
+                            <h2>6. Magnetic Field Units Matrix</h2>
+                            <p>Calculations me exact accuracy ke liye in parameters ko yaad rakhna zaroori hai:</p>
+
+                            <div class="premium-table-wrapper">
+                                <table class="premium-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Parameter</th>
+                                            <th>SI Unit Name</th>
+                                            <th>CGS Unit Name</th>
+                                            <th>Mathematical Relationship</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Magnetic Flux Density ($B$)</strong></td>
+                                            <td>Tesla ($\text{T}$) or $\text{Wb/m}^2$</td>
+                                            <td>Gauss ($\text{G}$)</td>
+                                            <td>$1 \text{ Tesla} = 10^4 \text{ Gauss}$</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Magnetic Flux ($\Phi$)</strong></td>
+                                            <td>Weber ($\text{Wb}$)</td>
+                                            <td>Maxwell ($\text{Mx}$)</td>
+                                            <td>$1 \text{ Weber} = 10^8 \text{ Maxwell}$</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Field Intensity ($H$)</strong></td>
+                                            <td>Ampere-turn/meter ($\text{AT/m}$)</td>
+                                            <td>Oersted ($\text{Oe}$)</td>
+                                            <td>$B = \mu H$</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section class="chapter-section" id="sec-qa">
+                            <span class="framework-badge">🎯 Viva & Interview Crack Zone</span>
+                            <h2>7. Top Professional Interview Questions</h2>
+
+                            <div class="qa-block">
+                                <div class="qa-question">Q1. Magnetic Field aur Magnetic Flux Density me kya antar hai?
+                                </div>
+                                <div class="qa-answer">Ans: Magnetic Field poora effective area hai, jabki Magnetic Flux
+                                    Density ($B$) yeh dikhati hai ki kisi specific 1 square meter area se kitni flux
+                                    lines pass ho rahi hain ($\text{B} = \Phi/\text{A}$).</div>
+                            </div>
+                            <div class="qa-block">
+                                <div class="qa-question">Q2. Kya magnetic field lines real me exist karti hain?</div>
+                                <div class="qa-answer">Ans: Nahi! Yeh bilkul imaginary (काल्पनिक) lines hain jinhe hum
+                                    magnetic force ki strength aur direction ko map karne ke liye draw karte hain.</div>
+                            </div>
+                            <div class="qa-block">
+                                <div class="qa-question">Q3. Motor me magnetic field ka asli kaam kya hota hai?</div>
+                                <div class="qa-answer">Ans: Magnetic field stator aur rotor ke beech me ek dynamic
+                                    medium ka kaam karta hai. Jab stator ka magnetic flux rotor conductor ko cut karta
+                                    hai, tabhi rotational mechanical force paida hota hai.</div>
+                            </div>
+                        </section>
+
+                        <section class="chapter-section" id="sec-mcq" style="border-bottom: none; margin-bottom: 0;">
+                            <span class="framework-badge">✅ Test Your Intellect</span>
+                            <h2>8. Top Core Assessment MCQs</h2>
+
+                            <div class="mcq-card">
+                                <div class="mcq-title">Q1. Magnetic Flux Density ki SI unit kya hoti hai?</div>
+                                <ul class="mcq-options">
+                                    <li>A) Weber</li>
+                                    <li class="correct-ans">B) Tesla ✅</li>
+                                    <li>C) Ampere-Turn</li>
+                                    <li>D) Maxwell</li>
+                                </ul>
+                            </div>
+
+                            <div class="mcq-card">
+                                <div class="mcq-title">Q2. Magnet ke andar magnetic lines ki direction kya hoti hai?
+                                </div>
+                                <ul class="mcq-options">
+                                    <li>A) North Pole to South Pole</li>
+                                    <li class="correct-ans">B) South Pole to North Pole ✅</li>
+                                    <li>C) Center to Outer Shell</li>
+                                    <li>D) Random / No fixed path</li>
+                                </ul>
+                            </div>
+
+                            <div class="mcq-card">
+                                <div class="mcq-title">Q3. Ek Tesla kitne Gauss ke barabar hota hai?</div>
+                                <ul class="mcq-options">
+                                    <li>A) $10^2 \text{ Gauss}$</li>
+                                    <li>B) $10^6 \text{ Gauss}$</li>
+                                    <li class="correct-ans">C) $10^4 \text{ Gauss}$ ✅</li>
+                                    <li>D) $10^8 \text{ Gauss}$</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div class="mobile-quick-nav-bar" data-html2pdf-ignore="true">
+        <span>🧲 Field Control Board</span>
+        <button class="btn-mobile-index" id="mobileIndexToggleBtn">📂 Open Topics Menu</button>
+    </div>
+
+    <script>
+        // Navbar Toggle Engine
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        mobileMenu.addEventListener("click", () => { navLinks.classList.toggle("active"); });
+
+        // Sidebar Index Responsive Controls
+        const mobileIndexToggleBtn = document.getElementById("mobileIndexToggleBtn");
+        const sidebarIndex = document.getElementById("sidebarIndex");
+        const indexLinks = document.querySelectorAll(".index-link-node");
+
+        mobileIndexToggleBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            sidebarIndex.classList.toggle("open");
+            mobileIndexToggleBtn.textContent = sidebarIndex.classList.contains("open") ? "✖ Close Topics Menu" : "📂 Open Topics Menu";
+        });
+
+        indexLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                sidebarIndex.classList.remove("open");
+                mobileIndexToggleBtn.textContent = "📂 Open Topics Menu";
+            });
+        });
+
+        // Interactive Simulator Engine
+        const simActionBtn = document.getElementById("simActionBtn");
+        const fluxContainer = document.getElementById("fluxContainer");
+        let activeStatus = false;
+
+        simActionBtn.addEventListener("click", () => {
+            activeStatus = !activeStatus;
+            if (activeStatus) {
+                simActionBtn.textContent = "Hide Field Lines (लाइन्स छुपाएं) ✖";
+                simActionBtn.classList.add("active");
+                fluxContainer.classList.add("active");
+            } else {
+                simActionBtn.textContent = "Visualize Magnetic Field Lines (लाइन्स देखें) →";
+                simActionBtn.classList.remove("active");
+                fluxContainer.classList.remove("active");
+            }
+        });
+
+        // High Fidelity PDF Builder Layout
+        document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+            alert("🎉 Awesome! Magnetic Field chapter ka premium teacher notes PDF print ho raha hai!");
+            const element = document.getElementById("pdfPrintArea");
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'Magnetic-Field-Deep-Concept-Notes.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 1.5, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+
+</html>
