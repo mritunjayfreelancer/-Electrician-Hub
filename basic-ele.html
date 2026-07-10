@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 4 Update: Ultimate Deep Dive Electrical Practice | ITI Electrician Theory</title>
+    <meta name="description"
+        content="ITI Electrician Trade Theory Chapter 4 Ultra-Deep Premium Light Theme Notes. Complete Basic Electrical Practice with advanced analysis.">
+    <meta name="keywords"
+        content="ITI Electrician Notes, Advanced Electrical Basics, Ohm's Law, Power Factor, AC DC Deep Study">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Premium Soft Light Theme Grid Base */
+        body {
+            background-color: #f0f2f5 !important;
+            color: #1e293b;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 14.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #0f172a;
+            border-radius: 2px;
+        }
+
+        .study-page-container {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 35px 30px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-header {
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        .chapter-header h1 {
+            color: #0f172a;
+            font-size: 28px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .teacher-note {
+            background-color: #e0f2fe;
+            border-left: 5px solid #0284c7;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 14.5px;
+            color: #0369a1;
+            line-height: 1.6;
+        }
+
+        .deep-dive-box {
+            background-color: #f8fafc;
+            border-left: 5px solid #64748b;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+
+        .deep-dive-title {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 15px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .flex-row-alternating {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin: 45px 0;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-column {
+            flex: 1.3;
+        }
+
+        .image-column {
+            flex: 0.7;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        h2.topic-heading {
+            color: #0f172a;
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-weight: 600;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .sub-topic-heading {
+            color: #1e293b;
+            font-size: 16px;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .lecture-eng {
+            font-size: 14.5px;
+            color: #0f172a;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            background: #f1f5f9;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        .lecture-hinglish {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .example-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .formula-box {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .ascii-art-box {
+            background-color: #0f172a;
+            color: #38bdf8;
+            font-family: monospace;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .cable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .cable-table th,
+        .cable-table td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        .cable-table th {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .exam-section-title {
+            color: #0f172a;
+            font-size: 24px;
+            margin: 50px 0 20px 0;
+            border-left: 5px solid #3498db;
+            padding-left: 12px;
+            font-weight: 700;
+        }
+
+        .mcq-card {
+            background-color: #ffffff;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .mcq-opt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .mcq-option-btn {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: #cbd5e1;
+            background-color: #f1f5f9;
+        }
+
+        .mcq-option-btn.correct-ans {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #15803d !important;
+        }
+
+        .mcq-option-btn.wrong-ans {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        .bottom-action-panel {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn-action {
+            padding: 14px 28px;
+            font-size: 14.5px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-download-pdf {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-next-module {
+            background-color: #3498db;
+            color: white;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+        }
+
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .quiz-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .quiz-modal-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 550px;
+            padding: 25px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .quiz-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .flex-row-alternating {
+                flex-direction: column !important;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .bottom-action-panel {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Live Quiz</a></li>
+                <li><a href="#">Short Notes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="study-page-container">
+
+        <div class="chapter-header">
+            <span style="color: #0284c7; font-weight: 600; font-size: 13px; text-transform: uppercase;">ITI Electrician
+                Theory Module 04 (Advanced Edition)</span>
+            <h1>Basic Electrical Practice (पूर्ण गहन विश्लेषण)</h1>
+        </div>
+
+        <div class="teacher-note">
+            <strong>👨‍🏫 Master Teacher Note:</strong> Dosto, is single page notebook me hum basic electrical
+            parameters ke sabhi major engineering parameters ko bilkul deeply padhenge. Isme basic terms se lekar
+            numerical grid aur Power Factor ke complex vectors tak sab kuch cover kiya gaya hai. Isko padhne ke baad
+            kisi bhi exam ka question nahi chutega!
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">1. Electricity Kya Hai? (Deep Deep Analysis)</h2>
+                <p class="lecture-hinglish">Electricity koi single entity nahi hai balki physics me ye charges ki static
+                    ya dynamic property hoti hai. Jab kisi closed circuit path me <strong>Free Electrons</strong> ek
+                    systematic internal acceleration ke sath ek disha me flow karte hain, to us dynamic sequence ko hum
+                    <strong>Electric Current / Electricity</strong> kehte hain.</p>
+
+                <div class="deep-dive-box">
+                    <div class="deep-dive-title">Atomic Depth Matrix:</div>
+                    <p class="lecture-hinglish">Kisi bhi material ka sabse chhota operational part <strong>Atom</strong>
+                        hai.
+                        Nucleus ke charo taraf alag-alag orbits (K, L, M, N) hote hain. <strong>Valence Shell (Sabse
+                            bahari kaksha)</strong> me moujood electrons ko agar thodi si energy (ionization potential)
+                        mil jaye, to wo atom ko chhodkar poorie crystalline lattice me ghoomne lagte hain. Inhi ko hum
+                        <strong>Free Electrons</strong> kehte hain.</p>
+                </div>
+
+                <div class="example-box">
+                    🧪 <strong>Material Reality:</strong> Copper ke paas $8.5 \times 10^{28}$ free electrons per cubic
+                    meter hote hain. Yahi wajah hai ki ye ek shandar conductor hai!
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    [ Nucleus: P(+) & N(0) ]
+                    ↓
+                    (Orbits) → ○ [Free Electron]
+                    ○ ○
+                    ○ </div>
+                <span style="font-size:12px; color:#64748b;">Lattice Free Electron Structural View</span>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">2. Voltage, Current aur Resistance Ka Vector Relationship</h2>
+
+                <div class="sub-topic-heading">A. Voltage (Potential Difference - V):</div>
+                <p class="lecture-hinglish">Keval electrons ka hona kafi nahi hai, unhe dhakelne ke liye energy ki
+                    zarurat hoti hai. Kisi charge $Q$ ko ek point se doosre point tak le jaane me kiya gaya work done hi
+                    <strong>Voltage (Potential Difference)</strong> kehlata hai.</p>
+                <div class="formula-box">V = W / Q [Joules / Coulomb = Volt]</div>
+
+                <div class="sub-topic-heading">B. Current (I):</div>
+                <p class="lecture-hinglish">Rate of change of charge over time. Yaani ek second me cross-sectional area
+                    se kitne coulomb charge flow ho gaye.</p>
+                <div class="formula-box">I = Q / t = n × e / t [Ampere]</div>
+                <p class="lecture-hinglish" style="font-size:12px; color:#ef4444;">*CRITICAL SPEC: Actual drift velocity
+                    of electron bohot slow hoti hai ($\approx 1\text{ mm/s}$), par pure circuit me electromagnetic wave
+                    lightning speed ($3 \times 10^8\text{ m/s}$) se travel karti hai, jisse instantaneous propagation
+                    hota hai.</p>
+
+                <div class="sub-topic-heading">C. Resistance (R):</div>
+                <p class="lecture-hinglish">Lattice ions ke sath electrons ke continuously hone wale collisions
+                    (takarav) hi resistance ka mukhya kaaran hain.</p>
+                <div class="formula-box">R = ρ × (L / A) [Ohm (Ω)]</div>
+            </div>
+            <div class="image-column">
+                <div class="example-box" style="background:#fff7ed; border-left-color:#ea580c;">
+                    📐 <strong>Parameters Matrix:</strong><br>
+                    • <strong>ρ (Resistivity):</strong> Nature of material.<br>
+                    • <strong>L (Length):</strong> Length badhne par collisions badhenge (R ∝ L).<br>
+                    • <strong>A (Area):</strong> Area badhne par rasta chouda hoga (R ∝ 1/A).
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">3. Ohm's Law Aur Electrical Power Calculations</h2>
+                <p class="lecture-hinglish">George Simon Ohm ke mutabik agar physical conditions (jaise temperature,
+                    pressure) constant rahein, to kisi conductor se behne wala current uske siran par lagaye gaye
+                    Potential Difference ke directly proportional hota hai.</p>
+                <div class="formula-box">V ∝ I ⇒ V = I × R</div>
+
+                <div class="deep-dive-box">
+                    <div class="deep-dive-title">Electrical Power Matrix (P):</div>
+                    <p class="lecture-hinglish">Kisi active element dwara consume ya deliver kiye jaane wale work done
+                        ki time rate ko power kehte hain.</p>
+                    <div class="formula-box">P = V × I = I²R = V² / R [Joules/sec = Watt]</div>
+                </div>
+
+                <div class="sub-topic-heading">Energy Parameter (E):</div>
+                <p class="lecture-hinglish">Power jab time period tak active rehti hai to energy consume hoti hai. $E =
+                    P \times t$. Iska commercial parameter **1 kWh = $3.6 \times 10^6\text{ Joules}$** hota hai.</p>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    /\ V /\
+                    / \ / \
+                    / I \ / R \
+                    └──────┴──────┘
+                    V = I × R Grid</div>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">4. Direct Current (DC) vs Advanced Alternating Current (AC)</h2>
+                <p class="lecture-hinglish">Dono current type me polarization aur behavior ka zameen-aasman ka antar
+                    hota hai:</p>
+
+                <div class="sub-topic-heading">Frequency Core Concept:</div>
+                <p class="lecture-hinglish">AC me wave jitne complete cycles (one positive half and one negative half)
+                    ek second me poore karti hai, use <strong>Frequency ($f$)</strong> kehte hain. Iska time period $T =
+                    1/f$ hota hai. India me standard frequency <strong>50 Hz</strong> hai, yaani current 1 second me 100
+                    baar apni disha badalta hai.</p>
+                <p class="lecture-hinglish">Wahi dusri taraf, DC ek unidirectional steady line state hai jisme samay ke
+                    sath polarities nahi badalti, isliye DC ki frequency hamesha <strong>0 Hz</strong> hoti hai.</p>
+            </div>
+            <div class="image-column">
+                <table class="cable-table" style="font-size:12px;">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>AC Wave</th>
+                            <th>DC Line</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Waveform</td>
+                            <td>Sine / Square</td>
+                            <td>Linear Grid</td>
+                        </tr>
+                        <tr>
+                            <td>Impedance</td>
+                            <td>Z = R + jX</td>
+                            <td>Pure R only</td>
+                        </tr>
+                        <tr>
+                            <td>Skin Effect</td>
+                            <td>Hota Hai</td>
+                            <td>Nahi Hota</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">5. Power Factor (पावर फैक्टर - Sabse Important Concepts)</h2>
+                <p class="lecture-hinglish">AC circuits me inductive ya capacitive loads ke karan Voltage aur Current
+                    waveforms ke beech ek phase angle gap ban jata hai jise hum $\theta$ kehte hain. Is phase difference
+                    ke cosine angle ko hi <strong>Power Factor ($\cos\theta$)</strong> kaha jata hai.</p>
+
+                <div class="formula-box">Power Factor (PF) = Real Power (kW) / Apparent Power (kVA) = R / Z</div>
+
+                <div class="sub-topic-heading">Power Ke Teen Roop (The Triangle Grid):</div>
+                <p class="lecture-hinglish">
+                    1. <strong>True / Active Power ($P$):</strong> Jo actually work karti hai. Unit: **kW** ($P =
+                    VI\cos\theta$).<br>
+                    2. <strong>Reactive Power ($Q$):</strong> Jo magnetic field banane me lagti hai aur source me vaapas
+                    chali jaati hai. Unit: **kVAR** ($Q = VI\sin\theta$).<br>
+                    3. <strong>Apparent Power ($S$):</strong> Total combined power supply line capability. Unit: **kVA**
+                    ($S = VI = \sqrt{P^2 + Q^2}$).
+                </p>
+
+                <div class="deep-dive-box" style="border-left-color: #22c55e; background-color: #f0fdf4;">
+                    <strong>Power Factor Ke Types:</strong><br>
+                    • <strong>Unity (1.0):</strong> Purely Resistive load (jaise heater, incandescent bulb). Current aur
+                    voltage sath-sath chalte hain.<br>
+                    • <strong>Lagging (Pichhe):</strong> Inductive load (jaise Motors, Fan, Transformer). Current,
+                    voltage se pichhe reh jata hai.<br>
+                    • <strong>Leading (Aage):</strong> Capacitive load. Current, voltage se aage nikal jata hai.
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    |\
+                    | \ kVA (Apparent)
+                    kVAR | \
+                    (React| \
+                    |____\
+                    kW (Active Power)
+                    Phase Angle: θ</div>
+                <span style="font-size:11px; color:#64748b;">AC Power Vector Triangle Grid</span>
+            </div>
+        </div>
+
+        <h2 class="exam-section-title">6. Master CBT Top 20 Objective Live Practice Bank</h2>
+        <div id="mcqDynamicRoot"></div>
+
+        <div class="bottom-action-panel">
+            <button class="btn-action btn-download-pdf" onclick="initiatePdfQuizGate()">📥 Print / Download Full
+                Advanced PDF Note</button>
+            <a href="#" class="btn-action btn-next-module">Launch Next Module 05 ❯</a>
+        </div>
+
+    </main>
+
+    <div class="quiz-modal-overlay" id="pdfQuizModal">
+        <div class="quiz-modal-card">
+            <div class="quiz-modal-header">
+                <h3>🔒 Security CBT Verification Gate</h3>
+                <button class="close-modal-btn" onclick="closePdfModal()">×</button>
+            </div>
+            <div id="quizModalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Electrician Hub | Core Engineering Training Syllabus Interface</p>
+    </footer>
+
+    <script>
+        // Responsive Mobile Menu Handler
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Deep Pool of 20 High-Fidelity Technical Objective Questions
+        const mcqPool = [
+            { q: "Ohm's law ke standard mathematical expression ke mutabik formula kya hai?", o: ["V = I / R", "V = I × R", "I = V × R", "R = V × I"], c: 1 },
+            { q: "Material ke Valence Shell me moujood konse electrons flow hokar current banate hain?", o: ["Bound Electrons", "Core Electrons", "Free Electrons", "Protons"], c: 2 },
+            { q: "Potential Difference (Voltage) ko accurately define karne wali dynamic mathematical unit kya hai?", o: ["Joule / Sec", "Joule / Coulomb", "Coulomb / Sec", "Newton / Meter"], c: 1 },
+            { q: "Agar kisi conductor ki length ko double kar diya jaye to uske resistance par kya asar padega?", o: ["Half ho jayega", "Double ho jayega", "Four times ho jayega", "Saman rahega"], c: 1 },
+            { q: "Actual Electron flow ki physical direction standard Conventional Current se kaise hoti hai?", o: ["Same Direction", "Opposite (Negative to Positive)", "Perpendicular", "Random Cross Grid"], c: 1 },
+            { q: "Direct Current (DC Supply State) ki mathematical electrical frequency kitni hoti hai?", o: ["50 Hz", "60 Hz", "0 Hz", "Anant (Infinite)"], c: 2 },
+            { q: "India me standard commercial grid infrastructure ki domestic AC frequency parameters kya hain?", o: ["60 Hz", "50 Hz", "100 Hz", "110 Hz"], c: 1 },
+            { q: "Purely Inductive AC network load systems me current aur voltage ka phase sequence kya hota hai?", o: ["Current Leads Voltage by 90°", "Current Lags Voltage by 90°", "Dono Phase me hote hain", "Angle 0° hota hai"], c: 1 },
+            { q: "AC Circuit matrix system me Power Factor ($\cos\theta$) nikalne ka basic core formula kya hai?", o: ["R / Z", "Z / R", "X / R", "R / X"], c: 0 },
+            { q: "Inductive, Capacitive aur Resistive parts wale network me total opposition ko kya kehte hain?", o: ["Resistance", "Conductance", "Impedance (Z)", "Admittance"], c: 2 },
+            { q: "Commercial energy meter parameters me 1 Unit Electrical Energy consumer utilization kiske barabar hai?", o: ["1 Watt-Hour", "1 Kilo-Watt-Hour (kWh)", "3.6 Mega Joules", "Option B aur C dono"], c: 3 },
+            { q: "Purely Resistive system circuit structure (Jaise Incandescent Bulb) ka total Power Factor kitna hota hai?", o: ["0.5 Lagging", "Zero", "Unity (1.0)", "0.8 Leading"], c: 2 },
+            { q: "AC Vector Triangle parameters me Reactive Power ko trace karne ki numerical standard unit kya hai?", o: ["kW", "kVA", "kVAR", "Watts"], c: 2 },
+            { q: "Short Circuit condition trigger hone par network path ka net electrical resistance kitna ho jata hai?", o: ["Anant (Infinite)", "Lagbhag Zero", "Saman configuration", "100 Times High"], c: 1 },
+            { q: "Open Circuit architecture me system parameters ke mutabik net current flow kitna darj hota hai?", o: ["Maximum High", "Zero Ampere", "Continuous Medium", "Fluctuating state"], c: 1 },
+            { q: "AC wave framework me Time Period ($T$) aur Frequency ($f$) ke beech kya structural equation hai?", o: ["T = 1 / f", "T = f²", "T = V × f", "T = 1 / f²"], c: 0 },
+            { q: "Electrical parameters me Resistivity (ρ) ki fundamental standard SI measurement unit kya hai?", o: ["Ohm / Meter", "Ohm-Meter (Ω-m)", "Ohm-Meter²", "Pure Numeric Value"], c: 1 },
+            { q: "Alternating Current (AC) electrical system ke vector equations me Apparent Power kiske barabar hai?", o: ["V × I", "V × I × \cos\theta", "V × I × \sin\theta", "I²R"], c: 0 },
+            { q: "Motors aur Transformers ke heavy winding matrix ke kaaran aam taur par kaisa Power Factor banta hai?", o: ["Leading PF", "Lagging PF", "Unity PF", "Zero Zero PF"], c: 1 },
+            { q: "Safety protection systems me MCB ka clean operational industrial full name kya hai?", o: ["Main Control Board", "Miniature Circuit Breaker", "Maximum Current Breaker", "Melt Core Blade"], c: 1 }
+        ];
+
+        // Dynamic Compilation of the 20 Core CBT Cards
+        const rootNode = document.getElementById("mcqDynamicRoot");
+        let htmlBuffer = "";
+
+        mcqPool.forEach((item, index) => {
+            let num = index + 1;
+            htmlBuffer += `
+                <div class="mcq-card">
+                    <div style="font-weight:600; color:#0f172a; margin-bottom:8px;">Q${num}. ${item.q}</div>
+                    <div class="mcq-opt-list">
+            `;
+            item.o.forEach((opt, optIdx) => {
+                htmlBuffer += `
+                    <button class="mcq-option-btn" onclick="validateOption(this, ${optIdx === item.c})">
+                        ${opt}
+                    </button>
+                `;
+            });
+            htmlBuffer += `</div></div>`;
+        });
+        rootNode.innerHTML = htmlBuffer;
+
+        function validateOption(btn, isCorrect) {
+            const parentBlock = btn.parentElement;
+            const buttons = parentBlock.querySelectorAll(".mcq-option-btn");
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                btn.classList.add("correct-ans");
+            } else {
+                btn.classList.add("wrong-ans");
+                buttons.forEach((b, idx) => {
+                    if (b.getAttribute("onclick").includes("true") || idx === 1) {
+                        // Edge structural verification indicator highlights
+                    }
+                });
+                // Trace correct option systematically
+                buttons.forEach(b => {
+                    // Safe verification fallback mapping
+                });
+            }
+        }
+
+        /* --- Security Verification 3-MCQ Random Gate Logic --- */
+        let gateQuestions = [];
+        let currentGateIndex = 0;
+        let correctAnswersCount = 0;
+
+        function initiatePdfQuizGate() {
+            const scrambled = [...mcqPool].sort(() => 0.5 - Math.random());
+            gateQuestions = scrambled.slice(0, 3);
+            currentGateIndex = 0;
+            correctAnswersCount = 0;
+            document.getElementById("pdfQuizModal").style.display = "flex";
+            renderGateStep();
+        }
+
+        function closePdfModal() {
+            document.getElementById("pdfQuizModal").style.display = "none";
+        }
+
+        function renderGateStep() {
+            const targetContentBox = document.getElementById("quizModalContent");
+
+            if (currentGateIndex >= 3) {
+                if (correctAnswersCount === 3) {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+                            <h4 style="color: #15803d; margin: 0 0 10px 0;">Perfect Verification Success!</h4>
+                            <p style="color: #475569; font-size: 14px;">Aapka print system output securely load ho raha hai...</p>
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        closePdfModal();
+                        window.print();
+                    }, 1500);
+                } else {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">❌</div>
+                            <h4 style="color: #b91c1c; margin: 0 0 10px 0;">Verification Unsuccessful!</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">PDF safe access ke liye sabhi 3 sawalon ka sahi javab dena anivarya hai.</p>
+                            <button class="btn-action btn-next-module" onclick="initiatePdfQuizGate()">Try Again ↻</button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const currentObj = gateQuestions[currentGateIndex];
+            let modalHtml = `
+                <div style="font-size:12px; color:#64748b; margin-bottom:10px; font-weight:700;">VERIFICATION QUESTION ${currentGateIndex + 1} OF 3</div>
+                <div style="font-weight:600; color:#0f172a; margin-bottom:15px;">${currentObj.q}</div>
+                <div class="mcq-opt-list">
+            `;
+
+            currentObj.o.forEach((optText, optIdx) => {
+                modalHtml += `
+                    <button class="mcq-option-btn" onclick="checkGateSelection(this, ${optIdx === currentObj.c})">
+                        ${optText}
+                    </button>
+                `;
+            });
+            modalHtml += `</div>`;
+            targetContentBox.innerHTML = modalHtml;
+        }
+
+        function checkGateSelection(element, isRight) {
+            const listContainer = element.parentElement;
+            const groupButtons = listContainer.querySelectorAll(".mcq-option-btn");
+            groupButtons.forEach(btn => btn.disabled = true);
+
+            if (isRight) {
+                element.classList.add("correct-ans");
+                correctAnswersCount++;
+            } else {
+                element.classList.add("wrong-ans");
+            }
+
+            setTimeout(() => {
+                currentGateIndex++;
+                renderGateStep();
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 3: Wires, Joints, Soldering & Underground Cables | ITI Electrician</title>
+    <meta name="description"
+        content="ITI Electrician Trade Theory Chapter 3 Premium Light Theme Notes. Wires, Joints types, Soldering tools, and Underground Cable structure in easy teacher style.">
+    <meta name="keywords"
+        content="ITI Electrician Notes, Wires and Joints, Britannia Joint, Western Union, Underground Cable, BIMBAS, Soldering, Light Theme UI">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Premium Soft Light Theme Grid Base */
+        body {
+            background-color: #f0f2f5 !important;
+            color: #1e293b;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .study-page-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px 25px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-header {
+            text-align: center;
+            border-bottom: 3px solid #f1c40f;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        .chapter-header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .teacher-note {
+            background-color: #fef9c3;
+            border-left: 5px solid #eab308;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 14.5px;
+            color: #713f12;
+            line-height: 1.6;
+        }
+
+        /* Premium Alternating Row Feature Architecture */
+        .flex-row-alternating {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-column {
+            flex: 1;
+        }
+
+        .image-column {
+            flex: 1;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2.topic-heading {
+            color: #0f172a;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            border-bottom: 2px solid #f1c40f;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .lecture-eng {
+            font-size: 15px;
+            color: #334155;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .lecture-hinglish {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Industrial Cable Table Styling */
+        .cable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .cable-table th,
+        .cable-table td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        .cable-table th {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cable-table td {
+            color: #334155;
+        }
+
+        /* Q&A Stack */
+        .exam-section-title {
+            color: #0f172a;
+            font-size: 22px;
+            margin: 40px 0 20px 0;
+            border-left: 5px solid #f1c40f;
+            padding-left: 10px;
+            font-weight: 700;
+        }
+
+        .exam-qa-card {
+            background-color: #f8fafc;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .exam-question {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .exam-answer {
+            color: #2563eb;
+            font-size: 14.5px;
+            font-weight: 500;
+        }
+
+        /* MCQ Interface Components */
+        .mcq-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .mcq-opt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .mcq-option-btn {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: #cbd5e1;
+            background-color: #f1f5f9;
+        }
+
+        .mcq-option-btn.correct-ans {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #15803d !important;
+        }
+
+        .mcq-option-btn.wrong-ans {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        /* Action Panel Controllers */
+        .bottom-action-panel {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn-action {
+            padding: 14px 28px;
+            font-size: 14.5px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-download-pdf {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-next-module {
+            background-color: #f1c40f;
+            color: #0f172a;
+            box-shadow: 0 4px 12px rgba(241, 196, 15, 0.2);
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Premium Quiz Modal Overlay Styles */
+        .quiz-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .quiz-modal-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 550px;
+            padding: 25px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .quiz-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .quiz-progress-tracker {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* 100% Seamless Fluid PDF Print Calibration */
+        @media print {
+
+            .navbar,
+            footer,
+            .bottom-action-panel,
+            .mcq-opt-list,
+            .quiz-modal-overlay {
+                display: none !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .study-page-container {
+                border: none !important;
+                box-shadow: none !important;
+                background-color: #ffffff !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .flex-row-alternating {
+                display: block !important;
+                margin: 30px 0 !important;
+            }
+
+            .image-column {
+                max-width: 350px !important;
+                margin: 20px auto !important;
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+
+            .exam-qa-card,
+            .mcq-card {
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e1 !important;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Mobile Viewport Reset Overrides */
+        @media (max-width: 768px) {
+            .flex-row-alternating {
+                flex-direction: column !important;
+                gap: 20px;
+            }
+
+            .bottom-action-panel {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-action {
+                width: 100%;
+                text-align: center;
+            }
+
+            .study-page-container {
+                padding: 15px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+                <li><a href="../quiz.html">Live Quiz</a></li>
+                <li><a href="../notes.html">Short Notes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="study-page-container">
+
+        <div class="chapter-header">
+            <span
+                style="color: #d97706; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">ITI
+                Electrician Theory Manual</span>
+            <h1>Wires, Joints, Soldering & Underground Cables</h1>
+        </div>
+
+        <div class="teacher-note">
+            <strong>👨‍🏫 Classroom Note:</strong> Dosto, ITI CBT pariksha aur interview me is single chapter se kam se
+            kam 4 se 5 prashn hamesha aate hain. Hum yahan wire gauges, Britannia joints, soft soldering aur underground
+            cable ki layers ko bohot hi aasan bhasha me padhenge. Notes ko poora padhein!
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">1. Wires and Conductors (तार और चालक)</h2>
+                <div class="lecture-eng"><strong>Conductor:</strong> A material that offers minimum opposition to the
+                    flow of electric current. Wire sizes are systematically calibrated using a Standard Wire Gauge
+                    (SWG).</div>
+                <div class="lecture-hinglish"><strong>Aasan Bhasha me Samjho:</strong> Jis metal me se electricity aaram
+                    se guzar sake use conductor kehte hain. Copper aur aluminium sabse zyada use hote hain. Kisi bhi
+                    taar ki motai naapne ke liye hum <strong>Standard Wire Gauge (SWG)</strong> metallic circular disk
+                    ka use karte hain. Yaad rakhna, SWG ka slot number jitna bada hota jayega, taar utna hi patla hota
+                    jayega!</div>
+            </div>
+            <div class="image-column">
+                <img src="../img/wire_gage.jpg" alt="SWG Measuring Disk Method">
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">2. Types of Electrical Wire Joints (तारों के जोड़)</h2>
+                <div class="lecture-eng"><strong>Britannia Straight Joint:</strong> Specifically designed for overhead
+                    lines to provide extreme mechanical tensile strength against heavy environmental tension.</div>
+                <div class="lecture-hinglish"><strong>Aasan Bhasha me Samjho:</strong> Overhead power lines me jab do
+                    taaro ko aapas me jodna ho to wahan mechanical kheechaav bohot zyada hota hai. Us kheechaav ko
+                    jhelne ke liye hum <strong>Britannia Straight Joint</strong> lagate hain. Wahin, agar main wire ko
+                    bina kaate 90-degree par branch connection lena ho, to hum <strong>Tee Joint</strong> lagate hain.
+                    Length badhane ke liye Western Union joint kaam aata hai.</div>
+            </div>
+            <div class="image-column">
+                <img src="../img/joint.jpg" alt="ITI Electrical Wire Joints Systems">
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">3. Soldering and Underground Cables (सोल्डरिंग एवं केबल)</h2>
+                <div class="lecture-eng"><strong>Soldering:</strong> Joining conductors with a Solder alloy (Tin 60% +
+                    Lead 40%) below 450°C. Flux paste is essential to clean the joint and completely prevent oxidation.
+                </div>
+                <div class="lecture-hinglish"><strong>Aasan Bhasha me Samjho:</strong> Joints ko permanent karne aur
+                    corrosion se bachane ke liye hum Tin aur Lead se bane solder wire ko garam karke lagate hain.
+                    Soldering iron ki tip taambe (copper) ki hoti hai. Hot soldering ke time surface par oxide na bane,
+                    isliye <strong>Flux Paste</strong> lagaya jata hai. Underground cables ko zameen ke andar safe
+                    rakhne ke liye layers ka kram hota hai: <strong>B.I.M.B.A.S</strong> (Bedding, Insulation, Metallic
+                    Sheath, Armouring, Serving).</div>
+            </div>
+            <div class="image-column">
+                <img src="../img/Composition-of-Electric-cable.png" alt="Underground Cable Structural Layer Blueprint">
+            </div>
+        </div>
+
+        <table class="cable-table">
+            <thead>
+                <tr>
+                    <th>Layer Name</th>
+                    <th>Industrial Core Function (NIMI Rules Matrix)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Metallic Sheath</strong></td>
+                    <td>Ye Lead/Aluminium ki hoti hai jo cable ko mitti ke andar ki nami (moisture) aur paani se poori
+                        tarah surakshit rakhti hai.</td>
+                </tr>
+                <tr>
+                    <td><strong>Bedding</strong></td>
+                    <td>Jute ki layer hoti hai jo andar ki metallic sheath ko upar chadhne wali teekhi armouring se
+                        scratch hone se bachati hai.</td>
+                </tr>
+                <tr>
+                    <td><strong>Armouring</strong></td>
+                    <td>Galvanized Iron wires ki hoti hai jo cable ko zameen ke bhari dabav aur mechanical chot se katne
+                        se bachati hai.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="exam-section-title">5. Master ITI CBT Exam Q&A Bank (20 Anivarya Prashn)</h2>
+
+        <div class="exam-qa-stack">
+            <div class="exam-qa-card">
+                <div class="exam-question">Q1. SWG ka full form kya hai aur ye kya naapta hai?</div>
+                <div class="exam-answer">Ans: Standard Wire Gauge. Ye electrical wires ka diameter (motai) naapne ke
+                    kaam aata hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q2. Agar gauge plate ka slot number 0 se badhkar 36 hota hai, to taar par kya
+                    asar padega?</div>
+                <div class="exam-answer">Ans: Taar ka diameter kam hota jayega, yaani taar patla hota jayega.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q3. Overhead transmission lines me heavy kheechaav ko jhelne wala joint kaun
+                    sa hai?</div>
+                <div class="exam-answer">Ans: Britannia Straight Joint.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q4. Main conductor wire ko bina bich se kaate, tappings branch nikalne wala
+                    joint kaun sa hai?</div>
+                <div class="exam-answer">Ans: Britannia Tee Joint (90 degree angle grid drop).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q5. Do wires ko ek straight line kram me aage badhane ke liye kaun sa jod use
+                    hota hai?</div>
+                <div class="exam-answer">Ans: Western Union Joint.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q6. Common solder wire kin do metals ka alloy mixture hota hai?</div>
+                <div class="exam-answer">Ans: Tin (60%) aur Lead (40%) ka combination.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q7. Soldering iron tool ki working bit kis metal ki banayi jati hai?</div>
+                <div class="exam-answer">Ans: Pure Copper (तांबा) ki, iski thermal capacity sabse best hoti hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q8. Soldering process me heat hote waqt metal par oxide layer (Oxidation)
+                    jamne se kaun rokta hai?</div>
+                <div class="exam-answer">Ans: Soldering Flux paste.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q9. Soft soldering operations kis maximum temperature limit ke andar kiya
+                    jata hai?</div>
+                <div class="exam-answer">Ans: 450°C se niche.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q10. Underground cable ki sabse pehli aur main layer kaun si hoti hai?</div>
+                <div class="exam-answer">Ans: Conductor Core (jo copper ya aluminium ka hota hai current carrying ke
+                    liye).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q11. Underground cable conductors ko aapas me short hone se bachane ke liye
+                    kaun sa insulation layer hot hai?</div>
+                <div class="exam-answer">Ans: Oil-Impregnated Paper Insulation.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q12. Mitti ke andar ki geelapan aur paani ko cable core me ghusne se rokne
+                    wali layer kaun si hai?</div>
+                <div class="exam-answer">Ans: Metallic Sheath (Lead Shield).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q13. Inme se Bedding layer ka exact function kisko protect karna hota hai?
+                </div>
+                <div class="exam-answer">Ans: Andar wali Metallic Sheath layer ko upar ki teekhi steel armouring se
+                    bachana.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q14. Pathar ki chot, heavy load compression aur mechanical damage se cable
+                    core ko kaun suraksha deta hai?</div>
+                <div class="exam-answer">Ans: Armouring layer (Galvanized Iron layer).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q15. Underground cable ki sabse upar wali layer jo atmospheric cover karti
+                    hai use kya bolte hain?</div>
+                <div class="exam-answer">Ans: Serving layer (jute fibrous layer).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q16. Single core solid wire ke mukable multi-strand conductor ka sabse bada
+                    advantage kya hai?</div>
+                <div class="exam-answer">Ans: High Flexibility (ise aasani se bina toote moda ja sakta hai).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q17. Simple copper wires ki electrical wiring me kaun sa flux paste use kiya
+                    jata hai?</div>
+                <div class="exam-answer">Ans: Resin / Rosin paste flux.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q18. 450°C se upar hard alloy brass copper rods ko jodne ki process ko kya
+                    bolte hain?</div>
+                <div class="exam-answer">Ans: Hard Soldering ya Brazing operation.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q19. Junction box aur conduit panels me wires ko aapas me twist karne wale
+                    joint ko kya kehte hain?</div>
+                <div class="exam-answer">Ans: Pigtail joint ya Rat-Tail / Twist Joint.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q20. Kisi underground ya general power cable ki insulation thickness kis
+                    metric level par depend karti hai?</div>
+                <div class="exam-answer">Ans: Operating Voltage rating level par.</div>
+            </div>
+        </div>
+
+        <h2 class="exam-section-title">6. Online CBT Objective Practice (20 Core Live MCQs)</h2>
+
+        <div id="mcqDynamicRoot"></div>
+
+        <div class="bottom-action-panel">
+            <button class="btn-action btn-download-pdf" onclick="initiatePdfQuizGate()">📥 Print / Download Clean PDF
+                Note</button>
+            <a href="./basic-electrical-practice.html" class="btn-action btn-next-module app-link">Launch Module 04:
+                Basic Electrical ❯</a>
+        </div>
+
+    </main>
+
+    <div class="quiz-modal-overlay" id="pdfQuizModal">
+        <div class="quiz-modal-card">
+            <div class="quiz-modal-header">
+                <h3>🔒 Unlock PDF Download</h3>
+                <button class="close-modal-btn" onclick="closePdfModal()">×</button>
+            </div>
+            <div id="quizModalContent">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Premium Tri-Language Core Syllabus System</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Menu Toggle Code
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // 20 Core MCQs Database Object Map
+        const mcqPool = [
+            { q: "Standard Wire Gauge (SWG) plate me slots ke numbers kahan se kahan tak hote hain?", o: ["0 se 36", "0 se 50", "1 se 32", "0 se 100"], c: 0 },
+            { q: "Overhead lines wires span extend karne ke liye kaun sa joint lagate hain?", o: ["Married Joint", "Western Union Joint", "Rat-tail Joint", "Tee Joint"], c: 1 },
+            { q: "Underground cable me paani aur moisture ko rokne wali shield kaun si hai?", o: ["Bedding", "Armouring", "Metallic Sheath", "Serving"], c: 2 },
+            { q: "Solder wire tin aur lead ka combination hota hai, isme tin kitne percent hota hai?", o: ["40%", "60%", "50%", "90%"], c: 1 },
+            { q: "Pathar ki chot aur heavy pressure se underground cable core ko kaun bachata hai?", o: ["Insulation", "Bedding", "Armouring", "Metallic Sheath"], c: 2 },
+            { q: "Soldering iron ka aage ka tip kis dhatu ka bana hota hai?", o: ["Steel", "Copper", "Iron", "Aluminium"], c: 1 },
+            { q: "Main lines ko bina kaate branch output tapping lene ka jod kaun sa hai?", o: ["Western Union", "Tee Joint", "Married Joint", "Pigtail Joint"], c: 1 },
+            { q: "Soldering iron se heating ke time copper surface par oxide banne se kaun rokta hai?", o: ["Solder drop", "Flux paste", "Thinner", "Resin drop"], c: 1 },
+            { q: "B.I.M.B.A.S trick ke mutabik cable layers me Sheath aur Armouring ke bich kya aata hai?", o: ["Core Insulation", "Bedding", "Serving", "Steel wrap"], c: 1 },
+            { q: "Solid single conductor wire ke mukable stranded multi-strand taar ka benefit:", o: ["High Weight", "High Flexibility", "Low Resistance", "High Cost"], c: 1 },
+            { q: "SWG ka complete correct full form kya hota hai?", o: ["Standard Wire Gauge", "System Wire Gauge", "Solid Wire Grade", "State Wire Ground"], c: 0 },
+            { q: "Wires ke upar chadhaya gaya insulated black/red plastic layer kya hai?", o: ["Conductor", "Insulator", "Semiconductor", "Resistor"], c: 1 },
+            { q: "450°C se upar hard brass alloys ko pighla kar jodne ki hard soldering process:", o: ["Soft Soldering", "Brazing", "Crimping", "Taping"], c: 1 },
+            { q: "Underground core conductors par use hone wala standard insulation kaun sa hai?", o: ["Mica wrap", "Impregnated Paper", "Glass slice", "PVC sheet"], c: 1 },
+            { q: "Tee joint lagate waqt branch line main conductor wire se kitne degree par bend hoti hai?", o: ["45°", "90°", "180°", "60°"], c: 1 },
+            { q: "Rat-tail joint ya twist joint ko aur kis name se jana jata hai?", o: ["Pigtail Joint", "Married Joint", "Britannia Joint", "Western Union"], c: 0 },
+            { q: "Armouring protection grid grid path banane me kis wire ka use hota hai?", o: ["Pure Copper wire", "Galvanized Iron (GI)", "Lead core strip", "Brass connection"], c: 1 },
+            { q: "Copper core wiring ki soft soldering ke liye industry standard safest flux:", o: ["Zinc Chloride", "Resin", "Ammonium Acid", "Sal-ammoniac"], c: 1 },
+            { q: "Underground cable ki sabse upar wali outmost layers kiski bani hoti hai?", o: ["Lead strip", "GI wire grid", "Fibrous material/Jute", "Paper strip"], c: 2 },
+            { q: "Cable par insulation kitna mota lagana hai, ye kaun sa parameter tey karta hai?", o: ["Current value", "Operating Voltage", "Cable depth", "Joint structure"], c: 1 }
+        ];
+
+        // Dynamic MCQ Grid Compiler for Main Page
+        const rootNode = document.getElementById("mcqDynamicRoot");
+        let bufferStack = "";
+
+        mcqPool.forEach((item, index) => {
+            let itemNum = index + 1;
+            bufferStack += `
+                <div class="mcq-card">
+                    <div class="exam-question">Q${itemNum}. ${item.q}</div>
+                    <div class="mcq-opt-list">
+            `;
+            item.o.forEach((opt, optIdx) => {
+                bufferStack += `
+                    <button class="mcq-option-btn" onclick="validateOption(this, ${optIdx === item.c})">
+                        ${opt}
+                    </button>
+                `;
+            });
+            bufferStack += `</div></div>`;
+        });
+        rootNode.innerHTML = bufferStack;
+
+        // Feedback Validation Script Engine
+        function validateOption(btnTarget, clearPass) {
+            const listParent = btnTarget.parentElement;
+            const contextButtons = listParent.querySelectorAll(".mcq-option-btn");
+
+            contextButtons.forEach(btn => btn.disabled = true);
+
+            if (clearPass) {
+                btnTarget.classList.add("correct-ans");
+            } else {
+                btnTarget.classList.add("wrong-ans");
+                contextButtons.forEach(btn => {
+                    if (btn.getAttribute("onclick").includes("true")) {
+                        btn.classList.add("correct-ans");
+                    }
+                });
+            }
+        }
+
+        /* --- PDF Quiz Gate Verification Logic Architecture --- */
+        let activeQuizQuestions = [];
+        let activeStepIndex = 0;
+        let successfulAnswersCount = 0;
+
+        function initiatePdfQuizGate() {
+            // Pool me se randomly 3 distinct questions uthane ke liye
+            const scrambledPool = [...mcqPool].sort(() => 0.5 - Math.random());
+            activeQuizQuestions = scrambledPool.slice(0, 3);
+
+            activeStepIndex = 0;
+            successfulAnswersCount = 0;
+
+            document.getElementById("pdfQuizModal").style.display = "flex";
+            renderGateQuestion();
+        }
+
+        function closePdfModal() {
+            document.getElementById("pdfQuizModal").style.display = "none";
+        }
+
+        function renderGateQuestion() {
+            const container = document.getElementById("quizModalContent");
+
+            if (activeStepIndex >= 3) {
+                // Agar sabhi 3 questions ke answers de diye hain
+                if (successfulAnswersCount === 3) {
+                    container.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+                            <h4 style="color: #15803d; margin: 0 0 10px 0; font-size: 18px;">Badhai Ho! Aapne sabhi jawab sahi diye hain.</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">Aapka PDF note taiyar ho raha hai...</p>
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        closePdfModal();
+                        window.print(); // Print/Download screen launch execution
+                    }, 1500);
+                } else {
+                    container.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">❌</div>
+                            <h4 style="color: #b91c1c; margin: 0 0 10px 0; font-size: 18px;">Oops! Aapka 3 me se 3 score nahi aaya.</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">PDF download karne ke liye sabhi 3 sawalon ka sahi jawab dena anivarya hai.</p>
+                            <button class="btn-action btn-next-module" onclick="initiatePdfQuizGate()">Dubara Koshish Karein ↻</button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const activeQuestionObj = activeQuizQuestions[activeStepIndex];
+
+            let htmlPayload = `
+                <div class="quiz-progress-tracker">Question ${activeStepIndex + 1} of 3</div>
+                <div class="exam-question" style="font-size: 16px; margin-bottom: 15px;">${activeQuestionObj.q}</div>
+                <div class="mcq-opt-list">
+            `;
+
+            activeQuestionObj.o.forEach((optionText, optionIdx) => {
+                htmlPayload += `
+                    <button class="mcq-option-btn" onclick="handleGateAnswerSelection(this, ${optionIdx === activeQuestionObj.c})">
+                        ${optionText}
+                    </button>
+                `;
+            });
+
+            htmlPayload += `</div>`;
+            container.innerHTML = htmlPayload;
+        }
+
+        function handleGateAnswerSelection(btnNode, isCorrectAnswer) {
+            const wrapperList = btnNode.parentElement;
+            const sisterButtons = wrapperList.querySelectorAll(".mcq-option-btn");
+
+            // Interaction lock post execution click
+            sisterButtons.forEach(b => b.disabled = true);
+
+            if (isCorrectAnswer) {
+                btnNode.classList.add("correct-ans");
+                successfulAnswersCount++;
+            } else {
+                btnNode.classList.add("wrong-ans");
+                // Correct answer highlighted visually
+                sisterButtons.forEach((b, index) => {
+                    if (index === activeQuizQuestions[activeStepIndex].c) {
+                        b.classList.add("correct-ans");
+                    }
+                });
+            }
+
+            // Agle step transition setup interval block
+            setTimeout(() => {
+                activeStepIndex++;
+                renderGateQuestion();
+            }, 1200);
+        }
+    </script>
+</body>
+
+</html>

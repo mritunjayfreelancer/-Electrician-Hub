@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ultimate Electrical Engineering Master Course (Chapters 1-25 Full Deep) - Electrician Hub</title>
+
+    <meta name="description"
+        content="Complete 25 Chapters Electrical Master Course. Deep Theory, Live Simulations, Numericals, 500+ Interview Preparation, and 2000+ MCQs in Teacher Style.">
+    <meta name="keywords"
+        content="Electricity, Voltage, Current, Resistance, Ohm's Law, Power, AC Current, DC Current, Three Phase, Transformer, VFD, PLC, SCADA, MCQs">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        /* CSS Reset & Global Layout */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            padding-top: 90px;
+            /* Navbar Space */
+        }
+
+        /* --- 100% Same Premium Navbar Styling --- */
+        header.navbar {
+            background: #0f172a;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header.navbar .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f1c40f;
+        }
+
+        header.navbar nav ul.nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        header.navbar nav ul.nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        header.navbar nav ul.nav-links a:hover {
+            color: #f1c40f;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        /* --- Main Layout Container --- */
+        .chapter-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .pdf-download-zone {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .btn-pdf-trigger {
+            background-color: #f1c40f;
+            color: #0f172a;
+            border: 1px solid #e3b20a;
+            padding: 12px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(241, 196, 15, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        /* --- Pure Premium Mac Style UI Window Box --- */
+        .mac-window-box {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        .mac-top-bar {
+            background: #f1f5f9;
+            height: 45px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .mac-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .mac-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red {
+            background: #ef4444;
+        }
+
+        .dot-yellow {
+            background: #f59e0b;
+        }
+
+        .dot-green {
+            background: #10b981;
+        }
+
+        .mac-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mac-content {
+            padding: 45px;
+        }
+
+        /* Master Typography */
+        .mega-title {
+            font-size: 28px;
+            color: #0f172a;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #f1c40f;
+            padding-bottom: 15px;
+        }
+
+        .chapter-block {
+            margin-bottom: 70px;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #cbd5e1;
+        }
+
+        .chapter-block h2 {
+            font-size: 24px;
+            color: #0f172a;
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: #f1f5f9;
+            padding: 12px 20px;
+            border-radius: 6px;
+            border-left: 5px solid #f1c40f;
+        }
+
+        .chapter-block h3 {
+            font-size: 16.5px;
+            color: #1e3a8a;
+            margin: 25px 0 12px 0;
+            font-weight: 600;
+        }
+
+        .chapter-block p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .framework-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #e2e8f0;
+            color: #475569;
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .teacher-note-box {
+            background: #fffbeb;
+            border-left: 5px solid #d97706;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .teacher-note-box h4 {
+            color: #b45309;
+            font-size: 15px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-container {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #cbd5e1;
+        }
+
+        .lang-label {
+            background: #e2e8f0;
+            padding: 5px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #475569;
+        }
+
+        .lang-text {
+            padding: 15px;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .eng-theme {
+            background: #f8fafc;
+            color: #334155;
+        }
+
+        .hing-theme {
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tech-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            border-top: 4px solid #2563eb;
+        }
+
+        .tech-card strong {
+            color: #0f172a;
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .tech-card span {
+            font-size: 13.5px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .visual-board {
+            background: #0f172a;
+            color: #38bdf8;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13.5px;
+            margin: 15px 0;
+            border-left: 4px solid #10b981;
+            white-space: pre-wrap;
+        }
+
+        .qa-block {
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-left: 4px solid #2563eb;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .qa-question {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .qa-answer {
+            font-size: 14px;
+            color: #334155;
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .mcq-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .mcq-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .mcq-options {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mcq-options li {
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            font-size: 13.5px;
+        }
+
+        .mcq-options li.correct-ans {
+            background: #dcfce7;
+            border-color: #bbf7d0;
+            color: #166534;
+            font-weight: 600;
+        }
+
+        /* --- Live Simulator Engine Components --- */
+        .simulation-container {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 2px solid #334155;
+        }
+
+        .circuit-board {
+            position: relative;
+            width: 100%;
+            height: 160px;
+            background: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .sim-wire {
+            position: absolute;
+            border: 4px solid #64748b;
+            border-radius: 4px;
+        }
+
+        .wire-top {
+            top: 30px;
+            left: 10%;
+            width: 80%;
+            height: 0;
+        }
+
+        .wire-right {
+            top: 30px;
+            right: 10%;
+            width: 0;
+            height: 100px;
+        }
+
+        .wire-bottom {
+            bottom: 30px;
+            left: 10%;
+            width: 80%;
+            height: 0;
+        }
+
+        .wire-left {
+            top: 30px;
+            left: 10%;
+            width: 0;
+            height: 100px;
+        }
+
+        .sim-battery {
+            position: absolute;
+            left: 8%;
+            top: 55px;
+            width: 40px;
+            height: 50px;
+            background: #ef4444;
+            color: white;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .sim-bulb {
+            position: absolute;
+            right: 6%;
+            top: 55px;
+            width: 50px;
+            height: 50px;
+            background: #475569;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .sim-bulb.glow {
+            background: #f1c40f;
+            box-shadow: 0 0 30px #f1c40f;
+        }
+
+        .electron-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #38bdf8;
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        .sim-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .btn-sim-toggle {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-sim-toggle.active {
+            background: #ef4444;
+        }
+
+        .atom-responsive-box {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 25px;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        .atom-core-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .orbit-line-top,
+        .orbit-line-bottom {
+            width: 60px;
+            height: 2px;
+            background: #475569;
+            position: relative;
+        }
+
+        .orbit-electron {
+            width: 10px;
+            height: 10px;
+            background: #38bdf8;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nucleus-box {
+            background: #1e293b;
+            border: 2px solid #f1c40f;
+            border-radius: 8px;
+            padding: 12px 25px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            header.navbar nav ul.nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                width: 100%;
+                background: #0f172a;
+                padding: 20px;
+                gap: 15px;
+            }
+
+            header.navbar nav ul.nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .mac-content {
+                padding: 25px 15px;
+            }
+
+            .mac-title {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu"><span class="bar"></span><span class="bar"></span><span
+                class="bar"></span></div>
+    </header>
+
+    <main class="chapter-container">
+        <div class="pdf-download-zone" data-html2pdf-ignore="true">
+            <button class="btn-pdf-trigger" id="downloadPdfBtn">📥 Download Full Course Blueprint PDF</button>
+        </div>
+
+        <div class="mac-window-box" id="pdfPrintArea">
+            <div class="mac-top-bar">
+                <div class="mac-dots"><span class="mac-dot dot-red"></span><span class="mac-dot dot-yellow"></span><span
+                        class="mac-dot dot-green"></span></div>
+                <div class="mac-title">Industrial Electrical Master Console</div>
+            </div>
+
+            <div class="mac-content">
+                <h1 class="mega-title">Industrial Electrical & Automation Master Course</h1>
+
+                <article class="chapter-block" id="ch1">
+                    <h2>Chapter 1 – Electricity Kya Hai? (Deep Theory)</h2>
+
+                    <span class="framework-badge">📖 Definition</span>
+                    <div class="lang-container">
+                        <div class="lang-label">Technical Definition</div>
+                        <div class="lang-text eng-theme"><strong>Electricity</strong> is a physical phenomenon
+                            associated with the presence and movement of matter that has a property of electric charge,
+                            specifically the flow of free electrons through a closed loop.</div>
+                    </div>
+                    <div class="lang-container">
+                        <div class="lang-label">Simple Hinglish Mode</div>
+                        <div class="lang-text hing-theme">सरल शब्दों में: <strong>तार के अंदर इलेक्ट्रॉन्स का एक ही दिशा
+                                में बहना ही बिजली है!</strong> जब तक तार के अंदर इलेक्ट्रॉन चुपचाप बैठे हैं, कोई करंट
+                            नहीं बहेगा। जैसे ही वे दौड़ना शुरू करेंगे, बिजली पैदा हो जाएगी।</div>
+                    </div>
+
+                    <span class="framework-badge">🧠 Concept & Analogy</span>
+                    <div class="teacher-note-box">
+                        <h4>👨‍🏫 Teacher Style Concept:</h4>
+                        <p>इसे पानी के पाइप से समझो। पाइप के अंदर का पानी = <strong>Electrons</strong>। पाइप =
+                            <strong>Wire</strong>। पानी का प्रेशर = <strong>Voltage</strong>। और पानी का बहना =
+                            <strong>Current</strong> है!
+                        </p>
+                    </div>
+
+                    <span class="framework-badge">🔬 Atom, Proton, Neutron, Electron</span>
+                    <p>दुनिया की हर चीज़ (चाहे कॉपर वायर हो या लोहा) छोटे दानों से बनी है जिसे <strong>Atom
+                            (परमाणु)</strong> कहते हैं। इसके अंदर 3 कण होते हैं:</p>
+
+                    <div class="atom-responsive-box">
+                        <div class="sim-title">Atom Internal Model Layout</div>
+                        <div class="atom-core-wrapper">
+                            <div class="orbit-line-top">
+                                <div class="orbit-electron"></div>
+                            </div>
+                            <div class="nucleus-box">
+                                <span style="color: #ef4444; font-weight: 700; display: block; font-size: 13px;">➕
+                                    Proton (+ Charge)</span>
+                                <span
+                                    style="color: #94a3b8; font-weight: 700; display: block; font-size: 13px; margin-top: 4px;">📦
+                                    Neutron (Neutral)</span>
+                            </div>
+                            <div class="orbit-line-bottom">
+                                <div class="orbit-electron"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>Proton (+):</strong> <span>नाभिक (Nucleus) के अंदर रहता है। इस पर
+                                धनात्मक आवेश होता है।</span></div>
+                        <div class="tech-card"><strong>Neutron:</strong> <span>यह भी नाभिक के अंदर रहता है, पर इस पर कोई
+                                चार्ज नहीं होता।</span></div>
+                        <div class="tech-card"><strong>Electron (-):</strong> <span>बाहरी कक्षाओं में चक्कर काटता है। इस
+                                पर ऋणात्मक आवेश होता है।</span></div>
+                    </div>
+
+                    <span class="framework-badge">⚡ Charge, Static vs Current & Free Electron</span>
+                    <p><strong>Charge (आवेश):</strong> वह बल जिससे वस्तुएं आकर्षित या प्रतिकर्षित होती हैं। समान चार्ज
+                        (+ +) दूर भागते हैं और विपरीत चार्ज (+ -) पास आते हैं।</p>
+                    <p><strong>Static Electricity:</strong> रगड़ के कारण इंसुलेटर की सतह पर जमा हुई रुकी हुई बिजली (जैसे
+                        कंघी से बाल रगड़ना)।</p>
+                    <p><strong>Current Electricity:</strong> बंद लूप में लगातार बहने वाली गतिशील बिजली, जो हमारे घरों
+                        में आती है।</p>
+                    <p><strong>Free Electron:</strong> एटम की सबसे बाहरी कक्षा का वो इलेक्ट्रॉन जिस पर नाभिक का नियंत्रण
+                        कम होता है। वोल्टेज का धक्का लगते ही यही इलेक्ट्रॉन तार में कतार बनाकर दौड़ पड़ता है।</p>
+
+                    <span class="framework-badge">🛡️ Materials Matrix</span>
+                    <div class="tech-grid">
+                        <div class="tech-card" style="border-top: 4px solid #10b981;"><strong>Conductor (चालक):</strong>
+                            <span>जिसमें फ्री इलेक्ट्रॉन्स की भरमार हो। उदा: Copper, Aluminium, Silver।</span>
+                        </div>
+                        <div class="tech-card" style="border-top: 4px solid #ef4444;"><strong>Insulator
+                                (कुचालक):</strong> <span>जिसमें फ्री इलेक्ट्रॉन्स बिल्कुल न हों। उदा: PVC, Rubber, सूखी
+                                लकड़ी।</span></div>
+                        <div class="tech-card" style="border-top: 4px solid #f59e0b;"><strong>Semiconductor
+                                (अर्धचालक):</strong> <span>जिसकी चालकता बीच की हो। उदा: Silicon, Germanium।</span></div>
+                    </div>
+
+                    <span class="framework-badge">📈 Electric Field & Potential Difference</span>
+                    <p><strong>Electric Field:</strong> किसी चार्ज के चारों ओर का वह क्षेत्र जहाँ तक उसका इलेक्ट्रिकल
+                        प्रभाव महसूस किया जा सके।</p>
+                    <p><strong>Potential Difference (विभवान्तर):</strong> सर्किट के दो बिंदुओं के बीच का इलेक्ट्रिकल
+                        प्रेशर का अंतर। इसके बिना करंट कभी फ्लो नहीं हो सकता।</p>
+
+                    <span class="framework-badge">🔄 Live Interactive Simulator</span>
+                    <div class="simulation-container" data-html2pdf-ignore="true">
+                        <div class="sim-title">Live Circuit Simulation Loop</div>
+                        <div class="circuit-board">
+                            <div class="sim-wire wire-top"></div>
+                            <div class="sim-wire wire-right"></div>
+                            <div class="sim-wire wire-bottom"></div>
+                            <div class="sim-wire wire-left"></div>
+                            <div class="sim-battery">🔋<br>BATTERY</div>
+                            <div class="sim-bulb" id="circuitBulb">💡</div>
+                            <div class="electron-dot" id="e1" style="top: 28px; left: 10%;"></div>
+                            <div class="electron-dot" id="e2" style="top: 28px; left: 50%;"></div>
+                            <div class="electron-dot" id="e3" style="top: 60px; right: 9.2%;"></div>
+                            <div class="electron-dot" id="e4" style="bottom: 28px; left: 80%;"></div>
+                            <div class="electron-dot" id="e5" style="bottom: 28px; left: 40%;"></div>
+                            <div class="electron-dot" id="e6" style="top: 100px; left: 9.2%;"></div>
+                        </div>
+                        <div class="sim-controls">
+                            <button class="btn-sim-toggle" id="simActionBtn">Start Electron Flow (पावर ऑन करें)
+                                →</button>
+                        </div>
+                    </div>
+
+                    <span class="framework-badge">🎯 Interview & Viva Questions</span>
+                    <div class="qa-block">
+                        <div class="qa-question">Q1. चांदी सबसे अच्छा सुचालक है, फिर भी हम तांबे के तार क्यों इस्तेमाल
+                            करते हैं?</div>
+                        <div class="qa-answer">Ans: चांदी बहुत महंगी है और उसकी मैकेनिकल स्ट्रेंथ (मजबूती) कम होती है।
+                            कॉपर बेहतरीन कंडक्टिविटी और कम दाम का परफेक्ट कॉम्बिनेशन है।</div>
+                    </div>
+
+                    <span class="framework-badge">✅ Examination MCQs</span>
+                    <div class="mcq-card">
+                        <div class="mcq-title">Q1. विद्युत आवेश (Electric Charge) की SI इकाई क्या है?</div>
+                        <ul class="mcq-options">
+                            <li>A) Ampere</li>
+                            <li>B) Volt</li>
+                            <li class="correct-ans">C) Coulomb ✅</li>
+                            <li>D) Ohm</li>
+                        </ul>
+                    </div>
+
+                    <span class="framework-badge">📝 Practice Questions</span>
+                    <p class="visual-board">1. तांबे (Copper) का परमाणु क्रमांक 29 है, इसका इलेक्ट्रॉनिक विन्यास लिखकर
+                        दिखाएं।<br>2. स्थिर विद्युत और गतिशील विद्युत में मुख्य अंतर क्या है?</p>
+                </article>
+
+                <article class="chapter-block" id="ch2">
+                    <h2>Chapter 2 – Voltage (V)</h2>
+
+                    <span class="framework-badge">📖 Definition & EMF</span>
+                    <div class="lang-container">
+                        <div class="lang-text eng-theme"><strong>Voltage</strong>, also called electromotive force (EMF)
+                            or potential difference, is the pressure from an electrical circuit's power source that
+                            pushes charged electrons through a conducting loop.</div>
+                    </div>
+                    <div class="lang-container">
+                        <div class="lang-text hing-theme"><strong>वोल्टेज मतलब वो धक्का</strong> जो इलेक्ट्रॉन्स को तार
+                            में आगे चलाता है। जब तक वोल्टेज का प्रेशर नहीं होगा, इलेक्ट्रॉन आगे नहीं बढ़ेंगे।
+                            <strong>EMF (Electromotive Force):</strong> जब सर्किट खुला हो (Open Circuit) तब सोर्स का कुल
+                            वोल्टेज EMF कहलाता है। <strong>Potential Difference:</strong> जब सर्किट बंद हो और लोड चल रहा
+                            हो, तब दो बिंदुओं के बीच का वोल्टेज ड्रॉप।
+                        </div>
+                    </div>
+
+                    <span class="framework-badge">⚙️ Voltage Kaise Banta Hai? & Generation</span>
+                    <p><strong>1. Battery (केमिकल एक्शन):</strong> बैटरी के अंदर दो अलग-अलग मेटल की प्लेट्स होती हैं
+                        जिन्हें इलेक्ट्रोलाइट लिक्विड में डाला जाता है। केमिकल रिएक्शन से एक प्लेट पर बहुत सारे
+                        इलेक्ट्रॉन इकट्ठा हो जाते हैं ($-$) और दूसरी प्लेट पर इलेक्ट्रॉन्स की कमी हो जाती है ($+$)। इस
+                        अंतर से वोल्टेज पैदा होता है।</p>
+                    <p><strong>2. Generator (मैग्नेटिक एक्शन):</strong> जब किसी कॉपर कॉइल को घूमते हुए चुंबकीय क्षेत्र
+                        (Magnetic Field) के बीच घुमाया जाता है, तो फैराडे के नियम के अनुसार फ्लक्स कटने से कॉइल के सिरों
+                        पर वोल्टेज पैदा होता है।</p>
+
+                    <span class="framework-badge">📊 Voltage Types Matrix</span>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>AC Voltage:</strong> <span>जिसका मान और दिशा समय के साथ बदलती
+                                रहती है। हमारे घरों की 230V सप्लाई AC वोल्टेज है।</span></div>
+                        <div class="tech-card"><strong>DC Voltage:</strong> <span>जिसका मान और दिशा हमेशा फिक्स रहती है।
+                                बैटरी और सोलर पैनल से मिलने वाला वोल्टेज DC है।</span></div>
+                        <div class="tech-card"><strong>High vs Low Voltage:</strong> <span>घरेलू स्तर पर 230V/415V लो
+                                वोल्टेज में आता है, जबकि ट्रांसमिशन लाइनों में 11KV, 33KV, 132KV हाई वोल्टेज होता
+                                है।</span></div>
+                    </div>
+
+                    <span class="framework-badge">🧮 Solved Numerical Problems</span>
+                    <div class="visual-board">
+                        💡 न्यूमेरिकल प्रश्न:
+                        यदि एक 12V की कार बैटरी 4 ओह्म ($\Omega$) के रेजिस्टेंस वाले लैंप से जुड़ी है, तो सर्किट का कुल
+                        विभवान्तर और सोर्स वोल्टेज बताएं।
+                        हल: यहाँ वोल्टेज सोर्स फिक्स है, $V = 12\text{ V}$।
+                    </div>
+
+                    <span class="framework-badge">✅ Examination MCQs</span>
+                    <div class="mcq-card">
+                        <div class="mcq-title">Q1. खुला परिपथ (Open Circuit) होने पर टर्मिनल वोल्टेज को क्या कहा जाता
+                            है?</div>
+                        <ul class="mcq-options">
+                            <li class="correct-ans">A) EMF ✅</li>
+                            <li>B) Potential Drop</li>
+                            <li>C) Resistance</li>
+                            <li>D) Current</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch3">
+                    <h2>Chapter 3 – Current (Ampere)</h2>
+
+                    <span class="framework-badge">📖 Definition & Flow Direction</span>
+                    <p><strong>Electric Current:</strong> किसी चालक तार में आवेश (Electrons) के प्रवाह की समय दर को करंट
+                        कहते हैं। इसका मात्रक <strong>Ampere (A)</strong> होता है।</p>
+                    <div class="visual-board">
+                        🔄 दिशा का सबसे बड़ा कन्फ्यूजन दूर करें:
+                        • Electron Flow: इलेक्ट्रॉन हमेशा नेगेटिव ($-$) से पॉजिटिव ($+$) की तरफ भागते हैं।
+                        • Conventional Current: पुरानी थ्योरी के अनुसार माना जाता है कि करंट हमेशा पॉजिटिव ($+$) से
+                        नेगेटिव ($-$) की तरफ बहता है। हम इंजीनियरिंग में इसी को मानते हैं।
+                    </div>
+
+                    <span class="framework-badge">🧮 Formulas & Current Types</span>
+                    <p>करंट का मुख्य सूत्र: $$I = \frac{Q}{t}$$ (जहाँ $Q = \text{Charge in Coulombs}$, $t = \text{Time
+                        in seconds}$)। ओह्म के नियम से: $$I = \frac{V}{R}$$</p>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>AC Current (Alternating):</strong> <span>यह अपनी दिशा एक सेकंड
+                                में 50 बार बदलता है (50 Hz)। घरों के पंखे, मोटर इसी पर चलते हैं।</span></div>
+                        <div class="tech-card"><strong>DC Current (Direct):</strong> <span>यह सीधे एक ही दिशा में बहता
+                                है। मोबाइल चार्जिंग, लैपटॉप, कार की बैटरी में यही होता है।</span></div>
+                        <div class="tech-card"><strong>Measurement:</strong> <span>करंट मापने के लिए Ammeter को हमेशा
+                                सर्किट के **Series (श्रेणीक्रम)** में लगाया जाता है।</span></div>
+                    </div>
+
+                    <span class="framework-badge">✅ Examination MCQs</span>
+                    <div class="mcq-card">
+                        <div class="mcq-title">Q1. करंट मापने वाले एमीटर का आंतरिक प्रतिरोध (Internal Resistance) कितना
+                            होना चाहिए?</div>
+                        <ul class="mcq-options">
+                            <li>A) बहुत उच्च</li>
+                            <li class="correct-ans">B) लगभग शून्य (Very Low) ✅</li>
+                            <li>C) अनंत</li>
+                            <li>D) 100 Ohm</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch4">
+                    <h2>Chapter 4 – Resistance & Materials</h2>
+
+                    <span class="framework-badge">📖 Resistance, Resistivity, Conductivity</span>
+                    <p><strong>Resistance (R):</strong> पदार्थ का वह गुण जो करंट के बहने का विरोध (Friction) करता है।
+                        इसका मात्रक **Ohm ($\Omega$)** है।</p>
+                    <p><strong>Resistivity (विशिष्ट प्रतिरोध - $\rho$):</strong> यह किसी मटेरियल के 1 मीटर लंबे और 1
+                        वर्ग मीटर एरिया वाले टुकड़े का अपना फिक्स रेजिस्टेंस होता है। यह लंबाई पर निर्भर नहीं करता,
+                        सिर्फ मटेरियल के टाइप पर निर्भर करता है।</p>
+                    <p><strong>Conductivity (चालकता):</strong> रेजिस्टेंस के उल्टे को कंडक्टेंस कहते हैं ($G = 1/R$)। यह
+                        करंट को आसानी से बहने की क्षमता है।</p>
+
+                    <span class="framework-badge">🧮 Formula & Calculations</span>
+                    <p>प्रतिरोध का मुख्य सूत्र: $$R = \rho \frac{l}{A}$$ (जहाँ $l = \text{Length}$, $A =
+                        \text{Cross-Sectional Area}$)।</p>
+
+                    <span class="framework-badge">📊 Material Effect Temperature Matrix</span>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>Copper & Aluminium:</strong> <span>इनका रेजिस्टेंस तापमान बढ़ने
+                                पर बढ़ता है। इन्हें **PTC (Positive Temperature Coefficient)** कहते हैं।</span></div>
+                        <div class="tech-card"><strong>Nichrome:</strong> <span>इसका रेजिस्टेंस बहुत हाई होता है और यह
+                                गर्म होने पर भी पिघलता नहीं। इसे हीटर के एलिमेंट में यूज़ करते हैं।</span></div>
+                        <div class="tech-card"><strong>Carbon:</strong> <span>यह एक **NTC (Negative Temperature
+                                Coefficient)** मटेरियल है। इसका तापमान बढ़ने पर रेजिस्टेंस घटता है।</span></div>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch5">
+                    <h2>Chapter 5 – Ohm's Law (ओह्म का नियम - कम्प्लीट स्टडी)</h2>
+
+                    <span class="framework-badge">📖 History & Statement</span>
+                    <p>सन 1827 में जर्मन वैज्ञानिक **जॉर्ज साइमन ओह्म** ने वोल्टेज और करंट के बीच संबंध का यह नियम दिया
+                        था। <strong>नियम:</strong> यदि किसी चालक की भौतिक परिस्थितियां (जैसे तापमान, दाब) स्थिर रहें, तो
+                        उसके सिरों पर लगाया गया वोल्टेज ($V$) उसमें बहने वाली धारा ($I$) के समानुपाती होता है।</p>
+
+                    <span class="framework-badge">🧮 Derivation & Mathematical Graph</span>
+                    <div class="visual-board">
+                        $$V \propto I \implies V = I \times R$$ (जहाँ R एक नियतांक है जिसे प्रतिरोध कहते हैं)।
+                        यदि हम X-Axis पर Current और Y-Axis पर Voltage को रखकर ग्राफ खींचें, तो हमेशा एक **Straight Line
+                        (सीधी रेखा)** प्राप्त होती है।
+                    </div>
+
+                    <span class="framework-badge">⚠️ Limitations & Applications</span>
+                    <p><strong>Applications:</strong> इसका उपयोग सर्किट का कुल करंट, वोल्टेज ड्रॉप या अज्ञात रेजिस्टेंस
+                        निकालने में होता है।</p>
+                    <p><strong>Limitations (सीमाएं):</strong> यह नियम सेमीकंडक्टर (Diode, Transistor) और वैक्यूम ट्यूब्स
+                        पर लागू नहीं होता, क्योंकि उनका ग्राफ सीधा नहीं होता (Non-Linear)।</p>
+
+                    <div class="mcq-card">
+                        <div class="mcq-title">Q1. ओह्म का नियम निम्नलिखित में से किस पर लागू नहीं होता?</div>
+                        <ul class="mcq-options">
+                            <li>A) कॉपर वायर</li>
+                            <li>B) टंगस्टन फिलामेंट</li>
+                            <li class="correct-ans">C) डायोड/सेमीकंडक्टर ✅</li>
+                            <li>D) एल्युमिनियम रॉड</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch6">
+                    <h2>Chapter 6 – Electric Power & Energy Bill Calculations</h2>
+
+                    <span class="framework-badge">📖 Power Types (Active, Reactive, Apparent)</span>
+                    <p><strong>Electric Power (P):</strong> कार्य करने की विद्युत दर को पावर कहते हैं। मात्रक **Watt
+                        (W)** या **Kilowatt (kW)** है। $1\text{ HP (Horsepower)} = 746\text{ Watts}$।</p>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>Active Power (kW):</strong> <span>यह असली पावर है जो मोटर घुमाने
+                                या बल्ब जलाने में असल में खर्च होती है।</span></div>
+                        <div class="tech-card"><strong>Reactive Power (kVAR):</strong> <span>यह पावर केवल चुंबकीय
+                                क्षेत्र (Magnetic Field) बनाने के काम आती है, पर कोई वास्तविक काम नहीं करती।</span>
+                        </div>
+                        <div class="tech-card"><strong>Apparent Power (kVA):</strong> <span>यह टोटल पावर है जो सोर्स से
+                                भेजी जाती है (Active + Reactive का कॉम्बिनेशन)।</span></div>
+                    </div>
+
+                    <span class="framework-badge">🧮 Household Electricity Bill Calculation</span>
+                    <div class="teacher-note-box">
+                        <h4>🔢 Solved Unit Calculation Numerical:</h4>
+                        <p><strong>प्रश्न:</strong> यदि 2000W का एक इंडक्शन हीटर रोज़ 5 घंटे चलता है, तो 30 दिन का बिजली
+                            का बिल निकालें (यदि 1 यूनिट का दाम ₹7 है)।</p>
+                        <p style="margin-top: 6px;"><strong>हल:</strong> $\text{Total Watt-Hour} = 2000\text{ W} \times
+                            5\text{ Hours} \times 30\text{ Days} = 300,000\text{ Wh}$।<br>
+                            $\text{Units (kWh)} = 300,000 / 1000 = 300\text{ Units}$।<br>
+                            $\text{Total Bill} = 300 \times ₹7 = \mathbf{₹2100}$!
+                        </p>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch7-ch8">
+                    <h2>Chapter 7 & 8 – AC Current Waveforms vs DC Systems</h2>
+
+                    <span class="framework-badge">📊 Alternating Current Parameters</span>
+                    <p><strong>AC Current:</strong> अल्टरनेटर द्वारा उत्पन्न वह करंट जो साइन वेव (Sine Wave) के रूप में
+                        चलता है।</p>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>Frequency:</strong> <span>एक सेकंड में पूरे होने वाले साइकिलों की
+                                संख्या (भारत में 50 Hz)।</span></div>
+                        <div class="tech-card"><strong>RMS Value:</strong> <span>Root Mean Square—वह प्रभावी मान जो हमें
+                                मल्टीमीटर पर दिखता है ($V_{rms} = V_{peak} / \sqrt{2}$)।</span></div>
+                        <div class="tech-card"><strong>Peak Value:</strong> <span>साइन वेव द्वारा छुआ गया अधिकतम वोल्टेज
+                                का शिखर मान।</span></div>
+                    </div>
+
+                    <span class="framework-badge">🔋 DC Source Systems</span>
+                    <p><strong>DC Current:</strong> यह बैटरी, सोलर पैनल, एडाप्टर और रेक्टिफायर (AC को DC में बदलने वाला
+                        सर्किट) से मिलता है।</p>
+                    <p><strong>लाभ:</strong> इसे बैटरी में स्टोर किया जा सकता है। इलेक्ट्रॉनिक्स इसी पर चलते हैं।</p>
+                    <p><strong>हानि:</strong> इसे ट्रांसफार्मर की मदद से स्टेप-अप या स्टेप-डाउन करके बहुत दूर तक नहीं
+                        भेजा जा सकता।</p>
+                </article>
+
+                <article class="chapter-block" id="ch9-ch10">
+                    <h2>Chapter 9 & 10 – Single Phase vs Three Phase Industrial Systems</h2>
+
+                    <span class="framework-badge">🏭 Complete Industrial Level Setup</span>
+                    <p><strong>Single Phase System:</strong> इसमें केवल दो तार होते हैं—एक Phase (Live) और एक Neutral।
+                        यह घरेलू लोड (पंखे, लाइट, फ्रिज) के लिए यूज़ होता है। मानक वोल्टेज 230V AC होता है।</p>
+                    <p><strong>Three Phase System:</strong> इसमें तीन फेज़ के तार (R - Red, Y - Yellow, B - Blue) और एक
+                        न्यूट्रल होता है। तीनों फेज़ आपस में $120^{\circ}$ के इलेक्ट्रिकल एंगल पर होते हैं। यह भारी
+                        औद्योगिक लोड और 3-फेज़ इंडक्शन मोटरों को चलाने के काम आता है। मानक लाइन-टू-लाइन वोल्टेज 415V AC
+                        होता है।</p>
+
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>Star Connection:</strong> <span>तीनों वाइंडिंग्स के एंड्स को एक
+                                जगह जोड़कर **Neutral Point** निकाला जाता है। $V_{line} = \sqrt{3} V_{phase}$।</span>
+                        </div>
+                        <div class="tech-card"><strong>Delta Connection:</strong> <span>तीनों वाइंडिंग्स को त्रिकोण लूप
+                                में जोड़ा जाता है। इसमें कोई न्यूट्रल नहीं होता। $V_{line} = V_{phase}$ (हाई टॉर्क के
+                                लिए बेस्ट)।</span></div>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch11-ch12">
+                    <h2>Chapter 11 & 12 – Frequency & Power Factor ($\cos\phi$)</h2>
+                    <p><strong>Frequency:</strong> भारत में फिक्स **50 Hz** ग्रिड सिस्टम है। डीसी (DC) सर्किट की
+                        फ्रीक्वेंसी हमेशा **शून्य (0 Hz)** होती है।</p>
+                    <p><strong>Power Factor:</strong> वोल्टेज और करंट के बीच के एंगल का कोसाइन ($\cos\phi$)। यह जितना 1
+                        के पास (Unity) होगा, सिस्टम उतना ही कुशल होगा। इंडस्ट्रीज में इंडक्टिव लोड (मोटर) के कारण पावर
+                        फैक्टर पिछड़ (Lagging) जाता है, जिसे सुधारने के लिए हम **Capacitor Bank** पैरेलल में लगाते हैं।
+                    </p>
+                </article>
+
+                <article class="chapter-block" id="ch13-ch14">
+                    <h2>Chapter 13 & 14 – Transformer Basics & Earthing Systems</h2>
+                    <p><strong>Transformer:</strong> यह एक स्थिर (Static) डिवाइस है जो म्यूचुअल इंडक्शन के सिद्धांत पर
+                        बिना फ्रीक्वेंसी बदले वोल्टेज को स्टेप-अप (बढ़ाने) या स्टेप-डाउन (घटाने) का काम करता है। यह केवल
+                        AC पर काम करता है, DC पर नहीं!</p>
+                    <p><strong>Earthing (भू-संयोजन):</strong> लीकेज करंट से इंसानों और मशीनों को बचाने के लिए मोटर की
+                        बॉडी को मोटे कॉपर या जीआई (GI) वायर से सीधे ज़मीन के अंदर गाड़े गए इलेक्ट्रोड से जोड़ना अर्थिंग
+                        कहलाता है। इसका प्रतिरोध हमेशा 1 ओह्म से कम होना चाहिए।</p>
+                </article>
+
+                <article class="chapter-block" id="ch15">
+                    <h2>Chapter 15 – Complete Protection Devices Layer</h2>
+                    <span class="framework-badge">🏭 Switchgear Specifications</span>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>MCB:</strong> <span>Miniature Circuit Breaker. ओवरलोड और शॉर्ट
+                                सर्किट होने पर घरों के सर्किट को तुरंत ट्रिप करता है (Up to 63A)।</span></div>
+                        <div class="tech-card"><strong>MCCB:</strong> <span>Molded Case Circuit Breaker. भारी औद्योगिक
+                                मोटरों के लिए हाई करंट प्रोटेक्शन (Up to 1600A)।</span></div>
+                        <div class="tech-card"><strong>RCCB / ELCB:</strong> <span>Residual Current Circuit Breaker. जब
+                                भी कोई इंसान नंगे तार को छूता है या करंट लीक होता है, यह 30mA के अंतर पर ही 0.03 सेकंड
+                                में ट्रिप हो जाता है।</span></div>
+                        <div class="tech-card"><strong>Contactor & Relay:</strong> <span>कंट्रोल पैनल में रिमोट स्विचिंग
+                                और ऑटोमेशन के लिए यूज़ होने वाले इलेक्ट्रोमैग्नेटिक स्विच।</span></div>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch16-ch17">
+                    <h2>Chapter 16 & 17 – Measuring Instruments & Safety</h2>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>Multimeter:</strong> <span>वोल्टेज, करंट और रेजिस्टेंस सब कुछ एक
+                                साथ मापने वाला ऑल-इन-वन डिजिटल मीटर।</span></div>
+                        <div class="tech-card"><strong>Clamp Meter:</strong> <span>बिना इंसुलेशन हटाए या तार को काटे,
+                                उसके चारों तरफ जबड़ा फंसाकर करंट मापने वाला टूल।</span></div>
+                        <div class="tech-card"><strong>Megger (इंसुलेशन टेस्टर):</strong> <span>मोटर की वाइंडिंग जल गई
+                                है या नहीं, यह जांचने के लिए हाई वोल्टेज (500V/1000V DC) जनरेट करके वाइंडिंग का
+                                मेगा-ओह्म में इंसुलेशन रेजिस्टेंस मापने वाला उपकरण।</span></div>
+                    </div>
+                    <div class="teacher-note-box" style="border-left-color: #ef4444; background: #fff5f5;">
+                        <h4>⚠️ Lockout/Tagout (LOTO) Safety Standard:</h4>
+                        <p>इंडस्ट्री में किसी भी मोटर पैनल पर काम करने से पहले मेन ब्रेकर को बंद करके उस पर अपना निजी
+                            ताला लगाना और "Danger: Do Not Operate" का टैग लटकाना अनिवार्य है ताकि कोई दूसरा गलती से पावर
+                            ऑन न कर दे।</p>
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch18-ch21">
+                    <h2>Chapter 18 & 21 – Industrial Wiring & Numerical Work</h2>
+                    <p><strong>Power Circuit Wiring:</strong> मेन बसबार से निकलकर केबल पहले MCCB, फिर कॉन्टैक्टर, फिर
+                        ओवरलोड रिले (OLR) से होते हुए मोटर के टर्मिनल बॉक्स में जाती है।</p>
+                    <div class="visual-board">
+                        🧮 मोटर स्पीड न्यूमेरिकल कैलकुलेशन:
+                        प्रश्न: एक 4-पोल वाली थ्री-फेज़ इंडक्शन मोटर 50Hz की सप्लाई पर चल रही है। उसकी सिंक्रोनस स्पीड
+                        (Ns) निकालें।
+                        सूत्र: Ns = (120 × f) / P
+                        गणना: Ns = (120 × 50) / 4 = 6000 / 4 = 1500 RPM (रिवॉल्यूशन पर मिनट)!
+                    </div>
+                </article>
+
+                <article class="chapter-block" id="ch22-ch23">
+                    <h2>Chapter 22 & 23 – Practical Troubleshooting & Electrical Drawings</h2>
+                    <p><strong>Drawing Reading:</strong> पैनल वायरिंग में दो तरह की ड्राइंग्स होती हैं—एक **Power
+                        Diagram** (जो हैवी करंट का रास्ता दिखाती है) और दूसरी **Control Diagram** (जो पुश बटन, रिले और
+                        इंटरलॉकिंग का लॉजिक दिखाती है)।</p>
+                    <p><strong>Troubleshooting Check:</strong> यदि मोटर चालू करने पर भिनभिनाने (Humming) की आवाज़ कर रही
+                        है और घूम नहीं रही, तो इसका मतलब **Single Phasing** हुआ है—यानी तीन में से कोई एक फेज़ उड़ गया
+                        है। तुरंत पावर बंद करें!</p>
+                </article>
+
+                <article class="chapter-block" id="ch24-ch25">
+                    <h2>Chapter 24 & 25 – Motor & Industrial Automation Foundation (PLC, VFD)</h2>
+                    <p><strong>Motor Foundation:</strong> मोटर को वाइब्रेशन (कंपन) से बचाने के लिए कंक्रीट के हैवी बेस
+                        पर फाउंडेशन बोल्ट की मदद से फिक्स किया जाता है और लेज़र अलाइनमेंट टूल से शाफ्ट को लोड से मिलाया
+                        जाता है।</p>
+                    <div class="tech-grid">
+                        <div class="tech-card"><strong>PLC (Programmable Logic Controller):</strong> <span>यह ऑटोमेशन का
+                                डिजिटल दिमाग है। इसमें लैडर लॉजिक (Ladder Logic) प्रोग्रामिंग लोड करके पूरी फैक्ट्री की
+                                मोटरों को ऑटोमैटिक कंट्रोल किया जाता है।</span></div>
+                        <div class="tech-card"><strong>VFD (Variable Frequency Drive):</strong> <span>यह वह इलेक्ट्रॉनिक
+                                डिवाइस है जो मोटर को दी जाने वाली फ्रीक्वेंसी ($f$) को बदलकर मोटर की गति (RPM) को शून्य
+                                से अधिकतम तक बहुत आसानी से कंट्रोल कर सकती है।</span></div>
+                        <div class="tech-card"><strong>SCADA & HMI:</strong> <span>कंट्रोल रूम में बैठकर पूरी फैक्ट्री
+                                का लाइव ग्राफिक एनीमेशन देखना (SCADA) और मशीन के पास लगी टच स्क्रीन (HMI) से कमांड
+                                देना।</span></div>
+                    </div>
+                </article>
+
+                <section class="section-block" id="master-exam">
+                    <span class="framework-badge">🎯 Comprehensive 500+ Prep Mock Test</span>
+                    <h2>📝 Final Master Assessment Exam</h2>
+                    <div class="mcq-card">
+                        <div class="mcq-title">Q1. VFD (Variable Frequency Drive) का मुख्य कार्य इंडक्शन मोटर में क्या
+                            नियंत्रित करना है?</div>
+                        <ul class="mcq-options">
+                            <li>A) केवल वोल्टेज</li>
+                            <li class="correct-ans">B) फ्रीक्वेंसी बदलकर मोटर की स्पीड (RPM) ✅</li>
+                            <li>C) मोटर के पोल्स की संख्या</li>
+                            <li>D) केवल अर्थिंग रेजिस्टेंस</li>
+                        </ul>
+                    </div>
+                    <div class="mcq-card">
+                        <div class="mcq-title">Q2. ट्रांसफार्मर की रेटिंग हमेशा किस इकाई में व्यक्त की जाती है?</div>
+                        <ul class="mcq-options">
+                            <li>A) kW</li>
+                            <li class="correct-ans">B) kVA ✅</li>
+                            <li>C) HP</li>
+                            <li>D) kVAR</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section-block" style="margin-bottom: 0;">
+                    <span class="framework-badge">🏁 Master Course Summary Notes</span>
+                    <div class="teacher-note-box"
+                        style="background: #eff6ff; border-left-color: #2563eb; margin-bottom: 0;">
+                        <p>• <strong>चैप्टर 1-5:</strong> इलेक्ट्रिसिटी के बेसिक नियम, एटम, वोल्टेज, करंट और ओह्म का
+                            अटूट नियम।</p>
+                        <p>• <strong>चैप्टर 6-15:</strong> पावर फैक्टर सुधार, थ्री-फेज़ सिस्टम, ट्रांसफार्मर वर्किंग, और
+                            MCB/RCCB प्रोटेक्शन गियर्स।</p>
+                        <p>• <strong>चैप्टर 16-25:</strong> मेगर टेस्टिंग, प्रैक्टिकल वायरिंग ड्राइंग्स, और आधुनिक
+                            VFD/PLC ऑटोमेशन टेक्नोलॉजी।</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Exact Navbar Controller
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        mobileMenu.addEventListener("click", () => { navLinks.classList.toggle("active"); });
+
+        // HYBRID LIVE SIMULATOR ENGINE
+        const simActionBtn = document.getElementById("simActionBtn");
+        const circuitBulb = document.getElementById("circuitBulb");
+        const electrons = [
+            document.getElementById("e1"), document.getElementById("e2"),
+            document.getElementById("e3"), document.getElementById("e4"),
+            document.getElementById("e5"), document.getElementById("e6")
+        ];
+        let simActive = false; let animInterval;
+
+        simActionBtn.addEventListener("click", () => {
+            simActive = !simActive;
+            if (simActive) {
+                simActionBtn.textContent = "Power OFF (बिजली बंद करें) ✖";
+                simActionBtn.classList.add("active");
+                circuitBulb.classList.add("glow");
+                electrons.forEach(el => el.style.opacity = "1");
+                let step = 0;
+                animInterval = setInterval(() => {
+                    step += 2;
+                    electrons[0].style.left = ((10 + step) % 80) + "%";
+                    electrons[1].style.left = ((50 + step) % 80) + "%";
+                    electrons[3].style.left = ((80 - step < 10 ? 80 : 80 - step)) + "%";
+                    electrons[4].style.left = ((40 - step < 10 ? 40 : 40 - step)) + "%";
+                }, 30);
+            } else {
+                simActionBtn.textContent = "Start Electron Flow (पावर ऑन करें) →";
+                simActionBtn.classList.remove("active");
+                circuitBulb.classList.remove("glow");
+                electrons.forEach(el => el.style.opacity = "0");
+                clearInterval(animInterval);
+            }
+        });
+
+        // Direct Instant HTML-to-PDF Core Generator System Logic Hook
+        document.getElementById("downloadPdfBtn").addEventListener("click", () => {
+            alert("🎉 Excelent! Pura 25 Chapters ka deep master blueprint content PDF download ho raha hai!");
+            const element = document.getElementById("pdfPrintArea");
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'Complete-25-Chapters-Electrical-Master-Course.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 1.5, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+
+</html>

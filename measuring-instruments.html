@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 11: Measuring Instruments | ITI Electrician Theory Premium Notes</title>
+    <meta name="description"
+        content="ITI Electrician Trade Theory Chapter 11 Premium Notes. Ammeter, Voltmeter, Wattmeter, Multimeter & Megger in easy teacher style.">
+    <meta name="keywords"
+        content="ITI Electrician Notes, Measuring Instruments, Ammeter, Voltmeter, Megger, Multimeter, Light Theme UI">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Premium Soft Light Theme Grid Base */
+        body {
+            background-color: #f0f2f5 !important;
+            color: #1e293b;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Layout Configuration */
+        header.navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 14.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #0f172a;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+        }
+
+        .study-page-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px 25px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-header {
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        .chapter-header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .teacher-note {
+            background-color: #e0f2fe;
+            border-left: 5px solid #0284c7;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 14.5px;
+            color: #0369a1;
+            line-height: 1.6;
+        }
+
+        /* Premium Alternating Row Feature Architecture */
+        .flex-row-alternating {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-column {
+            flex: 1;
+        }
+
+        .image-column {
+            flex: 1;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2.topic-heading {
+            color: #0f172a;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .sub-topic-heading {
+            color: #1e293b;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .lecture-eng {
+            font-size: 14.5px;
+            color: #0f172a;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            background: #f1f5f9;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        .lecture-hinglish {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .example-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .formula-box {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .ascii-art-box {
+            background-color: #0f172a;
+            color: #38bdf8;
+            font-family: monospace;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Industrial Table Styling */
+        .cable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .cable-table th,
+        .cable-table td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        .cable-table th {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cable-table td {
+            color: #334155;
+        }
+
+        /* Q&A Stack */
+        .exam-section-title {
+            color: #0f172a;
+            font-size: 22px;
+            margin: 40px 0 20px 0;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            font-weight: 700;
+        }
+
+        .exam-qa-card {
+            background-color: #f8fafc;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .exam-question {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .exam-answer {
+            color: #2563eb;
+            font-size: 14.5px;
+            font-weight: 500;
+        }
+
+        /* MCQ Interface Components */
+        .mcq-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .mcq-opt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .mcq-option-btn {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: #cbd5e1;
+            background-color: #f1f5f9;
+        }
+
+        .mcq-option-btn.correct-ans {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #15803d !important;
+        }
+
+        .mcq-option-btn.wrong-ans {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        /* Action Panel Controller (Centred PDF Download Only) */
+        .bottom-action-panel {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-action {
+            padding: 14px 40px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-download-pdf {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Quiz Modal Overlay Styles */
+        .quiz-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .quiz-modal-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 550px;
+            padding: 25px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .quiz-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .quiz-progress-tracker {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 20px 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #64748b;
+            font-size: 13.5px;
+        }
+
+        .footer-logo {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* Mobile Viewport Overrides */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #ffffff;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 20px;
+                gap: 15px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .flex-row-alternating {
+                flex-direction: column !important;
+                gap: 20px;
+            }
+
+            .btn-action {
+                width: 100%;
+                text-align: center;
+            }
+
+            .study-page-container {
+                padding: 15px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+                <li><a href="../quiz.html">Live Quiz</a></li>
+                <li><a href="../notes.html">Short Notes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="study-page-container">
+
+        <div class="chapter-header">
+            <span
+                style="color: #0284c7; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">ITI
+                Electrician Theory Module 11</span>
+            <h1>Measuring Instruments (मापक यंत्र)</h1>
+        </div>
+
+        <div class="teacher-note">
+            <strong>👨‍🏫 Classroom Note:</strong> Dosto, Measuring Instruments ITI Electrician Trade ka sabse important
+            topic hai. Agar tum isko achhe se samajh gaye to wiring, motor, transformer, maintenance aur electrical
+            testing sab easy ho jayega. Ek-ek instrument ko detail me aur aasan tarike se dekhenge!
+        </div>
+
+        <!-- Section 1 -->
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">1. Measuring Instruments Kya Hote Hain?</h2>
+                <div class="lecture-eng">Measuring instruments are devices used to measure electrical quantities such as
+                    voltage, current, resistance, power and insulation resistance.</div>
+                <div class="lecture-hinglish"><strong>Aasan Bhasha me:</strong> Measuring instruments wo devices hote
+                    hain jo electrical circuit ki physical values (Jaise Current, Voltage, Power) ko accurately measure
+                    karke scale par show karte hain.</div>
+            </div>
+        </div>
+
+        <!-- Quick Reference Table -->
+        <h2 class="topic-heading">Instrument Matrix Table</h2>
+        <table class="cable-table">
+            <thead>
+                <tr>
+                    <th>Instrument</th>
+                    <th>Kya Measure Karta Hai?</th>
+                    <th>Standard Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ammeter</strong></td>
+                    <td>Current (धारा)</td>
+                    <td>Ampere (A)</td>
+                </tr>
+                <tr>
+                    <td><strong>Voltmeter</strong></td>
+                    <td>Voltage / Potential Difference</td>
+                    <td>Volt (V)</td>
+                </tr>
+                <tr>
+                    <td><strong>Wattmeter</strong></td>
+                    <td>Electrical Power (शक्ति)</td>
+                    <td>Watt (W)</td>
+                </tr>
+                <tr>
+                    <td><strong>Multimeter</strong></td>
+                    <td>Voltage, Current, Resistance, Continuity</td>
+                    <td>Multiple Units</td>
+                </tr>
+                <tr>
+                    <td><strong>Megger</strong></td>
+                    <td>Insulation Resistance (उच्च प्रतिरोध)</td>
+                    <td>Mega Ohm (M&Omega;)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Section 2: Ammeter -->
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">2. Ammeter (एमीटर)</h2>
+                <p class="lecture-hinglish"><strong>Principle:</strong> Ammeter current ke magnetic effect par work
+                    karta hai. Jab isme se current flow hota hai to magnetic field produce hoti hai jo pointer ko scale
+                    par move karti hai.</p>
+
+                <div class="sub-topic-heading">Internal Construction & Resistance:</div>
+                <p class="lecture-hinglish">Ammeter ka internal resistance <strong>Bahut Low</strong> hota hai.
+                    <br>&bull; Ideal Ammeter Resistance = $0\text{ }\Omega$
+                    <br>&bull; Practical Ammeter Resistance = $0.01\text{ }\Omega \text{ to } 0.1\text{ }\Omega$
+                </p>
+
+                <div class="example-box">
+                    ⚠️ <strong>CRITICAL RULE:</strong> Ammeter ko hamesha <strong>Series (श्रेणी)</strong> me lagaya
+                    jata hai taaki pura load current iske andar se guzar sake. Agar tumne isko **Parallel** me laga
+                    diya, to low resistance hone ke karan bhayanak **Short Circuit** hoga aur meter instantly jal
+                    jayega!
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    [Battery +] ---- [Ammeter] ---- [Load] ---- [Battery -]
+                    |
+                    (Moving Coil)
+                    |
+                    Low Shunt Resistor</div>
+                <span style="font-size:12px; color:#64748b;">Ammeter Series Connection Grid</span>
+            </div>
+        </div>
+
+        <!-- Section 3: Voltmeter -->
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">3. Voltmeter (वोल्टमीटर)</h2>
+                <p class="lecture-hinglish"><strong>Principle:</strong> Yeh circuit ke do points ke beech ka Potential
+                    Difference (विभवान्तर) measure karta hai. Iske coil ke series me ek bahut high value resistance
+                    lagaya jata hai jise **Multiplier** kehte hain.</p>
+
+                <div class="sub-topic-heading">Internal Resistance Framework:</div>
+                <p class="lecture-hinglish">Voltmeter ka internal resistance <strong>Very High</strong> hota hai taaki
+                    yeh circuit se khud koi current na consume kare.
+                    <br>&bull; Ideal Voltmeter Resistance = $\infty\text{ }\Omega$ (Anant)
+                    <br>&bull; Practical Voltmeter Resistance = $10\text{ k}\Omega \text{ to } 10\text{ M}\Omega$
+                </p>
+
+                <div class="example-box" style="background-color: #fffbeb; border-left-color: #d97706; color: #78350f;">
+                    ⚡ <strong>Connection Rule:</strong> Voltmeter ko hamesha **Parallel (समांतर)** me lagaya jata hai.
+                    Agar isko Series me laga diya, to high resistance ki wajah se circuit me current flow block ho
+                    jayega aur galat reading aayegi.
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    [+] -------------------------> [Load]
+                    | |
+                    [ Voltmeter ] |
+                    | |
+                    [-] -------------------------> [Ground]</div>
+                <span style="font-size:12px; color:#64748b;">Voltmeter Parallel Network Architecture</span>
+            </div>
+        </div>
+
+        <!-- Section 4: Wattmeter -->
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">4. Wattmeter (वाटमीटर)</h2>
+                <div class="lecture-eng">Wattmeter is used to measure electrical active power in a circuit.</div>
+                <p class="lecture-hinglish"><strong>Coil Architecture:</strong> Wattmeter ke andar do main coils hoti
+                    hain:</p>
+                <div class="example-box">
+                    🌀 <strong>1. Current Coil (CC):</strong> Yeh mote wire aur kam turns ki hoti hai, ise load ke sath
+                    <strong>Series</strong> me joda jata hai.<br>
+                    🌀 <strong>2. Pressure Coil / Voltage Coil (PC):</strong> Yeh patle wire aur zyada turns ki hoti
+                    hai, ise load ke across <strong>Parallel</strong> me joda jata hai.
+                </div>
+                <p class="lecture-hinglish">In dono coils ke magnetic interaction se pointer move karta hai aur direct
+                    True Power ($P = VI \cos\theta$) scalable reading milti hai.</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Multimeter -->
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">5. Multimeter (मल्टीमीटर) - Multi-Purpose Tool</h2>
+                <p class="lecture-hinglish">Yeh ek aisa single instrument hai jo alag-alag modes par bohot saari
+                    electrical quantities ko naap sakta hai. Isko AVO (Ampere-Volt-Ohm) meter bhi kehte hain.</p>
+
+                <div class="sub-topic-heading">Symbols & Interpretation Grid:</div>
+                <div class="example-box" style="background:#f8fafc; color:#334155; border-left-color:#64748b;">
+                    &bull; <strong>V⎓</strong> : DC Voltage Mode <br>
+                    &bull; <strong>V~</strong> : AC Voltage Mode <br>
+                    &bull; <strong>A⎓</strong> : DC Current Mode <br>
+                    &bull; <strong>&Omega;</strong> : Resistance Mode <br>
+                    &bull; <strong>🔔 (Beep)</strong> : Continuity Testing Mode (Wire toota hai ya nahi check karne ke
+                    liye)
+                </div>
+
+                <div class="sub-topic-heading">🚨 Multimeter Safety Warning:</div>
+                <p class="lecture-hinglish">Hamesha range test karte waqt highest range se start karo. Kabhi bhi live
+                    voltage line par Resistance (&Omega;) mode select karke check mat karna, multimeter ka internal fuse
+                    ud jayega!</p>
+            </div>
+        </div>
+
+        <!-- Section 6: Megger -->
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">6. Megger (मेगर / इंसुलेशन टेस्टर)</h2>
+                <div class="lecture-eng">Megger is a portable instrument used to measure very high insulation resistance
+                    of cables, motors, and transformers.</div>
+                <p class="lecture-hinglish"><strong>Working Mechanism:</strong> Normal multimeter low voltage par chalta
+                    hai par Megger ke andar ek in-built hand-driven **DC Generator** hota hai jo high voltage
+                    ($250\text{V}$, $500\text{V}$, ya $1000\text{V}$) produce karta hai taaki leakage path ka pta chal
+                    sake.</p>
+
+                <div class="example-box">
+                    📈 <strong>Insulation Standards:</strong><br>
+                    &bull; Ek achhe aur safe installation ka insulation resistance hamesha <strong>1 Mega-Ohm ($1\text{
+                        M}\Omega$) se upar</strong> hona chahiye.<br>
+                    &bull; Industrial systems me yeh $100\text{ M}\Omega+$ tak target kiya jata hai.
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    [Hand Crank Handle]
+                    ↓
+                    [Internal DC Generator]
+                    ↓
+                    (Produces 500V/1000V)
+                    ↓
+                    [Measures Insulation MΩ]</div>
+                <span style="font-size:12px; color:#64748b;">Megger Structural Internal Flow</span>
+            </div>
+        </div>
+
+        <!-- Master Comparison Table -->
+        <h2 class="topic-heading">Comprehensive Comparison Grid</h2>
+        <table class="cable-table">
+            <thead>
+                <tr>
+                    <th>Instrument</th>
+                    <th>Connection Layout</th>
+                    <th>Internal Resistance</th>
+                    <th>Ideal Target Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ammeter</strong></td>
+                    <td>Series Line Only</td>
+                    <td>Extremely Low</td>
+                    <td>$0\text{ }\Omega$</td>
+                </tr>
+                <tr>
+                    <td><strong>Voltmeter</strong></td>
+                    <td>Parallel System</td>
+                    <td>Extremely High</td>
+                    <td>$\infty\text{ }\Omega$</td>
+                </tr>
+                <tr>
+                    <td><strong>Megger</strong></td>
+                    <td>Across Insulation Line</td>
+                    <td>Very High Range</td>
+                    <td>Infinitely High Range</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="topic-heading">Chapter Summary (One-Line Revision Grid)</h2>
+        <div class="example-box" style="background:#f8fafc; border-left-color:#3498db;">
+            &bull; <strong>Ammeter</strong> = Series me judega, resistance kam hoga, current naapega.<br>
+            &bull; <strong>Voltmeter</strong> = Parallel me judega, resistance high hoga, voltage naapega.<br>
+            &bull; <strong>Wattmeter</strong> = Current Coil Series + Potential Coil Parallel = Power Measurement.<br>
+            &bull; <strong>Megger</strong> = High DC voltage generate karega, Insulation Resistance naapega
+            ($M\Omega$).<br>
+            &bull; <strong>Continuity Mode</strong> = Multimeter me beep ki awaaz aane par path closed (healthy) mana
+            jata hai.
+        </div>
+
+        <!-- CBT Top 10 Q&A Bank -->
+        <h2 class="exam-section-title">5. Master CBT Top 10 Exam Core Q&A Bank</h2>
+        <div class="exam-qa-stack">
+            <div class="exam-qa-card">
+                <div class="exam-question">Q1. Ammeter ko series me hi kyu lagaya jata hai?</div>
+                <div class="exam-answer">Ans: Kyunki current ko measure karne ke liye poora circuit current meter se
+                    guzarana chahiye. Iska internal resistance bohot kam hota hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q2. Voltmeter ko parallel me na lagakar series me lagane par kya hoga?</div>
+                <div class="exam-answer">Ans: Voltmeter ka internal resistance bohot high hota hai, isliye agar ise
+                    series me lagaya to yeh circuit me current flow block kar dega aur reading zero/galat aayegi.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q3. Ideal Ammeter aur Ideal Voltmeter ka resistance kitna hota hai?</div>
+                <div class="exam-answer">Ans: Ideal Ammeter का Zero ($0\text{ }\Omega$) aur Ideal Voltmeter ka Infinite
+                    ($\infty\text{ }\Omega$) hota hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q4. Wattmeter ke andar kaun si do main coils bani hoti hain?</div>
+                <div class="exam-answer">Ans: Current Coil (CC) jo series me lagti hai, aur Pressure Coil (PC) jo
+                    parallel me connect hoti hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q5. Megger normal multimeter se alag kaise kaam karta hai?</div>
+                <div class="exam-answer">Ans: Multimeter low-voltage par kaam karta hai, jabki Megger high DC voltage
+                    ($250\text{V}$ to $1000\text{V}$) apply karke cable insulation ki leakage test karta hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q6. Motor winding ka ground test karne ke liye sabse best instrument kaun sa
+                    hai?</div>
+                <div class="exam-answer">Ans: Megger Tester. Isse insulation puncture ka turant pata chal jata hai.
+                </div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q7. Multimeter ka selector switch kis line system ko set karne ke liye use
+                    hota hai?</div>
+                <div class="exam-answer">Ans: Multiple functional ranges (Voltage, Current, Resistance) aur modes ke
+                    selection ke liye.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q8. Kisi healthy winding ka minimum ideal insulation resistance kitna hona
+                    chahiye?</div>
+                <div class="exam-answer">Ans: Kam se kam 1 Mega-Ohm ($1\text{ M}\Omega$) se upar hona chahiye.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q9. Voltmeter ki measurement range ko extend karne ke liye kis element ka use
+                    karte hain?</div>
+                <div class="exam-answer">Ans: High value Multiplier Resistor ko voltmeter coil ke series me joda jata
+                    hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q10. Ammeter ki testing range badhane ke liye kya upaye kiya jata hai?</div>
+                <div class="exam-answer">Ans: Ek low-resistance wire (Shunt) ko ammeter coil ke parallel me connected
+                    kiya jata hai.</div>
+            </div>
+        </div>
+
+        <!-- Online CBT Practice Block -->
+        <h2 class="exam-section-title">6. Online CBT Objective Practice (10 Core Live MCQs)</h2>
+        <div id="mcqDynamicRoot"></div>
+
+        <!-- Centred PDF Download Controller -->
+        <div class="bottom-action-panel">
+            <button class="btn-action btn-download-pdf" onclick="initiatePdfQuizGate()">📥 Direct Download Clean Chapter
+                Notes</button>
+        </div>
+
+    </main>
+
+    <!-- Interactive Locked Gate Quiz Modal Overlays -->
+    <div class="quiz-modal-overlay" id="pdfQuizModal">
+        <div class="quiz-modal-card">
+            <div class="quiz-modal-header">
+                <h3>🔒 Unlock Note File Download</h3>
+                <button class="close-modal-btn" onclick="closePdfModal()">×</button>
+            </div>
+            <div id="quizModalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Premium Tri-Language Core Syllabus System</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Mobile Bar Animation Toggle
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Live 10 Core Objective Question Bank Object Array
+        const mcqPool = [
+            { q: "Ideal Ammeter ka internal resistance parameter kitna hota hai?", o: ["Anant (Infinite)", "Very High", "Zero (शून्य)", "100 Ohm"], c: 2 },
+            { q: "Voltmeter ko electrical circuits me hamesha kis layout combination me lagaya jata hai?", o: ["Series combination", "Parallel combination", "Both alternative layouts", "None of these"], c: 1 },
+            { q: "Ideal Voltmeter ka internal resistance system parameter kitna hona chahiye?", o: ["Zero", "Infinite ($\infty$)", "10 Ohm", "Moderate value"], c: 1 },
+            { q: "Heavy electrical transformers aur wires ka high insulation resistance naapne ke liye kya use hota hai?", o: ["Ammeter", "Wattmeter", "Megger", "Energy Meter"], c: 2 },
+            { q: "Wattmeter ke andar circuit connection ke dauran Current Coil (CC) ko kaise joda jata hai?", o: ["Load ke parallel me", "Load ke sath series me", "Directly across earth path", "Neutral grid line me"], c: 1 },
+            { q: "Electrical Active Power ko accurately measure karne ki unit kya hoti hai?", o: ["Volt", "Ampere", "Ohm", "Watt"], c: 3 },
+            { q: "Ammeter ki operating range badhane ke liye coil ke parallel me kya lagaya jata hai?", o: ["High value multiplier", "Low value shunt resistance", "Capacitor block", "Fuse line"], c: 1 },
+            { q: "Multimeter par V~ symbol select karne ka kya matlab hota hai?", o: ["DC Current Measurement", "AC Voltage Measurement", "Resistance Testing", "Diode Continuity Check"], c: 1 },
+            { q: "Megger system ke andar high DC voltage test potential kis component se generate hota hai?", o: ["Internal Battery Bank", "In-built Hand Crank Generator", "External AC power supply", "Step-down transformer"], c: 1 },
+            { q: "Winding ya wire toota hai ya nahi, yeh multimeter ke kis check mode se pata chalta hai?", o: ["Resistance mode", "DC current line", "Continuity Beep Mode", "AC voltage tier"], c: 2 }
+        ];
+
+        // Compile Main Page Dynamic Quiz Matrix Grid Layout
+        const rootNode = document.getElementById("mcqDynamicRoot");
+        let htmlBuffer = "";
+
+        mcqPool.forEach((item, index) => {
+            let num = index + 1;
+            htmlBuffer += `
+                <div class="mcq-card">
+                    <div class="exam-question">Q${num}. ${item.q}</div>
+                    <div class="mcq-opt-list">
+            `;
+            item.o.forEach((opt, optIdx) => {
+                htmlBuffer += `
+                    <button class="mcq-option-btn" onclick="validateOption(this, ${optIdx === item.c})">
+                        ${opt}
+                    </button>
+                `;
+            });
+            htmlBuffer += `</div></div>`;
+        });
+        rootNode.innerHTML = htmlBuffer;
+
+        function validateOption(btn, isCorrect) {
+            const parentBlock = btn.parentElement;
+            const buttons = parentBlock.querySelectorAll(".mcq-option-btn");
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                btn.classList.add("correct-ans");
+            } else {
+                btn.classList.add("wrong-ans");
+                buttons.forEach(b => {
+                    if (b.getAttribute("onclick").includes("true")) {
+                        b.classList.add("correct-ans");
+                    }
+                });
+            }
+        }
+
+        /* --- Custom Premium 3-MCQ Quiz Gate Engine Logic --- */
+        let gateQuestions = [];
+        let currentGateIndex = 0;
+        let correctAnswersCount = 0;
+
+        function initiatePdfQuizGate() {
+            const scrambled = [...mcqPool].sort(() => 0.5 - Math.random());
+            gateQuestions = scrambled.slice(0, 3);
+
+            currentGateIndex = 0;
+            correctAnswersCount = 0;
+
+            document.getElementById("pdfQuizModal").style.display = "flex";
+            renderGateStep();
+        }
+
+        function closePdfModal() {
+            document.getElementById("pdfQuizModal").style.display = "none";
+        }
+
+        function renderGateStep() {
+            const targetContentBox = document.getElementById("quizModalContent");
+
+            if (currentGateIndex >= 3) {
+                if (correctAnswersCount === 3) {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+                            <h4 style="color: #15803d; margin: 0 0 10px 0; font-size: 18px;">Perfect Score! Verification Successful.</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">Chapter Notes (.txt file format) automatically downloading...</p>
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        closePdfModal();
+                        executeNoteDownload(); // Direct automated file download trigger without Print View!
+                    }, 1500);
+                } else {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">❌</div>
+                            <h4 style="color: #b91c1c; margin: 0 0 10px 0; font-size: 18px;">Verification Failed!</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">Secure notes download karne ke liye sabhi 3 verification questions ka sahi jawab dena hoga.</p>
+                            <button class="btn-action btn-download-pdf" style="width: 100%;" onclick="initiatePdfQuizGate()">Try Again ↻</button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const currentObj = gateQuestions[currentGateIndex];
+
+            let modalHtml = `
+                <div class="quiz-progress-tracker">Question ${currentGateIndex + 1} of 3</div>
+                <div class="exam-question" style="font-size: 16px; margin-bottom: 15px;">${currentObj.q}</div>
+                <div class="mcq-opt-list">
+            `;
+
+            currentObj.o.forEach((optText, optIdx) => {
+                modalHtml += `
+                    <button class="mcq-option-btn" onclick="checkGateSelection(this, ${optIdx === currentObj.c})">
+                        ${optText}
+                    </button>
+                `;
+            });
+
+            modalHtml += `</div>`;
+            targetContentBox.innerHTML = modalHtml;
+        }
+
+        function checkGateSelection(element, isRight) {
+            const listContainer = element.parentElement;
+            const groupButtons = listContainer.querySelectorAll(".mcq-option-btn");
+            groupButtons.forEach(btn => btn.disabled = true);
+
+            if (isRight) {
+                element.classList.add("correct-ans");
+                correctAnswersCount++;
+            } else {
+                element.classList.add("wrong-ans");
+                groupButtons.forEach((btn, idx) => {
+                    if (idx === gateQuestions[currentGateIndex].c) {
+                        btn.classList.add("correct-ans");
+                    }
+                });
+            }
+
+            setTimeout(() => {
+                currentGateIndex++;
+                renderGateStep();
+            }, 1200);
+        }
+
+        /* --- Automated Direct Document Blob Generation Engine (No Print View Window) --- */
+        function executeNoteDownload() {
+            const textData = `==================================================================
+ELECTRICIAN HUB ACADEMIC STUDY SYSTEMS - SYLLABUS REVISION MASTER DATA
+MODULE 11: MEASURING INSTRUMENTS CORE COMPLETE NOTES (CBT SPECIFIC)
+==================================================================
+
+[1. MEASURING INSTRUMENTS DEFINITION]
+* Devices used to measure electrical quantities like voltage, current, resistance, power and insulation.
+
+[2. AMMETER - CURRENT MEASUREMENT]
+* Connection: Connected strictly in SERIES. If connected in parallel, it causes a catastrophic Short Circuit.
+* Resistance: Extremely Low. Ideal = 0 Ohm, Practical = 0.01 Ohm to 0.1 Ohm.
+* Range Extension: Multiplied by placing a Low-resistance wire (Shunt) in PARALLEL with the coil.
+
+[3. VOLTMETER - VOLTAGE MEASUREMENT]
+* Connection: Connected strictly in PARALLEL across the load.
+* Resistance: Extremely High. Ideal = Infinite (Ohm), Practical = 10k Ohm to 10M Ohm.
+* Range Extension: Multiplied by placing a High-resistance wire (Multiplier) in SERIES with the coil.
+
+[4. WATTMETER - POWER MEASUREMENT]
+* Coils Architecture: Current Coil (CC) placed in Series + Potential/Voltage Coil (PC) placed in Parallel.
+* Output Data: Measures Active Power in Watt ($P = VI \\cos\\theta$).
+
+[5. MULTIMETER - ALL-IN-ONE DEVICE]
+* Functionality: Measures Voltage, Current, Resistance, and Continuity.
+* Key Modes: V- (DC Volts), V~ (AC Volts), A- (DC Amps), Ohm (Resistance), Beep Sound (Continuity path).
+
+[6. MEGGER - INSULATION TESTING]
+* Objective: Measures very High Resistance levels of cable jacket layers, motor bindings, and panel insulation.
+* Voltage Level: In-built hand crank generator forces 250V / 500V / 1000V DC deep into layers to track micro leakages.
+* Healthy Standard: Must be strictly greater than 1 Mega-Ohm ($1\\text{ M}\\Omega$).
+
+==================================================================
+VERIFICATION CODE: ETHUB-INSTRUMENTS-2026-DOWNLOAD-SUCCESS
+==================================================================`;
+
+            const blob = new Blob([textData], { type: "text/plain;charset=utf-8" });
+            const linkUrl = URL.createObjectURL(blob);
+
+            const dynamicDownloadAnchor = document.createElement("a");
+            dynamicDownloadAnchor.href = linkUrl;
+            dynamicDownloadAnchor.download = "Module_11_Measuring_Instruments_Notes.txt";
+
+            document.body.appendChild(dynamicDownloadAnchor);
+            dynamicDownloadAnchor.click();
+
+            document.body.removeChild(dynamicDownloadAnchor);
+            URL.revokeObjectURL(linkUrl);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Phase Drag & Drop Electrical Sandbox</title>
+    <style>
+        body {
+            background-color: #0f111a;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+            user-select: none;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ffcc;
+            margin-top: 0;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        canvas {
+            background: #151824;
+            border: 2px solid #2d3748;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            cursor: crosshair;
+        }
+
+        .instructions {
+            background: #1e2235;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #00ffcc;
+            max-width: 770px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .instructions strong {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>⚡ 3-Phase Drag, Wire & Run Simulator</h2>
+        <div class="instructions">
+            <strong>Kaise Khele (Instructions):</strong><br>
+            1. 📦 **Drag Components:** Kisi bhi block ke center me click karke use screen par kahin bhi drag karein.<br>
+            2. 🔌 **Wiring:** Component ke corners par bane <span style="color:#ff3333">🔴 Terminals</span> par click
+            karke dusre terminal tak line khinchein.<br>
+            3. 🕹️ **Run:** MCB ke andar bane [ON/OFF] Switch par click karein. Agar 3-Phase Motor ke teeno terminals
+            (R, Y, B) sahi se MCB se connect hue, to motor ghumne lagegi!
+        </div>
+        <canvas id="sandbox" width="800" height="450"></canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('sandbox');
+        const ctx = canvas.getContext('2d');
+
+        let components = [
+            {
+                id: 'mcb', x: 100, y: 150, w: 120, h: 160, label: '3-POLE MCB', isMainSource: true, isOpen: true,
+                terminals: [
+                    { id: 'R_IN', x: 20, y: 0, type: 'in', color: '#ff3333', hasPower: true },
+                    { id: 'Y_IN', x: 60, y: 0, type: 'in', color: '#ffcc00', hasPower: true },
+                    { id: 'B_IN', x: 100, y: 0, type: 'in', color: '#3366ff', hasPower: true },
+                    { id: 'R_OUT', x: 20, y: 160, type: 'out', color: '#ff3333', hasPower: false },
+                    { id: 'Y_OUT', x: 60, y: 160, type: 'out', color: '#ffcc00', hasPower: false },
+                    { id: 'B_OUT', x: 100, y: 160, type: 'out', color: '#3366ff', hasPower: false }
+                ]
+            },
+            {
+                id: 'motor', x: 500, y: 160, w: 150, h: 140, label: '3-Φ MOTOR', isMotor: true, isRunning: false, angle: 0,
+                terminals: [
+                    { id: 'M_R', x: 30, y: 0, type: 'load', color: '#ff3333', hasPower: false },
+                    { id: 'M_Y', x: 75, y: 0, type: 'load', color: '#ffcc00', hasPower: false },
+                    { id: 'M_B', x: 120, y: 0, type: 'load', color: '#3366ff', hasPower: false }
+                ]
+            }
+        ];
+
+        let wires = [];
+        let draggingComponent = null;
+        let dragOffset = { x: 0, y: 0 };
+        let activeTerminal = null;
+        let tempWireEnd = null;
+
+        // Mouse Events
+        canvas.addEventListener('mousedown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            // 1. Check if clicked on a terminal
+            for (let comp of components) {
+                for (let t of comp.terminals) {
+                    let tx = comp.x + t.x;
+                    let ty = comp.y + t.y;
+                    if (Math.hypot(mouseX - tx, mouseY - ty) < 10) {
+                        activeTerminal = { comp, terminal: t };
+                        tempWireEnd = { x: mouseX, y: mouseY };
+                        return;
+                    }
+                }
+            }
+
+            // 2. Check if clicked on MCB Toggle Switch Button
+            let mcb = components.find(c => c.id === 'mcb');
+            if (mouseX > mcb.x + 30 && mouseX < mcb.x + 90 && mouseY > mcb.y + 70 && mouseY < mcb.y + 110) {
+                mcb.isOpen = !mcb.isOpen;
+                updateCircuitLogic();
+                return;
+            }
+
+            // 3. Check if dragging component body
+            for (let comp of components) {
+                if (mouseX > comp.x && mouseX < comp.x + comp.w && mouseY > comp.y && mouseY < comp.y + comp.h) {
+                    draggingComponent = comp;
+                    dragOffset.x = mouseX - comp.x;
+                    dragOffset.y = mouseY - comp.y;
+                    return;
+                }
+            }
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            if (draggingComponent) {
+                draggingComponent.x = mouseX - dragOffset.x;
+                draggingComponent.y = mouseY - dragOffset.y;
+            } else if (activeTerminal) {
+                tempWireEnd = { x: mouseX, y: mouseY };
+            }
+        });
+
+        canvas.addEventListener('mouseup', (e) => {
+            if (activeTerminal) {
+                const rect = canvas.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                for (let comp of components) {
+                    for (let t of comp.terminals) {
+                        if (t !== activeTerminal.terminal) {
+                            let tx = comp.x + t.x;
+                            let ty = comp.y + t.y;
+                            if (Math.hypot(mouseX - tx, mouseY - ty) < 12) {
+                                // Create permanent connection wire
+                                wires.push({
+                                    fromComp: activeTerminal.comp,
+                                    fromTerm: activeTerminal.terminal,
+                                    toComp: comp,
+                                    toTerm: t
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+            draggingComponent = null;
+            activeTerminal = null;
+            tempWireEnd = null;
+            updateCircuitLogic();
+        });
+
+        // ⚡ core Electrical simulation logic
+        function updateCircuitLogic() {
+            let mcb = components.find(c => c.id === 'mcb');
+            let motor = components.find(c => c.id === 'motor');
+
+            // Reset power status
+            mcb.terminals.forEach(t => { if (t.type === 'out') t.hasPower = false; });
+            motor.terminals.forEach(t => t.hasPower = false);
+            motor.isRunning = false;
+
+            // 1. MCB Close state updates outputs
+            if (!mcb.isOpen) {
+                mcb.terminals.find(t => t.id === 'R_OUT').hasPower = true;
+                mcb.terminals.find(t => t.id === 'Y_OUT').hasPower = true;
+                mcb.terminals.find(t => t.id === 'B_OUT').hasPower = true;
+            }
+
+            // 2. Propagate power through wires
+            wires.forEach(wire => {
+                let t1 = wire.fromTerm;
+                let t2 = wire.toTerm;
+                if (t1.hasPower) t2.hasPower = true;
+                if (t2.hasPower) t1.hasPower = true;
+            });
+
+            // Re-check wire connection propagation to make it double-bound
+            wires.forEach(wire => {
+                let t1 = wire.fromTerm;
+                let t2 = wire.toTerm;
+                if (t1.hasPower) t2.hasPower = true;
+                if (t2.hasPower) t1.hasPower = true;
+            });
+
+            // 3. Check if motor has all 3 Phases active
+            let rPh = motor.terminals.find(t => t.id === 'M_R').hasPower;
+            let yPh = motor.terminals.find(t => t.id === 'M_Y').hasPower;
+            let bPh = motor.terminals.find(t => t.id === 'M_B').hasPower;
+
+            if (rPh && yPh && bPh) {
+                motor.isRunning = true;
+            }
+        }
+
+        // Draw Loop Animation
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw Grid lines
+            ctx.strokeStyle = '#1e2538';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < canvas.width; i += 25) {
+                ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(canvas.width, i); ctx.stroke();
+            }
+
+            // Draw existing wires
+            wires.forEach(wire => {
+                let x1 = wire.fromComp.x + wire.fromTerm.x;
+                let y1 = wire.fromComp.y + wire.fromTerm.y;
+                let x2 = wire.toComp.x + wire.toTerm.x;
+                let y2 = wire.toComp.y + wire.toTerm.y;
+
+                ctx.strokeStyle = wire.fromTerm.hasPower || wire.toTerm.hasPower ? '#00ff66' : '#4a5568';
+                ctx.lineWidth = 4;
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                ctx.bezierCurveTo(x1, y1 + 50, x2, y2 - 50, x2, y2);
+                ctx.stroke();
+            });
+
+            // Draw temporary dragging wire
+            if (activeTerminal && tempWireEnd) {
+                ctx.strokeStyle = '#ffcc00';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([4, 4]);
+                ctx.beginPath();
+                ctx.moveTo(activeTerminal.comp.x + activeTerminal.terminal.x, activeTerminal.comp.y + activeTerminal.terminal.y);
+                ctx.lineTo(tempWireEnd.x, tempWireEnd.y);
+                ctx.stroke();
+                ctx.setLineDash([]);
+            }
+
+            // Draw Components
+            components.forEach(comp => {
+                ctx.fillStyle = '#2d3748';
+                ctx.strokeStyle = '#4a5568';
+                ctx.lineWidth = 2;
+                ctx.fillRect(comp.x, comp.y, comp.w, comp.h);
+                ctx.strokeRect(comp.x, comp.y, comp.w, comp.h);
+
+                // Header label
+                ctx.fillStyle = '#00ffcc';
+                ctx.font = 'bold 12px sans-serif';
+                ctx.fillText(comp.label, comp.x + 15, comp.y + 25);
+
+                // Draw Custom elements inside MCB
+                if (comp.id === 'mcb') {
+                    ctx.fillStyle = comp.isOpen ? '#e53e3e' : '#38a169';
+                    ctx.fillRect(comp.x + 30, comp.y + 70, 60, 40);
+                    ctx.fillStyle = '#fff';
+                    ctx.fillText(comp.isOpen ? 'OFF' : 'ON', comp.x + 48, comp.y + 94);
+                }
+
+                // Draw Custom Elements inside Motor (Shaft Rotation)
+                if (comp.isMotor) {
+                    ctx.save();
+                    ctx.translate(comp.x + comp.w / 2, comp.y + comp.h / 2 + 10);
+                    if (comp.isRunning) {
+                        comp.angle += 0.15;
+                    }
+                    ctx.rotate(comp.angle);
+                    ctx.fillStyle = '#718096';
+                    ctx.beginPath(); ctx.arc(0, 0, 25, 0, Math.PI * 2); ctx.fill();
+                    ctx.strokeStyle = '#fff'; ctx.lineWidth = 4;
+                    ctx.beginPath(); ctx.moveTo(0, -25); ctx.lineTo(0, 25); ctx.stroke();
+                    ctx.restore();
+                }
+
+                // Draw Terminals
+                comp.terminals.forEach(t => {
+                    let tx = comp.x + t.x;
+                    let ty = comp.y + t.y;
+                    ctx.fillStyle = t.color;
+                    ctx.beginPath(); ctx.arc(tx, ty, 7, 0, Math.PI * 2); ctx.fill();
+                    ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke();
+
+                    // Text descriptor near node
+                    ctx.fillStyle = '#a0aec0';
+                    ctx.font = '9px sans-serif';
+                    ctx.fillText(t.id, tx - 12, ty + (t.y === 0 ? -12 : 16));
+                });
+            });
+
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+
+</body>
+
+</html>

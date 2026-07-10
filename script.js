@@ -21,7 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         "wiring-practice.html",
         "wiring-installation-earthing.html",
         "illumination.html",
-        "measuring-instruments.html"
+        "measuring-instruments.html",
+        "three-phase.html",
+        "Domestic-Appliances.html",
+        "what-is-ac.html",
+        "what-is-moter.html"
     ];
 
     // 2. PREMIUM CARD CLICK CONTROLLER (Folder independent checking logic)

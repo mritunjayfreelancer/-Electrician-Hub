@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Module 5: Magnetism & Capacitors | ITI Electrician Theory</title>
+    <meta name="description"
+        content="ITI Electrician Trade Theory Chapter 5 Premium Light Theme Notes. Magnetism, Electromagnetism, Capacitors in series and parallel in easy teacher style.">
+    <meta name="keywords"
+        content="ITI Electrician Notes, Magnetism, Capacitors, Magnetic Circuit, Flux, Farad, Series Parallel, Light Theme UI">
+    <meta name="robots" content="index, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Premium Soft Light Theme Grid Base */
+        body {
+            background-color: #f0f2f5 !important;
+            color: #1e293b;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .study-page-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px 25px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .chapter-header {
+            text-align: center;
+            border-bottom: 3px solid #e67e22;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        .chapter-header h1 {
+            color: #0f172a;
+            font-size: 26px;
+            margin: 5px 0;
+            font-weight: 700;
+        }
+
+        .teacher-note {
+            background-color: #ffedd5;
+            border-left: 5px solid #ea580c;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-size: 14.5px;
+            color: #c2410c;
+            line-height: 1.6;
+        }
+
+        /* Premium Alternating Row Feature Architecture */
+        .flex-row-alternating {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .flex-row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .content-column {
+            flex: 1;
+        }
+
+        .image-column {
+            flex: 1;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h2.topic-heading {
+            color: #0f172a;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: 600;
+            border-bottom: 2px solid #e67e22;
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        .sub-topic-heading {
+            color: #1e293b;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .lecture-eng {
+            font-size: 14.5px;
+            color: #0f172a;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            background: #f1f5f9;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        .lecture-hinglish {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .example-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .formula-box {
+            background-color: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #0f172a;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .ascii-art-box {
+            background-color: #0f172a;
+            color: #f97316;
+            font-family: monospace;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Industrial Table Styling */
+        .cable-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        }
+
+        .cable-table th,
+        .cable-table td {
+            border: 1px solid #e2e8f0;
+            padding: 14px;
+            text-align: left;
+        }
+
+        .cable-table th {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cable-table td {
+            color: #334155;
+        }
+
+        /* Q&A Stack */
+        .exam-section-title {
+            color: #0f172a;
+            font-size: 22px;
+            margin: 40px 0 20px 0;
+            border-left: 5px solid #e67e22;
+            padding-left: 10px;
+            font-weight: 700;
+        }
+
+        .exam-qa-card {
+            background-color: #f8fafc;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .exam-question {
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .exam-answer {
+            color: #ea580c;
+            font-size: 14.5px;
+            font-weight: 500;
+        }
+
+        /* MCQ Interface Components */
+        .mcq-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .mcq-opt-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .mcq-option-btn {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .mcq-option-btn:hover {
+            border-color: #cbd5e1;
+            background-color: #f1f5f9;
+        }
+
+        .mcq-option-btn.correct-ans {
+            background-color: #dcfce7 !important;
+            border-color: #22c55e !important;
+            color: #15803d !important;
+        }
+
+        .mcq-option-btn.wrong-ans {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        /* Action Panel Controllers */
+        .bottom-action-panel {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .btn-action {
+            padding: 14px 28px;
+            font-size: 14.5px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-download-pdf {
+            background-color: #dc2626;
+            color: white;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .btn-next-module {
+            background-color: #e67e22;
+            color: white;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2);
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Premium Quiz Modal Overlay Styles */
+        .quiz-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .quiz-modal-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 550px;
+            padding: 25px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .quiz-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e67e22;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-modal-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .close-modal-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .quiz-progress-tracker {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* 100% Seamless Fluid PDF Print Calibration */
+        @media print {
+
+            .navbar,
+            footer,
+            .bottom-action-panel,
+            .mcq-opt-list,
+            .quiz-modal-overlay {
+                display: none !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+
+            .study-page-container {
+                border: none !important;
+                box-shadow: none !important;
+                background-color: #ffffff !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .flex-row-alternating {
+                display: block !important;
+                margin: 30px 0 !important;
+            }
+
+            .image-column {
+                max-width: 350px !important;
+                margin: 20px auto !important;
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+
+            .exam-qa-card,
+            .mcq-card,
+            .example-box,
+            .ascii-art-box {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                border: 1px solid #cbd5e1 !important;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Mobile Viewport Reset Overrides */
+        @media (max-width: 768px) {
+            .flex-row-alternating {
+                flex-direction: column !important;
+                gap: 20px;
+            }
+
+            .bottom-action-panel {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-action {
+                width: 100%;
+                text-align: center;
+            }
+
+            .study-page-container {
+                padding: 15px;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#dashboard">Dashboard</a></li>
+                <li><a href="../index.html#chapters">Syllabus</a></li>
+                <li><a href="../quiz.html">Live Quiz</a></li>
+                <li><a href="../notes.html">Short Notes</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <main class="study-page-container">
+
+        <div class="chapter-header">
+            <span
+                style="color: #ea580c; font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">ITI
+                Electrician Theory Module 05</span>
+            <h1>Magnetism & Capacitors (चुंबकत्व और कैपेसिटर)</h1>
+        </div>
+
+        <div class="teacher-note">
+            <strong>👨‍🏫 Classroom Note:</strong> Pyare dosto, Magnetism aur Capacitors electrical engineering ki jaan
+            hai. Transformers, Motors aur Generators bina magnetism ke nahi chal sakte, aur Fan ya single-phase motor
+            bina capacitor ke start nahi ho sakti. Is chapter ko aasan aur mazedar bhasha me pure concepts ke sath
+            samjhaya gaya hai. Ekdam dhyan se padhna!
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Chapter 1 : Magnetism Aur Uske Niyam</h2>
+                <div class="sub-topic-heading">Magnet (चुंबक) Kya Hota Hai?</div>
+                <p class="lecture-hinglish">Magnet ek aisi cheez hai jo Iron, Cobalt, aur Nickel jaise magnetic
+                    materials ko apni taraf attract karti hai. Magnet ke do poles hote hain—**North Pole (N)** aur
+                    **South Pole (S)**.</p>
+
+                <div class="example-box">
+                    🧲 <strong>Like Poles (N-N / S-S):</strong> Aapas me ek doosre ko door bhagate hain (Repel). <br>
+                    🤝 <strong>Unlike Poles (N-S):</strong> Aapas me ek doosre ko attract karte hain. <br>
+                    🌍 <strong>Freely Suspended Magnet:</strong> Agar kisi magnet ko dhage se bandhkar latkaya jaye, to
+                    wo hamesha North-South direction me hi rukega.
+                </div>
+
+                <div class="sub-topic-heading">Magnetic Flux ($\Phi$) aur Field Lines</div>
+                <div class="lecture-eng">Magnetic Flux is the total number of magnetic lines of force passing through a
+                    specific area. Unit: Weber (Wb).</div>
+                <div class="lecture-hinglish"><strong>Dhyan dene wali baat:</strong> Magnet ke bahar lines hamesha
+                    <strong>North se South</strong> ki taraf jati hain, aur magnet ke andar ye lines <strong>South se
+                        North</strong> ki taraf travel karti hain. Ye lines kabhi bhi ek doosre ko cross (kat-ti) nahi
+                    hain.
+                </div>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    ┌───────────────────┐
+                    │ N S │
+                    └───────────────────┘
+                    (North Pole) (South Pole)
+                    Flux Lines: N =======> S (Bahar)
+                    S =======> N (Andar)</div>
+                <span style="font-size:12px; color:#64748b;">Magnet Flux Lines Core System</span>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">Electromagnetism Aur Rules</h2>
+                <div class="sub-topic-heading">Electromagnetism Kya Hai?</div>
+                <p class="lecture-hinglish">Jab kisi conductor (wire) se electric current pass hota hai, to us wire ke
+                    charo taraf ek temporary magnetic field ban jata hai. Is phenomenon ko **Electromagnetism** kehte
+                    hain.</p>
+
+                <div class="sub-topic-heading">Direction Janne Ke Do Main Rules:</div>
+                <div class="lecture-hinglish">
+                    1. <strong>Right-Hand Thumb Rule:</strong> Agar hum kisi wire ko right hand me pakdein aur thumb
+                    current ki direction dikhaye, to ghoomi hui ungliyan (fingers) magnetic field ki direction
+                    batayengi. <br>
+                    2. <strong>Maxwell's Corkscrew Rule:</strong> Agar ek corkscrew ko current ki direction me ghumaya
+                    jaye, to screw ke ghoomne ki direction hi magnetic field ki direction hogi.
+                </div>
+            </div>
+            <div class="image-column">
+                <img src="../img/Electromagnet-3.png" alt="Right Hand Thumb Rule and Field Vectors">
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Magnetic Circuits Ke Important Terms</h2>
+                <p class="lecture-hinglish">Jaise electrical circuit me Voltage aur Resistance hote hain, waise hi
+                    magnetic circuit me niche diye gaye terms hote hain:</p>
+
+                <div class="sub-topic-heading">1. MMF (Magnetomotive Force):</div>
+                <div class="lecture-eng">MMF is the force that drives magnetic flux through a magnetic circuit. Unit:
+                    Ampere-Turns (AT).</div>
+                <div class="formula-box">MMF = N × I (Turns × Current)</div>
+
+                <div class="sub-topic-heading">2. Reluctance (S):</div>
+                <div class="lecture-eng">Reluctance is the opposition offered to the flow of magnetic flux. Unit: AT/Wb.
+                </div>
+                <p class="lecture-hinglish">Jaise electrical wire me current ko rokne ke liye Resistance hota hai, waise
+                    hi magnetic path me flux ko rokne ke liye **Reluctance** hota hai.</p>
+            </div>
+            <div class="image-column">
+                <table class="cable-table" style="margin: 0;">
+                    <thead>
+                        <tr>
+                            <th>Electrical Circuit</th>
+                            <th>Magnetic Circuit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Voltage (V)</td>
+                            <td>MMF (Ampere-Turns)</td>
+                        </tr>
+                        <tr>
+                            <td>Current (I)</td>
+                            <td>Flux ($\Phi$)</td>
+                        </tr>
+                        <tr>
+                            <td>Resistance (R)</td>
+                            <td>Reluctance (S)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <span style="font-size:12px; color:#64748b; display:block; margin-top:8px;">Electrical vs Magnetic
+                    Analogy Matrix</span>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating flex-row-reverse">
+            <div class="content-column">
+                <h2 class="topic-heading">Capacitor Aur Uska Principle</h2>
+                <div class="sub-topic-heading">Capacitor (कंडेनसर) Kya Hai?</div>
+                <div class="lecture-eng">A capacitor is an electronic component that stores electrical energy in the
+                    form of an electrostatic field.</div>
+                <p class="lecture-hinglish">Jab do conducting plates ko ek insulating material (jise
+                    <strong>Dielectric</strong> kehte hain, jaise Air, Paper, Mica) ke threw alag kiya jata hai, to wo
+                    ek capacitor banta hai. Iski energy store karne ki capacity ko **Capacitance** bolte hain aur iski
+                    unit **Farad (F)** hoti hai.
+                </p>
+
+                <div class="formula-box">Q = C × V | C = Q / V</div>
+                <p class="lecture-hinglish">Yahan $Q = \text{Charge (Coulomb)}$, $C = \text{Capacitance (Farad)}$, aur
+                    $V = \text{Voltage (Volt)}$ hai.</p>
+            </div>
+            <div class="image-column">
+                <div class="ascii-art-box">
+                    Plate 1 (+++++) Positive
+                    ─────────────────────────
+                    [ Dielectric Medium ]
+                    ─────────────────────────
+                    Plate 2 (-----) Negative
+
+                    Formula Grid: C = εA / d</div>
+                <span style="font-size:12px; color:#64748b;">Capacitor Parallel Plate Architecture</span>
+            </div>
+        </div>
+
+        <div class="flex-row-alternating">
+            <div class="content-column">
+                <h2 class="topic-heading">Capacitor Ke Series Aur Parallel Combinations</h2>
+                <p class="lecture-hinglish"><strong>Dhyan rakhein:</strong> Capacitor ka formula Resistor ke formula se
+                    bilkul **ulta (opposite)** hota hai. Exams me yahan bache galti karte hain!</p>
+
+                <div class="sub-topic-heading">Series Combination (श्रेणी संयोजन):</div>
+                <p class="lecture-hinglish">Isme total capacitance drop ho jati hai. <br> Formula: $$1/C_T = 1/C_1 +
+                    1/C_2 + 1/C_3$$</p>
+
+                <div class="sub-topic-heading">Parallel Combination (समांतर संयोजन):</div>
+                <p class="lecture-hinglish">Isme total capacitance badh jati hai. <br> Formula: $$C_T = C_1 + C_2 +
+                    C_3$$</p>
+
+                <div class="example-box">
+                    <strong>Numerical Example:</strong> Agar 6$\mu$F aur 12$\mu$F ke do capacitors series me jude hain,
+                    to total capacitance kya hogi? <br>
+                    ⚡ $1/C_T = 1/6 + 1/12 \implies 2/12 + 1/12 = 3/12 \implies C_T = 12/3 = \mathbf{4\mu\text{F}}$
+                </div>
+            </div>
+            <div class="image-column">
+                <img src="../img/capacitor_circuits.webp" alt="Series and Parallel Capacitors Network Layout">
+            </div>
+        </div>
+
+        <h2 class="topic-heading">Types of Capacitors & Industrial Applications</h2>
+        <table class="cable-table">
+            <thead>
+                <tr>
+                    <th>Capacitor Type</th>
+                    <th>Dielectric Used</th>
+                    <th>Main Industrial Application</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Electrolytic Capacitor</strong></td>
+                    <td>Electrolyte Layer</td>
+                    <td>DC Filters, Audio amplification systems (Polarized hote hain).</td>
+                </tr>
+                <tr>
+                    <td><strong>Ceramic Capacitor</strong></td>
+                    <td>Ceramic Disk</td>
+                    <td>High-frequency RF circuits, bypass filters (Non-polarized).</td>
+                </tr>
+                <tr>
+                    <td><strong>Mica Capacitor</strong></td>
+                    <td>Mica Sheets</td>
+                    <td>High stability requirements, laboratory standard instruments.</td>
+                </tr>
+                <tr>
+                    <td><strong>Paper / Plastic Film</strong></td>
+                    <td>Paper / Polyester</td>
+                    <td>Ceiling fans starting motors, cooler pumps (2.5 $\mu$F common).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="topic-heading">Chapter Summary (One-Line Revision)</h2>
+        <div class="example-box" style="background:#f8fafc; border-left-color:#ea580c;">
+            🧲 <strong>Flux Unit</strong> = Weber (Wb) aur Flux Density ki unit Tesla ($T$) ya $\text{Wb/m}^2$ hoti hai.
+            <br>
+            🔄 <strong>Magnetic Lines Direction</strong> = Bahar North se South, Andar South se North. <br>
+            ⚡ <strong>MMF Formula</strong> = $N \times I$ (Unit: Ampere-Turns). <br>
+            🚧 <strong>Reluctance</strong> = Flux ke raste ki rukavat (Unit: AT/Wb). <br>
+            🔋 <strong>Capacitor Stores</strong> = Electrostatic field energy store karta hai. <br>
+            📐 <strong>Capacitance Unit</strong> = Farad ($F$), aam taur par $\mu\text{F}$ ya $\text{pF}$ use hota hai.
+            <br>
+            🔌 <strong>Series Capacitors</strong> = $$1/C_T = 1/C_1 + 1/C_2$$ <br>
+            📈 <strong>Parallel Capacitors</strong> = $$C_T = C_1 + C_2$$ (Direct sum hota hai). <br>
+            ⚠️ <strong>Polarity Caution</strong> = Electrolytic capacitors ko hamesha sahi +/- terminal par lagayein,
+            nahi to blast ho sakta hai.
+        </div>
+
+        <h2 class="exam-section-title">5. Master CBT Top 10 Exam Core Q&A Bank</h2>
+        <div class="exam-qa-stack">
+            <div class="exam-qa-card">
+                <div class="exam-question">Q1. Magnetic Flux Density ki SI unit kya hoti hai?</div>
+                <div class="exam-answer">Ans: Tesla ($T$) ya $\text{Wb/m}^2$.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q2. Permeability ka magnetic circuit me kya kaam hota hai?</div>
+                <div class="exam-answer">Ans: Ye material ki flux conduct karne ki ability hoti hai, jaise electrical
+                    circuit me Conductivity hoti hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q3. Kaun sa material permanent magnet banane ke liye sabse best mana jata
+                    hai?</div>
+                <div class="exam-answer">Ans: Alnico (Aluminium, Nickel, Cobalt alloy) aur Steel.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q4. Residual Magnetism (अवशिष्ट चुंबकत्व) kya hota hai?</div>
+                <div class="exam-answer">Ans: Current supply band karne ke baad bhi core me jo thoda sa magnetism bacha
+                    reh jata hai, use residual magnetism kehte hain. DC Generators me ye zaroori hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q5. Capacitor ki capacitive reactance ($X_C$) ka DC supply par kya maan hota
+                    hai?</div>
+                <div class="exam-answer">Ans: DC supply par frequency zero ($0\text{ Hz}$) hoti hai, isliye $X_C = 1 /
+                    (2\pi fC) = \text{Infinite } (\infty)$. Yaani capacitor DC ko completely block kar deta hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q6. Dielectric Strength ki standard unit kya hoti hai?</div>
+                <div class="exam-answer">Ans: $\text{kV/mm}$ (Kilo-volt per millimeter).</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q7. Ceiling Fan me lagne wale starting capacitor ki value lagbhag kitni hoti
+                    hai?</div>
+                <div class="exam-answer">Ans: $2.25\,\mu\text{F}$ se $2.5\,\mu\text{F}$ tak.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q8. Agar do metal plates ke beech ki doori (distance) kam kar di jaye, to
+                    capacitance par kya asar padega?</div>
+                <div class="exam-answer">Ans: Capacitance badh jayegi kyunki $C$ distance ($d$) ke inversely
+                    proportional ($C \propto 1/d$) hota hai.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q9. Hysteresis Loss kya hota hai?</div>
+                <div class="exam-answer">Ans: Magnetic material ke baar-baar magnetize aur demagnetize hone se jo heat
+                    ke roop me energy loss hoti hai, use Hysteresis Loss bolte hain.</div>
+            </div>
+            <div class="exam-qa-card">
+                <div class="exam-question">Q10. Single-phase motor me capacitor ka primary functional objective kya hai?
+                </div>
+                <div class="exam-answer">Ans: Phase split karke starting torque paida karna taaki motor apne aap ghoom
+                    sake.</div>
+            </div>
+        </div>
+
+        <h2 class="exam-section-title">6. Online CBT Objective Practice (10 Core Live MCQs)</h2>
+        <div id="mcqDynamicRoot"></div>
+
+        <div class="bottom-action-panel">
+            <button class="btn-action btn-download-pdf" onclick="initiatePdfQuizGate()">📥 Print / Download Clean PDF
+                Note</button>
+            <a href="./ac-circuits.html" class="btn-action btn-next-module app-link">Launch Module 06: AC Circuits ❯</a>
+        </div>
+
+    </main>
+
+    <div class="quiz-modal-overlay" id="pdfQuizModal">
+        <div class="quiz-modal-card">
+            <div class="quiz-modal-header">
+                <h3>🔒 Unlock PDF Download</h3>
+                <button class="close-modal-btn" onclick="closePdfModal()">×</button>
+            </div>
+            <div id="quizModalContent">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">⚡ Electrician Hub</p>
+            <p>&copy; 2026 Electrician Hub | Premium Tri-Language Core Syllabus System</p>
+        </div>
+    </footer>
+
+    <script>
+        // Responsive Mobile Bar Animation Toggle
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+        if (mobileMenu && navLinks) {
+            mobileMenu.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        }
+
+        // Live 10 Core Objective Question Bank Object Array
+        const mcqPool = [
+            { q: "Magnetic Flux ki SI unit inme se kya hoti hai?", o: ["Tesla", "Weber", "Ampere-Turn", "Maxwell"], c: 1 },
+            { q: "Magnetic circuit me flux ko rokne wale element ko kya bolte hain?", o: ["Resistance", "Reluctance", "Permeability", "Inductance"], c: 1 },
+            { q: "Capacitance ki practical measurement unit kya hai?", o: ["Henry", "Ohm", "Farad", "Coulomb"], c: 2 },
+            { q: "Conductor ke charo taraf magnetic field check karne ke liye kis rule ka use karte hain?", o: ["Fleming's Left Hand Rule", "Right Hand Thumb Rule", "Lenz's Law", "Faraday's Law"], c: 1 },
+            { q: "Capacitor inme se kis tarah ki energy store karta hai?", o: ["Magnetic Field", "Electrostatic Field", "Chemical Energy", "Thermal Energy"], c: 1 },
+            { q: "Agar 10μF ke do capacitors parallel me jude hain, to total capacitance kitni hogi?", o: ["5 μF", "20 μF", "10 μF", "0.1 μF"], c: 1 },
+            { q: "Inme se kaun sa capacitor polarized hota hai (jisme +/- fix polarity hoti hai)?", o: ["Ceramic Capacitor", "Mica Capacitor", "Electrolytic Capacitor", "Film Capacitor"], c: 2 },
+            { q: "Flux Density ($B$) nikalne ka sahi mathematical formula kya hai?", o: ["B = Φ / A", "B = Φ × A", "B = MMF / S", "B = H × L"], c: 0 },
+            { q: "Capacitor kis power grid network line ko completely block kar deta hai?", o: ["Alternating Current (AC)", "Direct Current (DC)", "Poly-phase AC", "High Frequency Signals"], c: 1 },
+            { q: "Ceiling fan ke speed regulator aur motor starting system me common condenser component kaun sa hai?", o: ["Electrolytic Type", "Paper/Plastic Film Type", "Ceramic Bead", "Air Variable Node"], c: 1 }
+        ];
+
+        // Compile Main Page Dynamic Quiz Matrix Grid Layout
+        const rootNode = document.getElementById("mcqDynamicRoot");
+        let htmlBuffer = "";
+
+        mcqPool.forEach((item, index) => {
+            let num = index + 1;
+            htmlBuffer += `
+                <div class="mcq-card">
+                    <div class="exam-question">Q${num}. ${item.q}</div>
+                    <div class="mcq-opt-list">
+            `;
+            item.o.forEach((opt, optIdx) => {
+                htmlBuffer += `
+                    <button class="mcq-option-btn" onclick="validateOption(this, ${optIdx === item.c})">
+                        ${opt}
+                    </button>
+                `;
+            });
+            htmlBuffer += `</div></div>`;
+        });
+        rootNode.innerHTML = htmlBuffer;
+
+        function validateOption(btn, isCorrect) {
+            const parentBlock = btn.parentElement;
+            const buttons = parentBlock.querySelectorAll(".mcq-option-btn");
+            buttons.forEach(b => b.disabled = true);
+
+            if (isCorrect) {
+                btn.classList.add("correct-ans");
+            } else {
+                btn.classList.add("wrong-ans");
+                buttons.forEach(b => {
+                    if (b.getAttribute("onclick").includes("true")) {
+                        b.classList.add("correct-ans");
+                    }
+                });
+            }
+        }
+
+        /* --- Custom Premium 3-MCQ Quiz Gate Engine Logic --- */
+        let gateQuestions = [];
+        let currentGateIndex = 0;
+        let correctAnswersCount = 0;
+
+        function initiatePdfQuizGate() {
+            const scrambled = [...mcqPool].sort(() => 0.5 - Math.random());
+            gateQuestions = scrambled.slice(0, 3);
+
+            currentGateIndex = 0;
+            correctAnswersCount = 0;
+
+            document.getElementById("pdfQuizModal").style.display = "flex";
+            renderGateStep();
+        }
+
+        function closePdfModal() {
+            document.getElementById("pdfQuizModal").style.display = "none";
+        }
+
+        function renderGateStep() {
+            const targetContentBox = document.getElementById("quizModalContent");
+
+            if (currentGateIndex >= 3) {
+                if (correctAnswersCount === 3) {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+                            <h4 style="color: #15803d; margin: 0 0 10px 0; font-size: 18px;">Perfect Score! Aapka Verification Safal Hua.</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">PDF Note system automatically download ho raha hai...</p>
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        closePdfModal();
+                        window.print();
+                    }, 1500);
+                } else {
+                    targetContentBox.innerHTML = `
+                        <div style="text-align:center; padding: 20px 0;">
+                            <div style="font-size: 50px; margin-bottom: 10px;">❌</div>
+                            <h4 style="color: #b91c1c; margin: 0 0 10px 0; font-size: 18px;">Verification Fail Ho Gaya!</h4>
+                            <p style="color: #475569; font-size: 14px; margin-bottom: 20px;">Clean PDF secure download karne ke liye sabhi 3 sawalon ka sahi jawab dena hoga.</p>
+                            <button class="btn-action btn-next-module" onclick="initiatePdfQuizGate()">Dobara Koshish Karein ↻</button>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const currentObj = gateQuestions[currentGateIndex];
+
+            let modalHtml = `
+                <div class="quiz-progress-tracker">Sawal ${currentGateIndex + 1} of 3</div>
+                <div class="exam-question" style="font-size: 16px; margin-bottom: 15px;">${currentObj.q}</div>
+                <div class="mcq-opt-list">
+            `;
+
+            currentObj.o.forEach((optText, optIdx) => {
+                modalHtml += `
+                    <button class="mcq-option-btn" onclick="checkGateSelection(this, ${optIdx === currentObj.c})">
+                        ${optText}
+                    </button>
+                `;
+            });
+
+            modalHtml += `</div>`;
+            targetContentBox.innerHTML = modalHtml;
+        }
+
+        function checkGateSelection(element, isRight) {
+            const listContainer = element.parentElement;
+            const groupButtons = listContainer.querySelectorAll(".mcq-option-btn");
+            groupButtons.forEach(btn => btn.disabled = true);
+
+            if (isRight) {
+                element.classList.add("correct-ans");
+                correctAnswersCount++;
+            } else {
+                element.classList.add("wrong-ans");
+                groupButtons.forEach((btn, idx) => {
+                    if (idx === gateQuestions[currentGateIndex].c) {
+                        btn.classList.add("correct-ans");
+                    }
+                });
+            }
+
+            setTimeout(() => {
+                currentGateIndex++;
+                renderGateStep();
+            }, 1200);
+        }
+    </script>
+</body>
+
+</html>

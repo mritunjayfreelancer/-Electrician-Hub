@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Electrician Hub - Advanced Motor & Electrical Components Syllabus</title>
+
+    <!-- Global SEO Production & Google Algorithm Layer -->
+    <meta name="description"
+        content="Master Guide for ITI Electrician & Industrial Automation. Learn Motor Types, Star-Delta, VFD, MCB, DOL Starters and Complete Industrial Wiring with Deep Explanations.">
+    <meta name="keywords"
+        content="Electric Motor, Star Delta Starter, VFD, MCB, DOL Starter, Megger Test, Clamp Meter, Industrial Wiring, ITI Electrician Theory, Electricity Foundation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Electrician Hub">
+
+    <!-- Open Graph / Facebook SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Electrician Hub - Advanced Motor & Electrical Components">
+    <meta property="og:description"
+        content="Complete step-by-step industrial guide for electrical motors, testing, starters, and wiring.">
+
+    <!-- Premium Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Connection Route -->
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* CSS Reset & Global Layout */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            padding-top: 90px;
+            /* Navbar Space */
+        }
+
+        /* --- 100% Same Premium Navbar Styling --- */
+        header.navbar {
+            background: #0f172a;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header.navbar .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f1c40f;
+        }
+
+        header.navbar nav ul.nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        header.navbar nav ul.nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        header.navbar nav ul.nav-links a:hover {
+            color: #f1c40f;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        /* --- Master Dashboard Container --- */
+        .dashboard-container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* --- Pure Premium Mac Style UI Window Box --- */
+        .mac-window-box {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        /* Top Bar with 3-Dots completely aligned to the Left */
+        .mac-top-bar {
+            background: #f1f5f9;
+            height: 45px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .mac-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .mac-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red {
+            background: #ef4444;
+        }
+
+        .dot-yellow {
+            background: #f59e0b;
+        }
+
+        .dot-green {
+            background: #10b981;
+        }
+
+        /* Centered subtle window text */
+        .mac-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .mac-content {
+            padding: 35px;
+        }
+
+        .mac-content h1 {
+            font-size: 26px;
+            color: #0f172a;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .mac-content p {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        /* --- Premium Grid Layout for Chapter Buttons --- */
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 16px;
+        }
+
+        .btn-component {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px 20px;
+            border-radius: 10px;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 4px solid #64748b;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+        }
+
+        /* Professional Hover Action Modes */
+        .btn-component:hover {
+            background: #0f172a;
+            color: #f1c40f;
+            border-color: #0f172a;
+            border-left-color: #f1c40f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+        }
+
+        .btn-icon {
+            font-size: 16px;
+            transition: transform 0.2s;
+            color: #94a3b8;
+        }
+
+        .btn-component:hover .btn-icon {
+            transform: translateX(5px);
+            color: #f1c40f;
+        }
+
+        /* Mobile Responsive Configurations */
+        @media (max-width: 768px) {
+            header.navbar nav ul.nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 55px;
+                left: 0;
+                width: 100%;
+                background: #0f172a;
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid #1e293b;
+            }
+
+            header.navbar nav ul.nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .component-grid {
+                grid-template-columns: 1fr;
+                /* Exact single column structure for smartphone devices */
+            }
+
+            .mac-content {
+                padding: 25px 15px;
+            }
+
+            .mac-content h1 {
+                font-size: 22px;
+            }
+
+            .mac-title {
+                display: none;
+                /* Hide title on small screens to prevent overlap */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 100% Match Fully Functional Navbar Component Layer -->
+    <header class="navbar">
+        <div class="logo">⚡ Electrician Hub</div>
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#dashboard">Dashboard</a></li>
+                <li><a href="./index.html#chapters">Syllabus</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobileMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <!-- Main Central Layout Hub Grid Wrapper -->
+    <main class="dashboard-container">
+
+        <!-- Perfect Premium Mac UI Windows Box Shell -->
+        <div class="mac-window-box">
+
+            <!-- Mac Style 3-Dot Top Bar Control Line (Dots placed strictly on the left) -->
+            <div class="mac-top-bar">
+                <div class="mac-dots">
+                    <span class="mac-dot dot-red"></span>
+                    <span class="mac-dot dot-yellow"></span>
+                    <span class="mac-dot dot-green"></span>
+                </div>
+                <div class="mac-title">Syllabus Terminal Window</div>
+            </div>
+
+            <!-- Dashboard Functional Content Panel Area -->
+            <div class="mac-content">
+                <h1>औद्योगिक मोटर एवं इलेक्ट्रिकल सिलेबस</h1>
+                <p>चैप्टर पढ़ने के लिए नीचे दिए गए टॉपिक बटन पर क्लिक करें:</p>
+
+                <!-- Responsive Grid for all 30 Component Files Routing Link Hooks -->
+                <div class="component-grid">
+
+                    <a href="./components/electricity-foundation.html" class="btn-component">
+                        <span>⚡ 1. Electricity की Foundation</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/what-is-motor.html" class="btn-component">
+                        <span>⚙️ 2. Motor Kya Hoti Hai?</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/moter-parts.html" class="btn-component">
+                        <span>🧩 3. Motor ke Parts</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/magnetic-field.html" class="btn-component">
+                        <span>🧲 4. Magnetic Field Kaise Banti Hai?</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/fleming-rules.html" class="btn-component">
+                        <span>🫵 5. Fleming Rules</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/motor-types.html" class="btn-component">
+                        <span>🌀 6. Motor Types</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/single-phase-motor.html" class="btn-component">
+                        <span>🔌 7. Single Phase Motor</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/three-phase-motor.html" class="btn-component">
+                        <span>🏭 8. Three Phase Motor</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/star-connection.html" class="btn-component">
+                        <span>⭐ 9. Star Connection</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/delta-connection.html" class="btn-component">
+                        <span>🔺 10. Delta Connection</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/star-delta-starter.html" class="btn-component">
+                        <span>⏱️ 11. Star Delta Starter</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/dol-starter.html" class="btn-component">
+                        <span>🟢 12. DOL Starter</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/contactor.html" class="btn-component">
+                        <span>🎛️ 13. Contactor</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/overload-relay.html" class="btn-component">
+                        <span>🔴 14. Overload Relay</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/mcb.html" class="btn-component">
+                        <span>🔒 15. MCB</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/mccb.html" class="btn-component">
+                        <span>🗃️ 16. MCCB</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/acb.html" class="btn-component">
+                        <span>💨 17. ACB</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/vfd.html" class="btn-component">
+                        <span>📈 18. VFD (Variable Frequency Drive)</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/soft-starter.html" class="btn-component">
+                        <span>📉 19. Soft Starter</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/motor-name-plate.html" class="btn-component">
+                        <span>🏷️ 20. Motor Name Plate</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/rpm-formula.html" class="btn-component">
+                        <span>🔢 21. RPM Formula</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/slip.html" class="btn-component">
+                        <span>📉 22. Slip</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/torque-formula.html" class="btn-component">
+                        <span>💪 23. Torque Formula</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/horsepower.html" class="btn-component">
+                        <span>🐎 24. Horsepower</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/motor-testing.html" class="btn-component">
+                        <span>🛠️ 25. Motor Testing</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/megger-test.html" class="btn-component">
+                        <span>📟 26. Megger Test</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/clamp-meter.html" class="btn-component">
+                        <span>🧲 27. Clamp Meter</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/common-faults.html" class="btn-component">
+                        <span>⚠️ 28. Common Faults</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/winding.html" class="btn-component">
+                        <span>🧵 29. Winding</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                    <a href="./components/industrial-wiring.html" class="btn-component"
+                        style="grid-column: 1 / -1; background: #eff6ff; border-left-color: #2563eb;">
+                        <span>🏭 30. Complete Industrial Wiring (Master Class)</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Navigation Drawer Action Script Logic Links -->
+    <script>
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.getElementById("navLinks");
+
+        mobileMenu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
